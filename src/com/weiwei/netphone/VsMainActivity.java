@@ -130,6 +130,9 @@ public class VsMainActivity extends FragmentActivity implements OnClickListener 
     public Button mCallBtn;
 
     /**
+     *
+     *
+     *
      * 拨号按钮是否显示
      */
     public static boolean isShow = true;
