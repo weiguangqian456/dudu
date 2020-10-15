@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/bg_stroke_gray_coner_small">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="标题"
+        android:textColor="@color/vs_black"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="16dp"
+        android:text="正文"
+        android:textSize="14dp" />
+
+    <View
+        android:id="@+id/line_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/ll_button"
+        android:background="#cccccc" />
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/w_44_dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#666666"
+            android:textSize="14dp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/w_44_dip"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#38ADFF"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+</RelativeLayout>

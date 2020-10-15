@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:scrollbars="none" >
+
+    <FrameLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#dbdbdb"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/searchLayoutChild"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/cts_keyword"
+                android:layout_width="fill_parent"
+                android:layout_height="34dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/vs_contact_search"
+                android:drawablePadding="18dp"
+                android:gravity="center_vertical"
+                android:hint="@string/contacts_editext_text"
+                android:maxLines="1"
+                android:paddingLeft="35dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="20dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/contact_keysearch" />
+
+        <ImageView
+            android:id="@+id/deleteImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="15dp"
+            android:paddingRight="35dp"
+            android:src="@drawable/vs_del"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/line"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/kcuserlayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/vs_personal_bg_color"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/kcuser_imge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18.5dp"
+            android:background="@drawable/vs_mark" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/kcuser_imge"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contacts_vsuser"
+                    android:textColor="@color/vs_black"
+                    android:textSize="19.5sp" />
+
+                <TextView
+                    android:id="@+id/groupSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/vs_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/vs_contact_vmark_hint"
+                android:textColor="@color/vs_gray_deep"
+                android:textSize="14.5sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/kc_seting_line01_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/vs_right_icon" />
+    </RelativeLayout>
+
+</LinearLayout>

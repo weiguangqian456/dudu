@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <include layout="@layout/systitle_orange" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 下划线 -->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/pre_piano_set"
+                android:layout_width="fill_parent"
+                android:layout_height="59dp"
+                android:background="@drawable/vs_personal_bg_color">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="19dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/vs_seting_piano_str"
+                    android:textColor="@color/vs_black"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/jt_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/vs_right_icon"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/my_balance_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/jt_01"
+                    android:textColor="@color/vs_gray_deep"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+            <!-- 下划线 -->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

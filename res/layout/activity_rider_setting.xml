@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/temp_base_title_orange"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_10_dip"
+        android:background="@color/public_color_F4F4F4"
+        android:layout_below="@+id/title"/>
+    <RelativeLayout
+        android:id="@+id/rl_switch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_50_dip"
+        android:layout_marginTop="@dimen/w_10_dip"
+        android:layout_below="@+id/title"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/w_15_dip"
+        android:paddingRight="@dimen/w_15_dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息振动"
+            android:textSize="@dimen/w_15_dip"
+            android:textColor="@color/public_color_333333"/>
+
+        <ImageView
+            android:id="@+id/iv_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/switch_on"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_48_dip"
+        android:background="@color/public_color_F4F4F4"
+        android:layout_below="@+id/rl_switch"
+        android:text="关闭后，新消息将不会有振动提示"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/w_13_dip"
+        android:textColor="@color/public_color_999999"
+        android:paddingLeft="@dimen/w_15_dip"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_light"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_50_dip"
+        android:layout_marginTop="@dimen/w_10_dip"
+        android:layout_below="@+id/tv_intro"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/w_15_dip"
+        android:paddingRight="@dimen/w_15_dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有新消息时自动亮屏"
+            android:textSize="@dimen/w_15_dip"
+            android:textColor="@color/public_color_333333"/>
+
+        <ImageView
+            android:id="@+id/iv_light_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/switch_off"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_10_dip"
+        android:background="@color/public_color_F4F4F4"
+        android:layout_below="@+id/rl_light"/>
+
+</RelativeLayout>

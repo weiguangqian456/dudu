@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:panel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.weiwei.base.util.Panel
+        android:id="@+id/alert_dialog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        panel:animationDuration="1200"
+        panel:closedHandle="@android:color/transparent"
+        panel:content="@+id/panelContent"
+        panel:handle="@+id/panelHandle"
+        panel:openedHandle="@android:color/transparent"
+        panel:position="bottom" >
+
+        <Button
+            android:id="@+id/panelHandle"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/panelContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/lucency"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/alert_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/vs_whilte_btn_top_shape_bg"
+                android:gravity="center"
+                android:textColor="@color/alert_dialog_title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/alert_dialog_title_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                android:contentDescription="@string/app_name" />
+
+    
+
+            <LinearLayout
+                android:id="@+id/alert_dialog_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_message1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/vs_whilte_btn_selecter"
+                    android:gravity="center"
+                    android:textColor="@color/vs_blue_slight"
+                    android:textSize="19.5sp"
+                    />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!--
+                 <Button
+                android:id="@+id/alert_dialog_btn_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/kc_alert_dialog_btn_bg"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/alert_dialog_button"
+                android:textSize="20sp" />
+            -->
+        </LinearLayout>
+    </com.weiwei.base.util.Panel>
+
+</LinearLayout>

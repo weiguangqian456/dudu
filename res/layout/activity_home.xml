@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_76_dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:id="@+id/ll_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFEFF"
+            android:clipChildren="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/rg_oper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clipChildren="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:clipChildren="false"
+                    android:orientation="horizontal">
+                    <!--首页-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/w_46_dip"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/vs_homepage_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/vs_homepage_iv"
+                                android:layout_width="@dimen/w_21_dip"
+                                android:layout_height="@dimen/w_21_dip"
+                                android:background="@drawable/ic_homepage_normal" />
+
+                            <TextView
+                                android:id="@+id/vs_homepage_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:text="@string/tab_homepage"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/w_10_dip" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/vs_keyborad_layout_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_homepage_layout"
+                            android:layout_alignTop="@id/vs_homepage_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/vs_red_dot"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_homepage_layout"
+                            android:layout_alignTop="@id/vs_homepage_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/st_btn_numb_bg"
+                            android:gravity="center"
+                            android:textColor="@color/White"
+                            android:textSize="9sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                    <!-- 购物车-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/w_46_dip"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/vs_found_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/vs_found_imagview"
+                                android:layout_width="@dimen/w_21_dip"
+                                android:layout_height="@dimen/w_21_dip"
+                                android:background="@drawable/ic_service" />
+
+                            <TextView
+                                android:id="@+id/vs_found_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/w_4_dip"
+                                android:gravity="center"
+                                android:text="@string/tab_shoppingcart"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/w_10_dip" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/vs_found_layout_red"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_alignRight="@id/vs_found_layout"
+                            android:layout_alignTop="@id/vs_found_layout"
+                            android:background="@drawable/vs_red_dot"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_found_layout"
+                            android:layout_alignTop="@id/vs_found_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/st_btn_numb_bg"
+                            android:gravity="center"
+                            android:textColor="@color/White"
+                            android:textSize="9sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                    <!--嘟嘟加油-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/w_46_dip"
+                        android:layout_alignEnd="@+id/vs_found_layout_red"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignRight="@+id/vs_found_layout_red"
+                        android:layout_weight="1"
+                        android:clipChildren="false"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/vs_keyborad_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="24dp"
+                            android:gravity="center"
+                            android:text="@string/dudujiayou"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/w_10_dip" />
+
+                        <!--<ImageView-->
+
+                        <!--android:id="@+id/vs_contact_layout_red"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignRight="@id/vs_keyborad_layout"-->
+                        <!--android:layout_alignTop="@id/vs_keyborad_layout"-->
+                        <!--android:layout_marginRight="3dp"-->
+                        <!--android:layout_marginTop="3dp"-->
+                        <!--android:background="@drawable/vs_red_dot"-->
+                        <!--android:visibility="gone" />-->
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignRight="@id/vs_keyborad_layout"-->
+                        <!--android:layout_alignTop="@id/vs_keyborad_layout"-->
+                        <!--android:layout_marginRight="3dp"-->
+                        <!--android:layout_marginTop="3dp"-->
+                        <!--android:background="@drawable/st_btn_numb_bg"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="@color/White"-->
+                        <!--android:textSize="9sp"-->
+                        <!--android:visibility="gone" />-->
+                    </RelativeLayout>
+
+                    <!--<LinearLayout-->
+
+
+                    <!--android:id="@+id/vs_money_layout"-->
+
+
+                    <!--android:layout_width="wrap_content"-->
+
+
+                    <!--android:layout_height="match_parent"-->
+
+
+                    <!--android:layout_weight="1"-->
+
+
+                    <!--android:gravity="center"-->
+
+
+                    <!--android:orientation="vertical"-->
+
+
+                    <!--android:visibility="gone">-->
+
+
+                    <!--<ImageView-->
+
+
+                    <!--android:id="@+id/vs_money_imagview"-->
+
+
+                    <!--android:layout_width="wrap_content"-->
+
+
+                    <!--android:layout_height="wrap_content"-->
+
+
+                    <!--android:background="@drawable/ic_recharge_normal" />-->
+
+
+                    <!--<TextView-->
+
+
+                    <!--android:id="@+id/vs_money_tv"-->
+
+
+                    <!--android:layout_width="wrap_content"-->
+
+
+                    <!--android:layout_height="wrap_content"-->
+
+
+                    <!--android:gravity="center"-->
+
+
+                    <!--android:text="@string/tab_recharge"-->
+
+
+                    <!--android:textColor="@color/text_gray"-->
+
+
+                    <!--android:textSize="11sp" />-->
+
+
+                    <!--</LinearLayout>-->
+
+
+                    <!--我的订单-->
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/w_46_dip"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/ll_classify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/iv_classify"
+                                android:layout_width="@dimen/w_19_dip"
+                                android:layout_height="@dimen/w_21_dip"
+                                android:background="@drawable/myorder2x" />
+
+                            <TextView
+                                android:id="@+id/tv_classify"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/w_4_dip"
+                                android:gravity="center"
+                                android:text="@string/myorder"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/w_10_dip" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/vs_mms_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/vs_mms_imagview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_mms_normal" />
+
+                            <TextView
+                                android:id="@+id/vs_mms_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/tab_mms"
+                                android:textColor="@color/text_gray"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/vs_mms_imagview_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_mms_layout"
+                            android:layout_alignTop="@id/vs_mms_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/vs_red_dot"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/vs_mms_unread"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_mms_layout"
+                            android:layout_alignTop="@id/vs_mms_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/st_btn_numb_bg"
+                            android:gravity="center"
+                            android:textColor="@color/White"
+                            android:textSize="9sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <!--我的界面-->
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/w_46_dip"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+
+                        <LinearLayout
+                            android:id="@+id/vs_me_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/vs_me_imagview"
+                                android:layout_width="@dimen/w_21_dip"
+                                android:layout_height="@dimen/w_21_dip"
+                                android:background="@drawable/icon_home_mine_n" />
+
+                            <TextView
+                                android:id="@+id/vs_me_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/w_4_dip"
+                                android:gravity="center"
+                                android:text="@string/tab_myself"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/w_10_dip" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/vs_me_layout_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_me_layout"
+                            android:layout_alignTop="@id/vs_me_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/vs_red_dot"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_me_layout"
+                            android:layout_alignTop="@id/vs_me_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/st_btn_numb_bg"
+                            android:gravity="center"
+                            android:textColor="@color/White"
+                            android:textSize="9sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/vs_service_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/vs_service_imagview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_service" />
+
+                            <TextView
+                                android:id="@+id/vs_service_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/tab_service"
+                                android:textColor="@color/text_gray"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/vs_service_layout_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_service_layout"
+                            android:layout_alignTop="@id/vs_service_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/vs_red_dot"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/vs_service_layout"
+                            android:layout_alignTop="@id/vs_service_layout"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/st_btn_numb_bg"
+                            android:gravity="center"
+                            android:textColor="@color/White"
+                            android:textSize="9sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/vs_keyborad_layout"
+            android:layout_width="@dimen/w_37_dip"
+            android:layout_height="@dimen/w_37_dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/w_19_dip"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/vs_keyborad_imagview"
+                android:layout_width="@dimen/w_36_dip"
+                android:layout_height="@dimen/w_36_dip"
+                android:layout_gravity="center"
+                android:background="@drawable/dudujiayou2x" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

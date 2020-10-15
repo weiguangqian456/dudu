@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/vs_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_area_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_47_dip"
+            android:paddingTop="5dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="所在地区"
+                android:textColor="#333333"
+                android:textSize="@dimen/w_17_dip" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/w_13_dip"
+                android:layout_height="@dimen/w_13_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_15_dip"
+                android:src="@drawable/mall_area_dialog_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/w_213_dip"
+            android:orientation="horizontal">
+
+            <com.weiwei.base.area.WheelView
+                android:id="@+id/id_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"></com.weiwei.base.area.WheelView>
+
+            <com.weiwei.base.area.WheelView
+                android:id="@+id/id_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"></com.weiwei.base.area.WheelView>
+
+            <com.weiwei.base.area.WheelView
+                android:id="@+id/id_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"></com.weiwei.base.area.WheelView>
+
+            <com.weiwei.base.area.WheelView
+                android:id="@+id/id_town"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"></com.weiwei.base.area.WheelView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vs_ok" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical">
+
+        <!--<com.weiwei.base.widgets.TitleBarView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 顶部标题 -->
+            <RelativeLayout
+                android:id="@+id/small_title"
+                android:layout_width="fill_parent"
+                android:layout_height="54dp"
+                android:background="@color/vs_gray_simaple">
+
+                <LinearLayout
+                    android:id="@+id/btn_nav_right"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btn_nav_right_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="13dp"
+                        android:textColor="@color/vs_gree_text_selecter"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/title_line_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/btn_nav_right"
+                    android:contentDescription="@string/app_name"
+                    android:src="@android:color/transparent"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/localName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="18dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/vs_black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/sys_title_txt"
+                    android:layout_width="223dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="18dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:gravity="center_vertical|left"
+                    android:inputType="phone"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:textColor="@color/vs_black"
+                    android:textSize="29sp" />
+
+                <TextView
+                    android:id="@+id/ll_title_bar"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/vs_calllog_title_dial"
+                    android:textColor="@color/vs_black"
+                    android:textSize="19.5sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+        </LinearLayout>
+        <!-- 键盘往左下角移动动画 -->
+
+
+        <!-- 搜索listview -->
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/title"
+            android:background="@color/vs_gray_simaple"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:visibility="visible" />
+
+        <!-- 通话记录listview -->
+        <ListView
+            android:id="@+id/calllog_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/title"
+            android:background="@color/vs_gray_simaple"
+            android:cacheColorHint="@android:color/transparent"
+            android:dividerHeight="0.67dp"
+            android:fastScrollEnabled="false"
+            android:focusable="true"
+            android:visibility="visible" />
+
+        <!-- 无通话记录时的提示 -->
+
+        <!-- <com.weiwei.base.widgets.VsViewPagerWidget
+             android:id="@+id/calllog_null_pro"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@id/title"
+             android:visibility="gone" />  -->
+
+        <!-- 广告 -->
+        <ImageView
+            android:id="@+id/calllog_no_p"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/title"
+            android:background="@drawable/no_pbanner"
+            android:visibility="gone" />
+
+        <!-- 键盘 -->
+
+        <include
+            android:id="@+id/vs_input_keyboard"
+            layout="@layout/vs_input_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible" />
+
+        <!--
+             <com.zte.functions.ad.AdWidget
+            android:id="@+id/ad_widget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/vs_input_keyboard"
+            android:layout_below="@id/title"
+            android:visibility="gone" />
+        -->
+
+        <include
+            android:id="@+id/slid_title"
+            layout="@layout/vs_sliding_advertisement"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/vs_input_keyboard"
+            android:layout_below="@id/title" />
+
+        <!-- 默认显示的广告 -->
+        <ImageView
+            android:id="@+id/calllog_no_p1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/vs_input_keyboard"
+            android:layout_below="@id/title"
+            android:background="@color/vs_white"
+            android:clickable="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/no_pbanner" />
+
+        <LinearLayout
+            android:id="@+id/ll_title_bar_dlog"
+            android:layout_width="fill_parent"
+            android:layout_height="61dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="-5.5dp"
+            android:background="@drawable/title_bar_diog_bg"
+            android:orientation="vertical"
+            android:paddingTop="5.5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_title_bar_dlog_1"
+                android:layout_width="fill_parent"
+                android:layout_height="55.5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_title_bar_copy"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/title_bar_copy"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/call_log_text14"
+                    android:textColor="@color/call_log_title"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="0.67dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5.5dp"
+                    android:background="#dcdcdc" />
+
+                <Button
+                    android:id="@+id/btn_title_bar_clear"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/title_bar_delete"
+                    android:gravity="center"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/call_log_text15"
+                    android:textColor="@color/call_log_title"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_network_change"
+                android:layout_width="fill_parent"
+                android:layout_height="55.5dp"
+                android:gravity="center"
+                android:text="@string/call_log_text16"
+                android:textColor="@color/call_log_title"
+                android:textSize="15sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+</RelativeLayout>

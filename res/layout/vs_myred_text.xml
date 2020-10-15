@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/action"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/w_50_dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="item"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/w_50_dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="item"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/redlee"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/w_50_dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="item"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/ctime"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/w_50_dip"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="item"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+</LinearLayout>

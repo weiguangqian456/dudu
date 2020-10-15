@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/w_15_dip"
+    android:paddingRight="@dimen/w_15_dip"
+    android:layout_marginTop="@dimen/w_10_dip"
+    android:paddingBottom="@dimen/w_10_dip">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/w_60_dip"
+        android:layout_height="@dimen/w_60_dip"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="@dimen/w_13_dip" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="红酒干酒23%"
+        android:textSize="@dimen/w_12_dip"
+        android:textColor="@color/public_color_333333"
+        android:layout_toRightOf="@+id/iv_image"
+        android:layout_marginTop="@dimen/w_3_dip"/>
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="冰冻"
+        android:textColor="@color/public_color_999999"
+        android:textSize="@dimen/w_11_dip"
+        android:layout_toRightOf="@+id/iv_image"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="@dimen/w_3_dip"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥10"
+        android:textColor="#F0222F"
+        android:textSize="@dimen/w_11_dip"
+        android:layout_toRightOf="@+id/iv_image"
+        android:layout_below="@+id/tv_remark"
+        android:layout_marginTop="@dimen/w_3_dip"/>
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x2"
+        android:textSize="@dimen/w_11_dip"
+        android:textColor="@color/public_color_999999"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_name"/>
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="嘟嘟骑手"
+        android:textSize="@dimen/w_11_dip"
+        android:textColor="@color/public_color_999999"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_remark"
+        android:layout_marginTop="@dimen/w_3_dip"/>
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <!-- 移动充值卡充值 -->
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle_orange" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/kc_recharge_mobilecard_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/kc_recharge_mobilecard_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="@string/recharge_card_paytext"
+                android:textColor="@color/Black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vs_recharge_mobilecard_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/kc_recharge_mobilecard_hint"
+                android:textColor="@color/recharge_mobilecard"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/vs_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/vs_recharge_mobilecard_hintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_personal_bg_color"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:id="@+id/vs_recharge_mobilecard_load_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/vs_recharge_mobilecard_load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vs_recharge_load" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/vs_recharge_mobilecard_sumit_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/vs_recharge_mobilecard_load_layout"
+                android:textColor="@color/msg_bind_phoneNumber"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/vs_recharge_mobilecard_jt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/vs_right_icon"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/vs_recharge_mobilecard_sumit_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/vs_recharge_mobilecard_jt"
+                android:textColor="@color/msg_bind_phoneNumber"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/vs_recharge_mobilecard_hint_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/vs_recharge_mobilecard_sumit_hint"
+                android:background="@drawable/vs_recharge_list_fail"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/recharge_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/vs_recharge_mobilecard_cardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:text="充值卡序号(0/15)"
+            android:textColor="@color/Black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/vs_recharge_mobilecard_cardNumber_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/vs_edit_border_shape_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/vs_recharge_mobilecard_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:text="充值卡密码(0/19)"
+            android:textColor="@color/Black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/vs_recharge_mobilecard_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/vs_edit_border_shape_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/vs_recharge_mobilecard_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:text="@string/recharge_card_hint3"
+                android:textColor="@color/public_color_EC6941"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/kc_recharge_cardlist_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/vs_recharge_cardlist_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:text="@string/recharge_card_ok"
+                android:textColor="@color/White"
+                android:textSize="17sp"
+                app:rv_backgroundColor="@color/public_color_EC6941"
+                app:rv_isRadiusHalfHeight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

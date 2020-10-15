@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 9
+        versionName "1.1.8"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    sourceSets{
+        main(){
+            jniLibs.srcDirs=['libs']
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+}
+
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'com.github.bumptech.glide:glide:4.7.1'
+    //    compile project(':kefu-sdk')
+//    compile files('D:/work/dudu/libs/kefu-sdk-1.1.8.jar')
+    compile files('D:/AndroidFile/AndroidProject/dudu/libs/kefu-sdk-1.1.8.jar')
+    api 'org.greenrobot:eventbus:3.0.0'
+}
+
+repositories {
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+    google()
+}
+//apply from: 'jcenter.gradle'

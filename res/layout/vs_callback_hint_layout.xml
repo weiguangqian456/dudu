@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/vs_callback_ad_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/call_back_float_view_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/vs_callback_call_to_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Name"
+                android:textColor="@color/White"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/vs_callback_call_to_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="18668421927"
+                    android:textColor="@color/White" />
+
+                <TextView
+                    android:id="@+id/vs_callback_call_to_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:text="广东 深圳"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/White"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/vs_callback_tip01"
+            android:textColor="@color/Black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="@string/vs_callback_tip02"
+            android:textColor="@color/Black"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/vs_callback_back_waitting"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/vs_btn_gree_selecter"
+            android:onClick="onClick_ReturnWait"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/vs_callback_return_wait"
+            android:textColor="@color/White"
+            android:textSize="17sp" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

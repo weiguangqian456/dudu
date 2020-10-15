@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_gray_simaple" >
+
+    <!-- 联系人详情 -->
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle_orange" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/vs_contact_detail_text_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/title"
+        android:background="@drawable/vs_contact_detail" >
+
+        <TextView
+            android:id="@+id/vs_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/vs_contact_head_detail"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="阿东"
+            android:textColor="@color/whites"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/line_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/line" />
+        <!-- android:layout_below="@id/vs_contact_name" -->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/kc_contact_detail_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/vs_white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <com.weiwei.base.widgets.DrawableCenterTextView
+                android:id="@+id/vs_contact_detail_freecall"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:background="@drawable/vs_gray_btn_selecter"
+                android:drawableLeft="@drawable/vs_call_icon"
+                android:gravity="center"
+                android:text="免费电话"
+                android:textColor="@color/vs_black"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/line_freemsg_layout"
+                android:layout_width="0.67dp"
+                android:layout_height="60dp"
+                android:background="@color/vs_line_color" />
+
+            <com.weiwei.base.widgets.DrawableCenterTextView
+                android:id="@+id/vs_contact_detail_freemsg"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/vs_gray_btn_selecter"
+                android:drawableLeft="@drawable/vs_call_icon"
+                android:gravity="center"
+                android:text="免费信息"
+                android:textColor="@color/vs_black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/vs_contact_detail_listview"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_below="@id/vs_contact_detail_text_layout"
+        android:footerDividersEnabled="false"
+        android:scrollbars="none" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/vs_contact_detail_call"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/vs_contact_detail_listview"
+        android:background="@drawable/vs_personal_bg_color"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:drawableLeft="@drawable/vs_contact_dial"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="免费电话"
+            android:textColor="@color/money_text_color"
+            android:textSize="19.5sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vs_contact_detail_invitation"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@id/vs_contact_detail_call"
+        android:background="@drawable/vs_personal_bg_color"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:drawableLeft="@drawable/vs_contact_invitation"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="邀请好友"
+            android:textColor="@color/money_text_color"
+            android:textSize="19.5sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:layout_below="@id/vs_contact_detail_invitation"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/vs_line_color" />
+
+    <!-- 通话记录(尾头) -->
+
+    <RelativeLayout
+        android:id="@+id/vs_calllog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:background="@drawable/vs_whilte_btn_selecter"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/vs_calllog_line_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/vs_contact_callicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/vs_contact_dial"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:id="@+id/vs_calllog_details_phoneNumber_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/vs_whilte_btn_selecter"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/vs_calllog_details_phoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="123456789"
+                    android:textColor="@color/money_text_color"
+                    android:textSize="19.5sp" />
+
+                <TextView
+                    android:id="@+id/vs_calllog_details_localname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="广东深圳"
+                    android:textColor="@color/local_text"
+                    android:textSize="14.5sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/vs_contact_freecall_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="75dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/vs_whilte_btn_selecter"
+            android:src="@drawable/vs_contact_msg"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/vs_contact_freecall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/vs_whilte_btn_selecter"
+            android:src="@drawable/vs_contact_dial"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/vs_contact_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/vs_whilte_btn_selecter"
+            android:src="@drawable/vs_contact_dial"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/line_calllayout"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:layout_below="@id/vs_calllog_line_up"
+            android:layout_marginTop="10dp"
+            android:background="@color/vs_line_color" />
+    </RelativeLayout>
+
+    <!-- 通话记录 添加联系人、添加到已有联系人 -->
+
+    <RelativeLayout
+        android:id="@+id/vs_addcontact_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vs_calllog_layout"
+        android:background="@color/White"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/vs_calllog_detail_createcontact_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vs_whilte_btn_selecter"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/vs_calllog_createcontact"
+                    android:textColor="@color/vs_gree_text_selecter"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.67dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vs_calllog_detail_addtocontact_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vs_whilte_btn_selecter"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/vs_calllog_addtocontact"
+                    android:textColor="@color/vs_gree_text_selecter"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.67dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/line" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/vs_calllog_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send_message"
+        android:layout_below="@id/vs_addcontact_layout"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0px"
+        android:listSelector="@android:color/transparent"
+        android:paddingBottom="15dp"
+        android:scrollbars="none" >
+    </ListView>
+
+    <ImageButton
+        android:id="@+id/send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@drawable/vs_green_btn_selecter"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/vs_send_message" />
+
+</RelativeLayout>

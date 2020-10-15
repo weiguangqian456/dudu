@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whites">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/temp_base_title_orange" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.weiwei.salemall.widget.MyClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sckill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_39_dip">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/w_14_dip"
+                    android:src="@drawable/seckill_zone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/w_8_dip"
+                    android:layout_toRightOf="@+id/iv"
+                    android:text="限时限量 先到先得"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/w_14_dip" />
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/w_9_dip"
+                    android:layout_toLeftOf="@+id/ll_countdownView"
+                    android:text=""
+                    android:textColor="@color/nodeColor"
+                    android:textSize="@dimen/w_12_dip" />
+
+                <LinearLayout
+                    android:id="@+id/ll_countdownView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/w_9_dip"
+                    android:layout_marginRight="@dimen/w_14_dip">
+
+                    <TextView
+                        android:id="@+id/tv_miaosha_shi"
+                        android:layout_width="@dimen/w_20_dip"
+                        android:layout_height="@dimen/w_20_dip"
+                        android:background="@drawable/shape_miaosha_time"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/vs_white"
+                        android:textSize="@dimen/w_10_dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/w_3_dip"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_miaosha_minter"
+                        android:layout_width="@dimen/w_20_dip"
+                        android:layout_height="@dimen/w_20_dip"
+                        android:background="@drawable/shape_miaosha_time"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/vs_white"
+                        android:textSize="@dimen/w_10_dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/w_3_dip"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_miaosha_second"
+                        android:layout_width="@dimen/w_20_dip"
+                        android:layout_height="@dimen/w_20_dip"
+                        android:background="@drawable/shape_miaosha_time"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/vs_white"
+                        android:textSize="@dimen/w_10_dip" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/rl_top"
+                android:background="@color/line_bg" />
+
+            <ImageView
+                android:id="@+id/iv_banner_seckill"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_105_dip"
+                android:layout_below="@+id/view_line"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/mall_member_welfare_default" />
+
+            <View
+                android:id="@+id/view_interval"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_6_dip"
+                android:layout_below="@+id/iv_banner_seckill"
+                android:background="@color/vs_bg_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_seckill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_interval"
+                android:background="@color/whites" />
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <!--没网界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="@color/vs_bg_color"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_net"
+            android:layout_width="@dimen/w_277_dip"
+            android:layout_height="@dimen/w_172_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_93_dip"
+            android:src="@drawable/mall_no_network" />
+
+        <TextView
+            android:id="@+id/tv_no_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="网络出问题了请检查网络设置~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <Button
+            android:id="@+id/btn_fresh"
+            parent="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/w_98_dip"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_below="@+id/tv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_43_dip"
+            android:background="@drawable/bg_fresh_btn"
+            android:text="点击刷新"
+            android:textColor="#1084ff"
+            android:textSize="@dimen/w_14_dip"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+
+    <!--空白界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="@color/vs_bg_color"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_content"
+            android:layout_width="@dimen/w_194_dip"
+            android:layout_height="@dimen/w_127_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_145_dip"
+            android:src="@drawable/mall_no_goods" />
+
+        <TextView
+            android:id="@+id/tv_no_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="暂无数据~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <Button
+            android:id="@+id/btn_fresh_tv"
+            parent="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/w_98_dip"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_below="@+id/tv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_43_dip"
+            android:background="@drawable/bg_fresh_btn"
+            android:text="点击刷新"
+            android:textColor="#1084ff"
+            android:textSize="@dimen/w_14_dip"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+</RelativeLayout>

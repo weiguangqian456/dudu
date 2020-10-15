@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle_orange" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/BgColor" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <!-- 备份通讯录 -->
+
+            <LinearLayout
+                android:id="@+id/manual_backup_id"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/im_chat_edit_selecter"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawableLeft="@drawable/kc_contact_backup"
+                    android:gravity="center"
+                    android:text="@string/bakcontact_bakcontact"
+                    android:textColor="@color/bakcontact_prompt"
+                    android:textSize="@dimen/bakcontact_top_text_sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/bakcontact_bakcontact_info"
+                android:textColor="@color/bakcontact_prompt_info"
+                android:textSize="16sp" />
+            <!-- 还原通讯录 -->
+
+            <LinearLayout
+                android:id="@+id/renew_backup_id"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/im_chat_edit_selecter"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/kc_contact_backdown"
+                    android:gravity="center"
+                    android:text="@string/bakcontact_reccontact"
+                    android:textColor="@color/bakcontact_prompt"
+                    android:textSize="@dimen/bakcontact_top_text_sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/bakcontact_reccontact_info"
+                android:textColor="@color/bakcontact_prompt_info"
+                android:textSize="16sp" />
+            <!-- 下面信息 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                   
+                >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/bakcontact_local_contact"
+                        android:textColor="@color/bakcontact_localcontact"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+
+                    <TextView
+                        android:id="@+id/backup_phone_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bakcontact_info"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/bakcontact_net_contact"
+                        android:textColor="@color/bakcontact_localcontact"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+
+                    <TextView
+                        android:id="@+id/backup_phone_servernum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bakcontact_info"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/bakcontact_bak_time"
+                        android:textColor="@color/bakcontact_lasttime"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+
+                    <TextView
+                        android:id="@+id/backup_phone_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bakcontact_info"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/bakcontact_recover_time"
+                        android:textColor="@color/bakcontact_lasttime"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+
+                    <TextView
+                        android:id="@+id/rew_backup_phone_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/bakcontact_info"
+                        android:textSize="@dimen/bakcontact_bottom_text_sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_bg_color">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/temp_base_title_orange" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_add_address"
+        android:layout_below="@+id/title" />
+
+    <!--空界面-->
+    <RelativeLayout
+        android:id="@+id/rl_no_address_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_add_address"
+        android:layout_below="@+id/line_below">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/w_128_dip"
+                android:layout_height="@dimen/w_128_dip"
+                android:layout_gravity="center"
+                android:src="@drawable/mall_address_no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/w_20_dip"
+                android:gravity="center"
+                android:text="暂未设置"
+                android:textColor="#333333"
+                android:textSize="@dimen/w_16_dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/w_22_dip"
+                android:gravity="center"
+                android:text="没有收货地址寄不了快递哦~"
+                android:textColor="#828688"
+                android:textSize="@dimen/w_15_dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 底部按钮   -->
+    <RelativeLayout
+        android:id="@+id/rl_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_72_dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/vs_bg_color">
+
+        <LinearLayout
+            android:id="@+id/ll_btn_add_address"
+            android:layout_width="@dimen/w_317_dip"
+            android:layout_height="@dimen/w_56_dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/add_address_btn_bg">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1.2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/w_5_dip"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/w_14_dip"
+                    android:layout_height="@dimen/w_14_dip"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mall_address_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/w_8_dip"
+                    android:gravity="center"
+                    android:text="添加地址"
+                    android:textColor="@color/vs_white"
+                    android:textSize="@dimen/w_15_dip" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1.2" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

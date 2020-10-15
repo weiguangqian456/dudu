@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3FA">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/systitle_orange" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_below"
+        style="@style/line_below"
+        android:layout_below="@+id/title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_below"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/w_111_dip"
+            android:layout_height="@dimen/w_101_dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/w_46_dip"
+            android:src="@drawable/mall_pay_done" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="您已付款成功"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#1D1D1D"
+                android:textSize="@dimen/w_24_dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#1D1D1D"
+                android:textSize="@dimen/w_35_dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w_54_dip">
+
+            <View
+                android:layout_width="@dimen/w_45_dip"
+                android:layout_height="@dimen/w_1_dip" />
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/btn_check_order"
+                android:layout_width="@dimen/w_110_dip"
+                android:layout_height="@dimen/w_30_dip"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="查看订单"
+                android:textColor="@color/public_color_EC6941"
+                android:textSize="@dimen/w_14_dip"
+                app:rv_cornerRadius="4dp"
+                app:rv_strokeColor="@color/public_color_EC6941"
+                app:rv_strokeWidth="1dp" />
+
+            <TextView
+                android:id="@+id/btn_back_mall"
+                android:layout_width="@dimen/w_110_dip"
+                android:layout_height="@dimen/w_30_dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/w_38_dip"
+                android:background="@drawable/coner_ll_black"
+                android:gravity="center"
+                android:text="返回商城"
+                android:textColor="#1D1D1D"
+                android:textSize="@dimen/w_14_dip" />
+
+            <View
+                android:layout_width="@dimen/w_38_dip"
+                android:layout_height="@dimen/w_1_dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

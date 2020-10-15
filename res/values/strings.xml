@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 广告配置开关 -->
+    <string name="is_need_ad">open</string>
+    <!-- 配置 -->
+    <string name="packagename">com.hwtx.dududh</string>
+    <!-- 品牌名 -->
+    <string name="product">嘟嘟</string>
+    <!-- 品牌id -->
+    <string name="brandid">dudu</string>
+
+    <!--分享链接地址-->
+    <string name="url_share">http://route.edawtech.com/share</string>
+    <!--<string name="url_share">http://ceshi.edawtech.com/share</string>-->
+
+    <!-- 默认服务器地址 -->
+    <!--测试服务器-->
+    <!--<string name="uri_prefix">http://47.106.204.13:8082</string>-->
+    <!--正式服务器-->
+    <string name="uri_prefix">http://paas.edawtech.com</string>
+    <!-- 备用服务器地址 -->
+    <string-array name="url_prots">
+        <!--正式服务器-->
+        <item>http://paas.edawtech.com</item>
+        <!--测试服务器-->
+        <!--<item>http://47.106.204.13:8082</item>-->
+    </string-array>
+    <!-- 直连 -->
+    <string-array name="addr_urls">
+        <item></item>
+    </string-array>
+
+    <!-- 通话记录 -->
+    <string name="vs_calllog_title_dial_del_all">清除</string>
+    <string name="vs_dial_clog_all">全部通话</string>
+    <string name="vs_dial_clog_miss">未接来电</string>
+    <string name="vs_dial_clog_edit">编辑</string>
+    <!-- 联系人 -->
+    <string name="vs_contacts_all">联系人</string>
+    <string name="vs_msm_all">信息</string>
+    <string name="vs_dial_clog_add">添加</string>
+    <!-- 字符串开始 -->
+    <string name="vs_code_hint">请输入验证码</string>
+    <string name="vs_phone_hint">请输入手机号</string>
+    <string name="vs_phone_hint_and_account">请输入手机号/帐号</string>
+    <string name="vs_password_sr_hint">请输入密码</string>
+    <string name="vs_password_hint">请设置密码</string>
+    <string name="vs_verify_hint">请输入验证码</string>
+    <string name="vs_next_hint">下一步</string>
+    <string name="vs_finish_hint">完成</string>
+    <string name="vs_cannel">取消</string>
+    <string name="vs_ok">确定</string>
+    <string name="vs_phone_erro">请输入正确的手机号！</string>
+    <string name="vs_phone_erro_isnull">手机号/帐号不能为空！</string>
+    <string name="vs_phone_toast_isnull">手机号不能为空！</string>
+    <string name="vs_code_erro">验证码错误！</string>
+    <string name="vs_pwd_erro">请输入正确的密码！</string>
+    <string name="vs_exit">退出</string>
+    <string name="vs_gain_money">赚话费</string>
+    <string name="callphone_monery_title">余额不足</string>
+    <string name="callphone_monery_msg">你的账户没有话费，建议赚话费后拨打</string>
+    <string name="vs_pwd_isnull_str">密码不能为空！</string>
+    <string name="vs_code_isnull_str">验证码不能为空！</string>
+    <string name="vs_pwd_xy6_str">密码长度小于6位！</string>
+    <!-- 手势密码 -->
+    <string name="lockscreen_access_pattern_start">"开始绘制图案"</string>
+    <string name="lockscreen_access_pattern_cleared">"图案已清除"</string>
+    <string name="lockscreen_access_pattern_cell_added">"已添加单元格"</string>
+    <string name="lockscreen_access_pattern_detected">"图案绘制完成"</string>
+    <string name="lockpattern_retry_button_text">"重试"</string>
+    <string name="lockpattern_continue_button_text">"继续"</string>
+    <string name="lockpattern_confirm_button_text">"确认"</string>
+    <string name="lockpattern_recording_intro_header">"绘制解锁图案"</string>
+    <string name="lockpattern_settings_help_how_to_record">"如何绘制解锁图案"</string>
+    <string name="lockpattern_recording_incorrect_too_short">"至少连接4个点，请重试"</string>
+    <string name="lockpattern_pattern_entered_header">"图案已记录"</string>
+    <string name="lockpattern_need_to_confirm">"请再次绘制解锁图案"</string>
+    <string name="lockpattern_need_to_unlock_wrong">"与上次输入不一致，请重试"</string>
+    <string name="lockpattern_pattern_confirmed_header">"确认保存新解锁图案"</string>
+    <string name="lockpattern_recording_inprogress">"完成后松开手指"</string>
+    <string name="gesture_password_guide_text">你可以创建一个解锁图案，这样他人在借用你的手机时，将无法打开应用。</string>
+    <string name="gesture_password_guide_creat_btn">创建手势密码</string>
+    <string name="vs_unlocked_pwd_str">手势密码</string>
+    <string name="product_name">嘟嘟通讯专线</string>
+    <!-- 注册界面 -->
+    <string name="register_info">系统将把账号、密码以短信方式发送到该手机上，请妥善保管。</string>
+    <string name="register_fail_info">注册失败，请稍后再试！</string>
+    <string name="register_fail_code">获取验证码失败，请稍后再试！</string>
+    <string name="register_successsumbitmsg">注册成功.</string>
+    <string name="setpass_successsumbitmsg">重置密码成功.</string>
+    <string name="register_successcode">系统已把验证码发到您的手机,请稍后留意您的短信.</string>
+    <string name="vs_reg_dialog_title">温馨提示</string>
+    <string name="vs_reg_dialog_msg">该手机已注册过，老朋友去登录吧</string>
+    <string name="vs_reg_dialog_msg2">注册尚未完成，确定退出？</string>
+    <string name="vs_reg_dialog_goon">继续注册</string>
+    <!-- 启动界面 -->
+    <string name="vs_start_register_str">注册</string>
+    <string name="vs_start_login_str">登录</string>
+    <string name="vs_start_register_str2">立即领取</string>
+    <string name="vs_start_hint1">注册领取</string>
+    <string name="vs_start_hint2">40分钟话费</string>
+    <string name="vs_start_hint3">\n及无限WIFI通话大礼包</string>
+    <!-- 注册界面 -->
+    <string name="vs_reghist_hint">手机号码仅用于接收帐号密码，绝不会向他人公开</string>
+    <string name="vs_reghist_title_hint">注册</string>
+    <string name="vs_reghist_title_hint1">注册 （2/3）</string>
+    <string name="vs_reghist_title_hint2">注册 （3/3）</string>
+    <string name="vs_reghist_server_hint">注册即视为同意</string>
+    <string name="vs_reghist_server_tv">《电子协议》</string>
+    <string name="vs_phone_hint_invide">请输入邀请码</string>
+    <!-- 获取验证码界面 -->
+    <string name="vs_msg_verify_agin_hint">再次获取</string>
+    <string name="vs_msg_verify_hint1">嘟嘟通讯电话已下发验证短信到手机</string>
+    <string name="vs_msg_verify_hint2">请注意查收</string>
+    <string name="vs_msg_verify_str">短信接收验证码</string>
+    <string name="vs_voice_verify_str">电话接听验证码</string>
+    <string name="vs_msg_verify_voice_hint1">嘟嘟通讯电话正在呼叫</string>
+    <string name="vs_msg_verify_voice_hint2">，请接听来电，将听到的验证码填入输入框</string>
+    <string name="vs_msg_verify_hint_sms">短信验证码发送成功！</string>
+    <string name="vs_msg_verify_hint_voice">请电话接听验证码！</string>
+    <!-- 设置密码界面 -->
+    <string name="vs_set_password_hint">设置一个6到16位的密码，密码前后不能有空格</string>
+    <string name="vs_set_password_show_hint">显示密码</string>
+    <string name="vs_set_register_show_hint">免费注册</string>
+    <!-- 重置密码确认界面 -->
+    <string name="vs_set_phone_title_hint1">重置密码</string>
+    <string name="vs_set_phone_title_hint2">重置密码（2/3）</string>
+    <string name="vs_set_phone_title_hint3">重置密码（3/3）</string>
+    <string name="vs_set_phone_hint">确认你的手机号，接收短信验证码</string>
+    <string name="vs_pwd_dialog_msg2">重置密码尚未完成，确定退出？</string>
+    <string name="vs_pwd_dialog_goon">继续</string>
+    <!-- 登录界面 -->
+    <string name="vs_login_btn_hint">登录</string>
+    <string name="vs_login_reset_password_hint">忘记密码</string>
+    <!-- 拨打界面 -->
+    <string name="vs_calllog_inlog">导入通话记录</string>
+    <string name="vs_calllog_title_dial">最近通话</string>
+    <!-- 拨打设置界面 -->
+    <string name="vs_calltype_hint">拨打设置</string>
+    <string name="vs_calltype_close_hint">已关闭</string>
+    <string name="vs_thirdcalltype_hint">请输入第三方信息</string>
+    <string name="vs_calltype_open_hint">已开启</string>
+    <string name="vs_calltype_callback_hint">了解回拨</string>
+    <string name="vs_calltype_hint_title">关于回拨</string>
+    <string name="vs_calltype_hint1">回拨呼叫时需要接听系统来电，如果您的手机接听不免费或漫游，运营商会收取接听费用</string>
+    <string name="vs_calltype_hint2">1、不消耗手机流量（仅在通知嘟嘟通讯电话服务器时消耗2KB流量）\n2、通话稳定，音质好\n3、回拨是你呼叫对方后，嘟嘟通讯电话系统会收到你的呼叫，然后通过电话线路再呼叫你，当你接通后，嘟嘟通讯电话系统会通过电话线路为你呼叫对方。所以，回拨走的是电话线路，不是网络，所以不消耗手机流量，且通话稳定，音质好。</string>
+    <string name="vs_calltype_hint3">1.通话质量好\n2.一通电话仅需要2KB流量\n3.回拨呼叫时需要接听系统来电\n4.如果您的手机接听不免费或漫游，使用回拨时，运营商会收取接听费用</string>
+    <string name="vs_calltype_hint4">什么是回拨?</string>
+    <!-- 联系人 -->
+    <string name="vs_contact_vmark_hint">嘟嘟通讯好友互打永久免费</string>
+    <string name="vs_contact_add_righttext">添加</string>
+    <string name="vs_contact_nulltext">没有找到联系人</string>
+    <string name="vs_contact_no_authorytext1">请在系统设置中开启联系人权限</string>
+    <string name="vs_contact_no_authorytext2">（设置-应用-嘟嘟通讯电话-权限管理-联系人记录-允许）</string>
+    <string name="vs_contact_friend_nulltext1">你还没有嘟嘟通讯好友</string>
+    <string name="vs_contact_friend_nulltext2">邀请好友加入嘟嘟通讯电话，互打、发信息永久免费,还能获得话费奖励哦！</string>
+    <string name="vs_contact_footer_num">共有%d位联系人</string>
+    <string name="vs_contact_loading">正在加载联系人...</string>
+    <!-- 直拨、免费、接听界面 -->
+    <string name="vs_callphone_chioce_hint">不再提醒</string>
+    <string name="vs_callphone_hint_str">隐藏</string>
+    <string name="vs_callphone_sq_call">嘟嘟通讯电话</string>
+    <string name="vs_callphone_notOnline">对方不在线，建议改用嘟嘟通讯电话</string>
+    <string name="callphone_callend">挂断</string>
+    <string name="callphone_re">接听</string>
+    <string name="callphone_not_wifi_hint">你现在不在wifi网络下，会消耗本机流量</string>
+    <string name="callphone_not_wifi_btn1">建议嘟嘟通讯电话呼叫</string>
+    <string name="callphone_not_wifi_btn2">继续呼叫</string>
+
+    <!-- 二维码 -->
+    <string name="scan_tips">将二维码图片对准扫描框即可自动扫描</string>
+    <string name="vs_code_find">二维码扫描</string>
+    <string name="vs_qrcode_title">嘟嘟通讯电话二维码</string>
+    <string name="vs_qrcode_hint1">邀好友扫码\u0020\u0020</string>
+    <string name="vs_qrcode_hint2">每邀请一人可获得10个嘟嘟通讯元宝还能和TA永久免费互打噢</string>
+    <string name="vs_qrcode_hint3">对方可以用微信、QQ或其它二维码扫码器扫码</string>
+    <!-- 回拨界面 -->
+    <string name="vs_callback_hint01">系统正在回拨到</string>
+    <string name="vs_callback_hint02">\n注意接听</string>
+    <string name="first_dial_prompt">网络呼叫不会扣除手机话费，回拨需要接听系统来电（可能是未知号码）</string>
+    <string name="vs_callback_tip01">已经为您回拨，请准备接听</string>
+    <string name="vs_callback_tip02">(您可能会接到一个未知来电，请放心接听)</string>
+    <string name="vs_callback_return_wait">返回等待</string>
+    <!-- 联系人详情 -->
+    <string name="vs_contact_detail_title">联系人详情</string>
+    <string name="vs_contact_detail_edit_contacts">编辑</string>
+    <string name="vs_sendphonecard_cancelsendphonecard">取消</string>
+    <string name="vs_contact_detail_sendphonecard">传名片</string>
+    <string name="vs_sendfriendcard_str_hint">选择发送好友名片方式</string>
+    <string name="vs_sendfriendcard_str_msg">短信</string>
+    <string name="vs_sendfriendcard_str_wx">微信</string>
+    <string name="vs_sendfriendcard_str_qq">QQ</string>
+    <!-- 通话记录详情 -->
+    <string name="vs_calllog_detail_title">通话详情</string>
+    <string name="vs_calllog_createcontact">创建新联系人</string>
+    <string name="vs_calllog_addtocontact">添加到现有联系人</string>
+    <!-- 我 -->
+    <string name="vs_myselft_account">嘟嘟通讯号：</string>
+    <string name="vs_myinfo_text_title">个人信息</string>
+    <string name="vs_myaccount_detail">我的余额</string>
+    <string name="vs_myredpag_detail">我的成长金</string>
+    <string name="vs_myexchange_detail">充值卡列表</string>
+    <string name="vs_mypackage_detail">我的套餐</string>
+    <!-- 个人信息 -->
+    <string name="vs_mycheck_detail">话单查询</string>
+    <string name="vs_myinfotext_name">设置昵称</string>
+    <string name="vs_myinfotext_phone">手机号码</string>
+    <string name="vs_myinfotext_sex">设置性别</string>
+    <string name="vs_myinfotext_bir">设置生日</string>
+    <string name="vs_myinfotext_area">设置地区</string>
+    <string name="vs_myinfotext_mailbox">设置邮箱</string>
+    <!-- 对话框 -->
+    <string name="dialog_invit">邀请TA</string>
+    <string name="dialog_msg">对方还不是你的嘟嘟通讯好友，邀请TA使用嘟嘟通讯电话一起打免费电话，你也可以用嘟嘟通讯电话拨打</string>
+    <!-- 话费界面 -->
+    <string name="vs_recharge_title">话费</string>
+    <string name="vs_balance_combo_Tariff">资费查询</string>
+    <string name="vs_recharge_th_tv">特惠</string>
+    <string name="vs_recharge_go_tv">去充值</string>
+    <string name="vs_recharge_charge">立即充值</string>
+    <!-- 设置 -->
+    <string name="vs_setiong_phone_change_str">改绑手机</string>
+    <string name="vs_seting_call">拨打方式</string>
+    <string name="vs_seting_call_get">自动接听</string>
+    <string name="vs_seting_call_voice">声音设置</string>
+    <string name="vs_setiong_CID_str">来显设置</string>
+    <string name="vs_setiong_pwd_str">修改密码</string>
+    <string name="vs_setiong_exit_str">退出登录</string>
+    <string name="vs_setiong_exit_dialog_hint">你确定退出嘟嘟吗？</string>
+    <string name="vs_seting_zdjt_str">自动接听</string>
+    <string name="vs_seting_zdjt_hint">当你使用回拨方式通话时，开启自动接听后系统可帮你自动接听回拨来电。</string>
+    <string name="vs_seting_voice_hint">开启拨打按键音后，点击键盘会有提示音。</string>
+    <string name="vs_seting_voice_str">拨打按键音</string>
+    <string name="vs_seting_piano_str">拨打钢琴音设置</string>
+    <string name="vs_seting_hintvoice_str">语音提醒</string>
+    <string name="seting_call_voice_check">语音检测</string>
+    <string name="seting_contact_save">备份联系人</string>
+    <string name="seting_software_update">版本更新</string>
+    <string name="seting_software_update_hint">马上更新</string>
+    <string name="vs_setiong_backup_str">联系人备份</string>
+    <string name="minigame_title">迷你小游戏</string>
+
+    <!-- 修改密码 -->
+    <string name="vs_change_pwd_title">修改密码</string>
+    <string name="vs_change_pwd_edit_hint1">请输入旧密码</string>
+    <string name="vs_change_pwd_edit_hint2">请输入新密码</string>
+    <string name="vs_change_pwd_succ_str">修改密码成功！</string>
+    <!-- 充值类型 -->
+    <string name="vs_recharge_type_id_str">嘟嘟通讯号:</string>
+    <string name="vs_recharge_type_tc_str">套\u0020\u0020\u0020 餐:</string>
+    <!-- 赚话费 -->
+    <string name="vs_invite_time_num_str">累计赚到话费数</string>
+    <string name="vs_invite_time_str">分钟</string>
+    <string name="vs_invite_title">邀请分享</string>
+    <string name="vs_invite_task_hint">累计赚得</string>
+    <string name="vs_invite_str_hint">邀请好友成为嘟嘟通讯好友，互打永久免费</string>
+    <string name="vs_invite_str_msg">短信邀请</string>
+    <string name="vs_invite_str_wx">微信邀请</string>
+    <string name="vs_invite_str_qq">QQ邀请</string>
+    <string name="vs_invite_str_wxq">朋友圈邀请</string>
+    <!-- 推荐好友界面 -->
+    <string name="makemoney_point_first">您成功发送短信，奖励0.15元/条(仅奖励前80条不同联系人的短信);</string>
+    <string name="makemoney_message_recommend">短信邀请</string>
+    <!-- 邀请提示 -->
+    <string name="make_info">邀请好友注册成功\n即可获得<font color="#ff7836">1.5元/人</font>的话费奖励!\n若好友充值成功，还可获得更多奖励!</string>
+    <!-- 关于界面 -->
+    <string name="vs_about_update_str">有新版本</string>
+    <string name="vs_about_update_tv_str">版本更新</string>
+    <string name="vs_about_help_tv_str">帮助中心</string>
+    <string name="vs_about_help_customer">关于我们</string>
+    <string name="vs_about_weibo">官方微博</string>
+    <string name="vs_about_weixin">微信公众号</string>
+    <string name="vs_about_fk_tv_str">意见反馈</string>
+    <string name="vs_about_pf_tv_str">去评分</string>
+    <string name="vs_about_bq_tv_str">版权所有</string>
+    <string name="vs_about_fw_tv_str">服务条款</string>
+    <string name="vs_about_com_wap">电脑官网：</string>
+    <string name="vs_about_phone_wap">手机官网：</string>
+    <string name="vs_about_server_phoneNumber">客服电话：</string>
+    <string name="vs_about_server_QQ">客服\u0020\u0020QQ</string>
+    <string name="vs_about_server_phone">客服电话</string>
+    <string name="vs_about_server_time">客服时间</string>
+    <string name="vs_about_company_cn">深圳市易道科技有限公司</string>
+    <string name="vs_about_company_en">Copyright © dudu ,All Right Reserved</string>
+    <string name="vs_about_title">关于嘟嘟通讯电话</string>
+    <string name="curstomer_server_qq">2381172498</string>
+    <string name="curstomer_server_mobile">075528316171</string>
+    <string name="curstomer_server_time">9:00-21:00</string>
+    <string name="curstomer_server_copyright">嘟嘟通讯网络科技</string>
+    <string name="curstomer_server_wechat">szwind163</string>
+    <string name="curstomer_server_sina">\@嘟嘟通讯软件</string>
+    <!-- 我 -->
+    <string name="my_tv1">我的话费</string>
+    <string name="my_tv2">分享好友</string>
+    <string name="my_tv8">签到</string>
+    <string name="my_tv_recharge">充值中心</string>
+    <string name="my_tv_excharge">我的充值卡</string>
+    <string name="my_tv3">关于嘟嘟通讯电话</string>
+    <string name="my_tv5">玩转嘟嘟通讯电话</string>
+    <string name="my_tv6">设置</string>
+    <string name="my_tv9">个性化</string>
+    <string name="my_tv7">有新版本</string>
+    <string name="my_tv10">关于我们</string>
+    <string name="my_tv11">我的二维码</string>
+    <string name="my_tv12">分享好友</string>
+    <string name="my_tv13">分享就能赚钱当老板</string>
+    <string name="my_tv14">拨打方式</string>
+    <string name="my_tv15">修改密码</string>
+    <!-- 查询余额 -->
+    <string name="vs_balance_redbag">我的成长金</string>
+    <string name="vs_balance_taocan">会员权益</string>
+    <string name="vs_balance_mymoney">赠送话费</string>
+    <string name="vs_balance_income">话费收支</string>
+    <string name="vs_balance_expend">话单查询</string>
+    <string name="vs_balance_spare">本月节省</string>
+    <string name="vs_balance_dial">本月通话</string>
+    <string name="vs_balance_money_unit">个</string>
+    <string name="vs_balance_money_title">嘟嘟通讯话费</string>
+    <string name="no_closed">\u0020\u0020(已关闭)</string>
+    <string name="no_freedial_promit_close">免费拨打功能已关闭</string>
+    <string name="no_freedial_promit_network">您现在不处于wifi网络中,无法免费拨打</string>
+    <string name="my_bindtype_text">手机号未验证</string>
+    <string name="account_cid_hint">开启来电显示设置后呼叫，对方立即能识别您的来电</string>
+    <string name="callphone_vsfree_not">嘟嘟通讯电话免费未接来电</string>
+    <!-- 小滑屏组件 -->
+    <string name="vs_viewpager_big_hint1">嘟嘟通讯好友，打电话免费</string>
+    <string name="vs_viewpager_big_hint2">不是嘟嘟通讯好友，打嘟嘟通讯电话</string>
+    <string name="vs_viewpager_big_hint3">不扣手机话费</string>
+    <string name="vs_viewpager_big_hint4">不耗流量</string>
+    <string name="vs_viewpager_small_hint1">邀请好友用嘟嘟通讯电话，打电话永久免费</string>
+    <string name="vs_viewpager_small_hint2">全世界的手机座机随便呼 \n无漫游，无月租，长途、短途一口价</string>
+    <string name="vs_viewpager_small_hint3">嘟嘟通讯电话拨打电话，不扣手机话费</string>
+    <string name="vs_viewpager_small_hint4">回拨下，每通电话仅消耗2KB流量</string>
+    <string name="title_bar_recharge">充值方式</string>
+    <!-- 玩转界面 -->
+    <string name="vs_wz_big_1">嘟嘟通讯好友，打免费电话</string>
+    <string name="vs_wz_small_1">如果对方也是嘟嘟通讯电话用户，你们就是嘟嘟通讯好友嘟嘟通讯好友打免费电话，是指在网络状况良好的情况下，语音通过网络传输，需要消耗流量，建议在wifi环境下拨打免费电话</string>
+    <string name="vs_wz_big_2">不是嘟嘟通讯好友，打嘟嘟通讯电话 </string>
+    <string name="vs_wz_small_2">如果对方不是嘟嘟通讯电话用户，你也可以随时随地打嘟嘟通讯电话。长途、短途一口价，8分钱/分钟，消耗嘟嘟通讯电话话费 </string>
+    <string name="vs_wz_big_3">不扣手机话费 </string>
+    <string name="vs_wz_small_3">无论你拨打免费电话还是嘟嘟通讯电话，都不会扣除你的手机话费，仅扣除嘟嘟通讯电话话费，可在“我的话费”中查看嘟嘟通讯电话余额 </string>
+    <string name="vs_wz_big_4">不耗流量</string>
+    <string name="vs_wz_small_4">嘟嘟通讯电话默认以回拨的方式拨打，每通电话仅消耗2KB流量；如果您在3G/4G情况下打免费电话，5分钟消耗1M流量</string>
+    <string name="vs_wz_big_5">回拨，接听来电</string>
+    <string name="vs_wz_small_5">回拨，是网络电话高级技术，当你发起通话给好友时，会向服务器发出请求，服务器接收请求后，会同时向你和你的朋友拨出电话，只有你接通后，你和你的朋友才能建立通话，所以，回拨，需要你先接听系统来电
+回拨的好处是不耗流量，并且通话音质好</string>
+    <string name="vs_wz_big_6">注意运营商收费</string>
+    <string name="vs_wz_small_6">如果你的手机接听收费或在漫游中，请不要用回拨方式拨打，运营商会收取你的手机接听费或漫游费 </string>
+    <string name="vs_wz_big_7">赚嘟嘟通讯电话话费 </string>
+    <string name="vs_wz_small_7">邀请好友使用嘟嘟通讯电话，你们可以打免费电话；另外，邀请成功，你将获得嘟嘟通讯电话话费奖励，可用来打嘟嘟通讯电话</string>
+    <string name="vs_wz_big_8">快速搜索</string>
+    <string name="vs_wz_small_8">查找联系人时，只要输入联系人名字的首字母，1秒找到联系人</string>
+    <string name="vs_invite_text">邀请好友</string>
+    <string name="vs_select_text">选择好友</string>
+    <string name="vs_wz_str">玩转嘟嘟通讯电话</string>
+    <!-- 字符串结束 -->
+
+    <string name="my_tv_recharge_bangbangfs">积分充值卡</string>
+
+    <!-- 联系人非好友默认标签 -->
+    <string name="contact_default_tag">加TA为好友即可免费通话哦</string>
+    <!-- 联系人详情 -->
+    <string name="contact_free_call">免费呼叫</string>
+    <string name="notice_hint">欢迎使用KC</string>
+    <string name="makemoney_promit_text">hi\u0020瞧这边!</string>
+    <!-- 邀请好友 -->
+    <string name="invite_text1">短信</string>
+    <string name="invite_text2">微信好友</string>
+    <string name="invite_text3">朋友圈</string>
+    <string name="invite_text4">QQ</string>
+    <string name="invite_text5">当面邀请</string>
+    <string name="invite_text6">新浪微博</string>
+    <string name="invite_text7">待会再说</string>
+    <string name="invite_text8">邀请1人\u0020\u0020</string>
+    <string name="invite_text9">邀请3人\u0020\u0020</string>
+    <string name="invite_text10">邀请6人\u0020\u0020</string>
+    <string name="invite_text11">邀请10人</string>
+    <string name="invite_text12">60分钟免费打</string>
+    <string name="invite_text13">3个月免费打\u0020\u0020</string>
+    <string name="invite_text14">6个月免费打\u0020\u0020</string>
+    <string name="invite_text15">12个月免费打</string>
+    <string name="invite_text16">(每月60分钟)</string>
+    <string name="invite_text17">已邀请人数</string>
+    <string name="version_numer">V</string>
+    <string name="version_unkown">未获取到版本号 </string>
+    <!-- webView加载 -->
+    <string name="webview_load_error">加载失败,请点击屏幕重试</string>
+    <string name="help">帮助中心</string>
+    <string name="mall">商城</string>
+    <string name="service">服务</string>
+    <string name="wap_free">便民网站</string>
+    <!-- 赚话费界面 -->
+    <string name="rule">规则</string>
+    <string name="makemoney_top_title">娱乐赚话费</string>
+    <string name="more_update_hint" formatted="false">系统需要为你更新%s应用，是否需要现在更新！</string>
+    <string name="download_title">下载提示</string>
+    <string name="download_content">使用该功能需先下载插件包!</string>
+    <!-- 滑屏 -->
+    <string name="kc_viewpage_tv_two">长途畅聊\u0020\u0020\u0020\u0020关爱彼此 </string>
+    <string name="kc_viewpage_tv_jump">跳过 </string>
+    <!-- 充值 -->
+    <string name="card">卡</string>
+    <string name="recharge_text1">充</string>
+    <!-- 多点接入 -->
+    <string name="dial_now_check">立即检测</string>
+    <string name="dial_now_change">立即转换</string>
+    <string name="dial_checking">正在检测，请稍候…</string>
+    <string name="dial_touch_customer">联系客服</string>
+    <!-- Webview -->
+    <string name="weibo_loading">正在加载，请稍等…</string>
+    <string name="weibo_refreshing">刷新中，请稍等…</string>
+    <string name="weibo_advancing">前进中，请稍等…</string>
+    <string name="weibo_retreating">后退中，请稍等…</string>
+    <!-- 分享用到的文案 -->
+    <string name="weibo_bind_txweibo">绑定腾讯微博</string>
+    <string name="weibo_sharing">正在分享中…</string>
+    <string name="weibo_point_info">分享内容及地址已复制，请在网页内进行粘贴进行分享</string>
+    <string name="weibo_share_point">分享提示</string>
+    <string name="weibo_bound">绑定</string>
+    <string name="weibo_have_bound">已绑定</string>
+    <string name="input_weibo_string">还可以输入%s字</string>
+    <string name="weibo_fx_suc">分享成功</string>
+    <string name="weibo_fx_fa">分享失败</string>
+    <string name="weibo_tengxun_success">腾讯微博分享成功</string>
+    <string name="weibo_tengxun_fail">腾讯微博分享失败</string>
+    <string name="weibo_sina_success">新浪微博分享成功</string>
+    <string name="network_phone">电话</string>
+    <string name="share">分享</string>
+    <string name="weibo_more_share">更多分享</string>
+    <string name="weibo_sina_share">新浪微博分享</string>
+    <!-- 回拨 -->
+    <string name="mo_home_succ_title">温馨提示</string>
+    <string name="need_bind_phone_promt">您的手机还未验证，验证之后还可获取30分钟话费</string>
+    <string name="servicer_wrong">服务器错误!</string>
+    <string name="first_dial_title">回拨提醒</string>
+    <string name="first_dial_btn">知道了</string>
+    <string name="no_network_prompt">当前网络不支持，马上检查网络设置吧！</string>
+    <string name="prompt">提示</string>
+    <!-- 未绑定提醒 -->
+    <string name="dial_layout_bind_prompt">您尚未绑定，绑定后才可以拨打电话，现在马上去绑定吧！</string>
+    <!-- 未登录提醒 -->
+    <string name="dial_layout_login_prompt">您尚未登录，登录后才可以拨打电话，现在马上去登录吧！</string>
+    <string name="seach_bill_login_prompt">您尚未登录，登录后才可以查询话单，现在马上去登录吧！</string>
+    <string name="nologin_auto_hint">您尚未登录，登录后才可使用此功能，现在马上去登录吧！</string>
+    <string name="login_changepwd_prompt">您尚未登录，登录后才可以修改密码，现在马上去登录吧！</string>
+    <string name="seach_balance_login_prompt">您尚未登录，登录后才可以查询余额，现在马上去登录吧！</string>
+    <string name="login_bind_prompt">您尚未登录，登录后才可以绑定手机，现在马上去登录吧！</string>
+    <string name="vip_login_hint">您尚未登录，登录后才可以查看VIP功能，现在马上去登录吧！</string>
+    <string name="login_prompt0">您尚未登录，登录后才可以操作，现在马上去登录吧！</string>
+    <string name="login_prompt">您尚未登录，登录后才可以进入我的活动，现在马上去登录吧！</string>
+    <string name="login_prompt1">您尚未登录，登录后才可以赚话费，现在马上去登录吧！</string>
+    <string name="login_prompt2">您尚未登录，登录后才可以进入我的话费，现在马上去登录吧！</string>
+    <string name="login_prompt3">您尚未登录，登录后才可以充值，现在马上去登录吧！</string>
+    <string name="login_prompt4">您尚未登录，登录后才可以查看，现在马上去登录吧！</string>
+    <string name="login_prompt5">您尚未登录，登录后才可以进入我的套餐，现在马上去登录吧！</string>
+    <string name="login_prompt6">您尚未登录，登录后才可以进入我的余额，现在马上去登录吧！</string>
+    <string name="login_prompt7">您还没有绑定邀请人哦！</string>
+    <string name="login_prompt8">直接充值</string>
+    <string name="login_prompt9">去绑定</string>
+    <string name="login_prompt10">您尚未登录，登录后才可以购买，现在马上去登录吧！</string>
+    <string name="buy_tip">账号未登录，不能购买</string>
+    <!-- 来电显示界面 -->
+    <string name="call_display_login_prompt">您尚未登录，登录后才可以设置来电显示，现在马上去登录吧！</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_name">嘟嘟</string>
+    <string name="app_name_no_tel">嘟嘟</string>
+    <string name="point">信息</string>
+    <string name="ok">确定</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="warm_point">温馨提示：</string>
+    <string name="select_all_string">全选</string>
+    <string name="confirm_string">完成</string>
+    <!-- 注册 -->
+
+    <string name="lb_alter">嘟嘟通讯电话提示</string>
+    <string name="welcome_main_clause">服务条款</string>
+    <string name="welcome_main_elecdeal">电子协议</string>
+    <string name="mo_register_succ">注册成功！</string>
+    <string name="mo_bind_succ">绑定成功！</string>
+
+    <!-- 登录、设密码 -->
+    <string name="login_password__str_small">密码这么容易忘记</string>
+    <string name="login_password_str_big">那就设定个新密码吧</string>
+    <string name="login_slogan_str">输入密码体验新版</string>
+    <string name="login_edittext_hint">请输入密码</string>
+    <string name="login_resetpassword_hint">请输入6–12位新密码</string>
+    <string name="login_lose_password_str">忘记了</string>
+    <string name="login_go_kc">进入嘟嘟通讯电话</string>
+    <string name="login_go_next">下一步</string>
+    <string name="login_tost_text">账号或手机号未注册嘟嘟通讯电话，请您先注册</string>
+    <!-- 短信验证 -->
+    <string name="msg_verify_agin_str">再次获取</string>
+    <string name="msg_verify_get">获取验证码</string>
+    <string name="msg_verify_advertisement_small">只差一步，您就设定成功了</string>
+    <string name="msg_verify_advertisement_big">请输入短信中的验证码</string>
+    <string name="msg_verify_rest_passwrod">密码设定完成</string>
+    <string name="msg_verify_link_text">还没收到验证码吗？发短信获取验证></string>
+    <string name="msg_verify_hint">请输入验证码</string>
+    <!-- 直拨 -->
+    <string name="callphone_network_bad">网络很差</string>
+    <string name="callphone_network_good">网络良好</string>
+    <string name="callphone_network_littlebad">网络较差</string>
+    <string name="callphone_network_general">网络一般</string>
+    <string name="callphone_callstate_do">正在为您直拨</string>
+    <string name="callphone_2g_title">无法免费通话</string>
+    <string name="callphone_2g_msg">您正处于2G/3G网络，使用免费通话需耗大量流量，建议开启wifi或使用回拨</string>
+    <string name="callphone_2g_wifi">开启WIFI</string>
+    <string name="callphone_monery_cz">充值</string>
+    <string name="callphone_monery_cannel">待会再说</string>
+    <string name="callphone_callback_fail_title">连接失败</string>
+    <string name="callphone_callback_fail_msg">您的网络状态不佳，无法连接</string>
+    <string name="callphone_callback_fail_sys">系统呼叫</string>
+    <string name="callphone_callback_fail_cannel">结束通话</string>
+    <string name="callphone_callchange_hint">更稳定，需要流量少</string>
+    <string name="callphone_hint_void">静音</string>
+    <string name="callphone_hint_hf">免提</string>
+    <string name="callphone_hint_keyboard">键盘</string>
+    <string name="callphone_hint_contacts">联系人</string>
+    <string name="incall_0">结束通话</string>
+    <string name="incall_1">通话结束</string>
+    <string name="incall_2">呼叫超时,通话结束</string>
+    <string name="incall_402">余额不足</string>
+    <string name="incall_403">被叫号码被禁呼</string>
+    <string name="incall_405">被叫号码不支持</string>
+    <string name="incall_407">鉴权失败</string>
+    <string name="incall_408">呼叫超时</string>
+    <string name="incall_480">被叫拒绝接听</string>
+    <string name="incall_486">对方忙正在通话中</string>
+    <string name="incall_502">频繁呼叫或账号无效</string>
+    <string name="incall_503">账号已过期</string>
+    <string name="incall_530">服务不可达(服务器异常或繁忙)</string>
+    <string name="incall_603">对方拒绝接听</string>
+    <string name="dial_back_intercept">无法接听回拨，有可能是您进行了拦截设置或者修改了绑定手机，请您先去修改设置！</string>
+    <string name="incall_hint_keyboard">隐藏键盘</string>
+    <string name="callphone_change_hint">以后自动切换为</string>
+    <string name="callphone_kcfree_not">嘟嘟通讯电话免费未接来电</string>
+    <!-- 签到分享界面 -->
+    <string name="signin_button_bind">绑定</string>
+    <!-- 发送短信界面 -->
+    <string name="sendsms_hint_address">收信人</string>
+    <string name="send_phone_failure">手机号输入不正确，请检查！</string>
+    <!-- 在线升级界面 -->
+    <string name="upgrade_top_title">在线升级</string>
+    <string name="upgrade_version">当前版本：V</string>
+    <string name="upgrade_install_time">安装时间：</string>
+    <string name="upgrade_version_update">版本更新：</string>
+    <string name="upgrade_button_update">检查更新</string>
+    <string name="upgrade_check_title">升级提示</string>
+    <string name="upgrade_update">下载</string>
+    <string name="upgrade_download_notify">下载通知</string>
+    <string name="upgrade_getsize">正在取得文件大小…</string>
+    <string name="upgrade_havedownload" formatted="false">总计%s K,已经下载了%s K</string>
+    <string name="upgrade_updateerror">下载出错了，请看出错信息：</string>
+    <string name="upgrade_checking_version">正在检查版本，请稍候…</string>
+    <string name="upgrade_is_a_new">已是最新版本</string>
+    <!-- 邀请好友 -->
+    <string name="invition_first_step">第1步  邀请朋友从专属链接注册</string>
+    <string name="invition_second_step">第2步  请朋友登录软件，激活奖励</string>
+    <string name="invite_contact_str">短信邀请</string>
+    <string name="invite_qq_str">QQ邀请</string>
+    <string name="invite_weixin_str">微信邀请</string>
+    <string name="invite_more_str">更多邀请方式 ></string>
+    <string name="invite_sel_con_num_str">邀请以下好友</string>
+    <string name="invite_change_phone">换一批</string>
+    <string name="invite_content_str">分享内容</string>
+    <string name="invite_contact_send_btn_str">立即发送</string>
+    <string name="invite_anew_select_btn_str">重新选择</string>
+    <string name="invite_dialog_text">将嘟嘟通讯电话分享到你的好友圈，朋友注册后即能获得话费\n\n赠送规则：\n</string>
+    <string name="strategy_rewards_rules">奖励规则</string>
+    <string name="invition_check_rewards_count">查看奖励金额</string>
+    <string name="invition_invite_button_text">立即邀请</string>
+    <string name="recommend_friends_prompt">您尚未登录，登录后才可以推荐好友，现在马上去登录吧！</string>
+    <string name="sendmessage_fail"> 亲，系统短信邀请失败，请复制内容手动发送短信邀请！</string>
+    <!-- 登录界面 -->
+    <string name="login_top_title">登录账号</string>
+    <string name="login_register">立即注册</string>
+    <string name="login_hint_account">手机号/账号</string>
+    <string name="login_hint_pwd">请设置新密码</string>
+    <string name="login_input_account">请输入账号！</string>
+    <string name="login_input_pwd">请输入密码！</string>
+    <string name="login_success">登录成功！</string>
+    <string name="login_fail_info">登录失败，请稍后再试！</string>
+    <string name="login_button_login">登录</string>
+    <string name="login_button_get_again">重新领取</string>
+    <string name="login_tv_skip">开始体验</string>
+    <string name="login_autofail_prompt">自动登录失败，请手动输入您收到的短信密码登录！</string>
+    <string name="menu_settings">Settings</string>
+    <string name="tab_homepage">首页</string>
+    <string name="tab_dial">拨号</string>
+    <string name="tab_found">发现</string>
+    <string name="tab_recharge">话费</string>
+    <string name="tab_mms">消息</string>
+    <string name="tab_myself">我的</string>
+    <string name="tab_service">服务</string>
+    <string name="tab_mall">特惠商城</string>
+    <string name="tab_shoppingcart">购物车</string>
+    <string name="tab_my_order">我的订单</string>
+    <string name="call_to">呼叫</string>
+    <string name="call_back">回拨</string>
+    <string name="call_dial">直拨</string>
+    <string name="call_free">免费</string>
+    <string name="call_dial_my">手动</string>
+    <string name="title_dial">最近通话</string>
+    <string name="title_contacts_list">通讯录</string>
+    <string name="title_sale_mall">特惠商城</string>
+    <string name="back">返回</string>
+    <string name="exit">退出</string>
+    <!-- 联系人详情界面 -->
+    <string name="call_log_btn_str">通话记录</string>
+    <string name="contact_details_btn_str">详  情</string>
+    <string name="invitefriends_hint_str">邀请TA加入嘟嘟通讯电话最高可获51.5元</string>
+    <string name="add_invitefriends_str">邀请TA</string>
+    <string name="addlinktodesktop_str">添加桌面</string>
+    <string name="contact_details_title">详情</string>
+    <string name="contact_number_select_title">请选择号码</string>
+    <string name="iscreate_contactshort">您确定要创建桌面快捷拨打方式吗？创建后点击快捷方式即可拨打电话。</string>
+    <string name="contact_choose_all">选择全部</string>
+    <string name="contact_delete">删除</string>
+    <string name="contact_update_ing">更新联系人...</string>
+    <string name="contact_delete_contacts">删除联系人</string>
+    <string name="contact_delete_contacts_ing">正在删除联系人...</string>
+    <string name="contact_delete_contacts_success">删除联系人成功</string>
+    <string name="contact_delete_contacts_failed_and_again">删除联系人失败，请重试</string>
+    <string name="contact_delete_contacts_prompt">亲，联系人删除后就没有喽，确定要删除么？</string>
+    <string name="contact_edit_contacts">编辑联系人</string>
+    <string name="contact_cancel_all">取消全部</string>
+    <string name="contact_details_btn_str_invite">加好友</string>
+    <string name="contact_details_btn_str_call">嘟嘟通讯电话呼叫</string>
+    <string name="contact_details_str">联系人</string>
+    <string name="need_bind_phone">为了更好地为您服务，请先绑定手机号</string>
+    <string name="call_prompt">拨打提示</string>
+    <!-- 联系人列表界面 -->
+    <string name="import_contacts">导入</string>
+    <string name="import_contacts_kc">添加联系人</string>
+    <string name="contacts_contactsnull">没有发现有联系人，赶快导入吧！</string>
+    <string name="contacts_loadingcontacts">正在加载通讯录…</string>
+    <string name="contacts_editext_text">姓名首字母组合、数字搜索</string>
+    <string name="contacts_sending">短信发送中,请稍后…</string>
+    <string name="contacts_send_error">温馨提示", "邀请短信发送失败，请重新发送！</string>
+    <string name="contacts_no_findphone">找不到号码</string>
+    <string name="contacts_invitation_friends">邀请好友加入,有话费赠送哦!</string>
+    <string name="contacts_vsuser">嘟嘟通讯好友</string>
+    <string name="contacts_invitefriends_str">邀请</string>
+    <string name="contacts_addContacts">添加联系人</string>
+    <!-- 充值 -->
+    <string name="recharge_tv_account">手机号：</string>
+    <string name="recharge_card_number">卡号：</string>
+    <string name="recharge_card_password">密码：</string>
+    <string name="recharge_card_paytext">需支付：</string>
+    <string name="recharge_card_hint3">面额不够？再加一张</string>
+    <string name="recharge_card_ok">确定充值</string>
+    <string name="recharge_card_ok2">立即充值</string>
+    <string name="recharge_card_hint">1、充值卡金额为充值卡面额\n2、充值及消费的费用针对嘟嘟通讯账户，不会扣除手机嘟嘟通讯币</string>
+    <string name="request_failinfo">请求失败，请稍后再试！！</string>
+    <string name="recharge_paytype_hinit1">推荐已安装支付宝客户端用户使用</string>
+    <string name="recharge_paytype_hinit2">无需安装支付宝客户端直接支付</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="charge_card_error">充值卡序列号位数不对，请输入正确的充值卡序列号！ </string>
+    <string name="charge_pwd_error">充值卡密码位数不对，请输入正确的充值卡密码！ </string>
+    <string name="recharge_type">充值方式 </string>
+    <string name="kccard_psw">请输入充值卡密码 </string>
+    <string name="recharge_weixin_pay_tips">推荐安装微信5.0及以上版本的使用</string>
+
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="getting_prepayid">正在获取预支付订单...</string>
+    <string name="pay_result_user_cancel">用户取消支付.</string>
+    <string name="pay_result_success">付款成功</string>
+
+    <!-- 小C教你玩KC -->
+    <string name="course_sense_title">场景介绍</string>
+    <string name="course_tariff_title">资费查询</string>
+    <string name="course_opinion_tickling">意见反馈</string>
+    <string name="course_help">帮助</string>
+    <string name="feedback_btn_str">提  交</string>
+    <string name="content_input_hint">请输入内容</string>
+    <string name="yx_qq_input_hint">请输入您的邮箱或QQ</string>
+    <string name="feedback_qqoryxerror">联系方式格式输入错误！</string>
+    <string name="feedback_qqoryxisnull">请输入你的邮箱或QQ，方便我们为你解答</string>
+    <string name="feedback_content_error">提交内容字数过多，请修改后重新提交！</string>
+    <string name="feedback_content_isnull">请输入反馈内容</string>
+    <string name="submit_feedback_hint">正在提交，请稍后…</string>
+    <!-- 导航条 -->
+    <string name="a_to_z_JH">#</string>
+    <string name="a_to_z_A">A</string>
+    <string name="a_to_z_B">B</string>
+    <string name="a_to_z_C">C</string>
+    <string name="a_to_z_D">D</string>
+    <string name="a_to_z_E">E</string>
+    <string name="a_to_z_F">F</string>
+    <string name="a_to_z_G">G</string>
+    <string name="a_to_z_H">H</string>
+    <string name="a_to_z_I">I</string>
+    <string name="a_to_z_J">J</string>
+    <string name="a_to_z_K">K</string>
+    <string name="a_to_z_L">L</string>
+    <string name="a_to_z_M">M</string>
+    <string name="a_to_z_N">N</string>
+    <string name="a_to_z_O">O</string>
+    <string name="a_to_z_P">P</string>
+    <string name="a_to_z_Q">Q</string>
+    <string name="a_to_z_R">R</string>
+    <string name="a_to_z_S">S</string>
+    <string name="a_to_z_T">T</string>
+    <string name="a_to_z_U">U</string>
+    <string name="a_to_z_V">V</string>
+    <string name="a_to_z_W">W</string>
+    <string name="a_to_z_X">X</string>
+    <string name="a_to_z_Y">Y</string>
+    <string name="a_to_z_Z">Z</string>
+
+    <!-- 活动资讯 -->
+    <string name="information_activity_title">活动资讯</string>
+    <string name="information_activity_in">详情</string>
+    <string name="information_activity_null">没有活动资讯哦！</string>
+    <string name="information_activity_isdelete">删除提示</string>
+    <string name="information_activity_delete_fail">删除失败</string>
+    <string name="information_activity_no_content1">最新活动即将发布</string>
+    <string name="information_activity_no_content2">敬请期待…</string>
+    <string name="information_activity_refresh">更新数据中…</string>
+    <!-- 新人礼包 -->
+    <string name="dial_text1">已获得</string>
+    <string name="dial_text2">30分钟话费</string>
+    <string name="dial_text3">验证手机后可得</string>
+    <string name="dial_text4">立即获取</string>
+    <string name="dial_text5">30分钟免费通话</string>
+    <string name="dial_text6">立即参与</string>
+    <string name="phone_form_error">被叫号码格式不对，请核实后再拨</string>
+    <string name="invalide_phone">无效的电话号码</string>
+    <string name="check_money_button_bills">查询话单</string>
+
+    <!-- 通话记录 -->
+    <string name="call_log_free">免费</string>
+    <string name="call_log_text1">电话</string>
+    <string name="call_log_text2">信息</string>
+    <string name="call_log_text3">记录</string>
+    <string name="call_log_text4">详情</string>
+    <string name="call_log_text5">回拨</string>
+    <string name="call_log_text6">仅接通时需要2KB网络,有网络即可。通话更稳定</string>
+    <string name="call_log_text7">直拨</string>
+    <string name="call_log_text8">在Wifi网络下优先使用直拨,无法使用时自动转为回拨</string>
+    <string name="call_log_text9">WIFI自动直拨，非WIFI回拨，省钱省流量</string>
+    <string name="call_log_text10">手动选择</string>
+    <string name="call_log_text11">每次呼叫时候选择拨号方式</string>
+    <string name="call_log_text12">请等待系统来电</string>
+    <string name="call_log_text14">粘贴号码</string>
+    <string name="call_log_text15">清除全部</string>
+    <string name="call_log_text16">当前网络较差，已智能转换成回拨模式</string>
+    <string name="call_log_text19">当前无网络，请连接网络后重试</string>
+    <string name="call_log_text17">添加</string>
+    <string name="call_log_text18">(可能是未知号码，请放心接听)</string>
+    <string name="dial_clean_sure">您确定要清除通话记录吗？</string>
+    <string name="account_call_set_capacity">智能拨打</string>
+    <string name="vs_miss_call">未接来电</string>
+    <string name="vs_miss_call_d">%d个未接来电</string>
+    <string name="vs_private_number">私人号码</string>
+    <string name="call_log_load_tips">未能读取本地通话记录，请尝试按照如下流程授予权限：\n手机设置-应用-打开通话记录权限</string>
+    <!-- 设置 -->
+    <string name="seting_title">设置</string>
+    <string name="seting_calltyp_title">拨打设置</string>
+    <string name="phone_call">手机拨打</string>
+    <string name="more_sdk_uploadcontext">系统 需要为你更新该版本，更新完成之后即可体验！</string>
+    <string name="calltype_free_start">标示 </string>
+    <string name="calltype_free_end"> 的用户互打免费</string>
+    <string name="calltype_free_end2">自动开启</string>
+    <string name="calltype_free_call">免费拨打</string>
+    <!-- 我的账户 -->
+    <string name="account_openCID">开通来显</string>
+    <string name="account_reset_password">修改密码</string>
+    <string name="account_exit">退出当前账户</string>
+    <string name="account_cid_tv_str">来电显示</string>
+    <string name="account_voice_defualt">默认模式</string>
+    <string name="account_voice_defualt_hint">适用于大部分手机</string>
+    <string name="account_voice_compatibility">兼容模式</string>
+    <string name="account_voice_compatibility_hint">适合极少数被厂家修改模式的手机</string>
+    <string name="account_voice_hint">若通话没声音，请尝试切换模式，切换模式后仍然没有声音请反馈给客服人员</string>
+    <string name="account_voice_btn">语音测试</string>
+    <string name="account_voice_title">语音检测</string>
+    <string name="balance_money_text">余额</string>
+    <string name="balance_money_error">网络连接异常</string>
+    <string name="balance_time_text">余额有效期：</string>
+    <string name="balance_calltime_month">本月通话</string>
+    <string name="balance_spare">节省</string>
+    <string name="balance_calltime_ticket">查询话单</string>
+    <string name="balance_InorOut_detail">收支明细</string>
+    <string name="balance_combo_text">套餐</string>
+    <string name="balance_combo_time_text">剩余时长：</string>
+    <string name="balance_combo_time_start">生效时间：</string>
+    <string name="balance_combo_time_end">到期时间：</string>
+    <string name="balance_combo_Tariff">资费说明</string>
+    <string name="not_network_connon_msg">网络无连接！</string>
+    <string name="servicer_busying">服务器繁忙，请稍后再试！</string>
+    <string name="loading_special_info">正在加载中,请稍候…</string>
+    <string name="call_display_turnningmsg">正在为您开通，请稍候…</string>
+    <string name="call_display_cancelmsg">正在执行停止续费操作,请稍候…</string>
+    <string name="call_display_recovermsg">正在执行开启续费操作,请稍候…</string>
+    <string name="turnning_off_msg">正在执行取消来电显号业务,请稍候…</string>
+    <string name="call_display_haveopen">来电显示服务已开启</string>
+    <string name="call_display_haveclose">来电显示服务已关闭</string>
+    <string name="call_renew_haveopen">自动续费已开启</string>
+    <string name="call_renew_haveclose">自动续费已关闭</string>
+    <string name="call_display_openfail">开通来电显示失败，请稍后再试</string>
+    <string name="call_display_close_renewfail">停止自动续费失败，请稍后再试</string>
+    <string name="call_display_closefail">关闭来电显示失败，请稍后再试</string>
+    <string name="call_display_open_tishi">开通提示</string>
+    <string name="call_display_open_tishi_info">您的基本账户余额不足，建议您先去充值。</string>
+    <string name="display_haveexpire">已过期</string>
+    <string name="favourate_button_tariff">资费查询</string>
+
+    <!-- 键盘数字 -->
+    <string name="keyboard_0">0</string>
+    <string name="keyboard_1">1</string>
+    <string name="keyboard_2">2</string>
+    <string name="keyboard_3">3</string>
+    <string name="keyboard_4">4</string>
+    <string name="keyboard_5">5</string>
+    <string name="keyboard_6">6</string>
+    <string name="keyboard_7">7</string>
+    <string name="keyboard_8">8</string>
+    <string name="keyboard_9">9</string>
+    <!-- 去警告加的string -->
+    <string name="chatting_addcontact_btn1">加为微信联系人</string>
+    <string name="chatting_addcontact_btn2">显示更早的消息</string>
+    <string name="chatting_addcontact_btn3">全球免费通话60分钟</string>
+    <!-- 通讯录备份界面 -->
+    <string name="bakcontact_bakcontact">备份通讯录</string>
+    <string name="bakcontact_bakcontact_info">将您的通讯录上传到服务器方便通讯录遗失后找回</string>
+    <string name="bakcontact_reccontact">恢复通讯录</string>
+    <string name="bakcontact_reccontact_info">从服务器下载您之前备份的通讯录,恢复到您的手机中</string>
+    <string name="bakcontact_local_contact">本通讯录:</string>
+    <string name="bakcontact_net_contact">服务器通讯录:</string>
+    <string name="bakcontact_bak_time">上次备份时间:</string>
+    <string name="bakcontact_bak_never">您还没备份过通讯录</string>
+    <string name="bakcontact_recover_time">上次恢复时间:</string>
+    <string name="bakcontact_recover_never">您还没恢复过通讯录</string>
+    <string name="bakup_login_prompt">您尚未登录，登录后才可以备份通讯录，现在马上去登录吧！</string>
+    <string name="renew_login_prompt">您尚未登录，登录后才可以恢复通讯录，现在马上去登录吧！</string>
+    <string name="bak_bakup_confirm">备份确认</string>
+    <string name="bak_contact_bakup_query">将把您手机上的联系人全部上传到服务器进行备份，您确定要备份吗？</string>
+    <string name="bak_renew_confirm">恢复确认</string>
+    <string name="bak_contact_renew_query">将把服务器中的联系人恢复到您的手机中，您确定要恢复吗？</string>
+    <string name="bak_contact_null_ornot">请确认联系人是否为空。</string>
+    <string name="bak_loading_contact">正在下载通讯录数据，请稍候…</string>
+    <string name="bak_bakup_success">备份成功</string>
+    <string name="bak_bakup_fail">备份失败</string>
+    <string name="bak_bakup_failinfo">备份失败，请稍后再试！</string>
+    <string name="bak_renew_success">恢复成功</string>
+    <string name="bak_renew_fail">恢复失败</string>
+    <string name="bak_renew_failinfo">恢复失败，请稍后再试！</string>
+    <!-- 签到 -->
+    <string name="vs_sign_title">签到</string>
+    <string name="everyday_signin_button_nowsign">立即签到</string>
+    <string name="new_info">最新优惠:</string>
+    <string name="everyday_signin_below_prompt">每日签到，可随机获得1到5分钟的通话奖励，百分之百中奖哦！</string>
+    <string name="everyday_signin_prompt_info">每日签到成功，最高可获取5分钟通话奖励！</string>
+    <string name="sign_in_share"></string>
+    <string name="sign_in_to_remind">签到提醒</string>
+    <string name="vs_check_the_bill">查看我的话费</string>
+
+    <!-- 绑定手机界面 -->
+
+    <string name="login_bind_proving">验证码：</string>
+    <string name="login_bind_button_again">重新获取</string>
+    <string name="login_bind_hint_phone">请输入新手机号</string>
+    <string name="login_bind_hint_pwd">请输入密码</string>
+    <string name="login_bind_pwd_error">密码出错</string>
+    <string name="login_bind_point_info">1.此手机号码用于寻找密码使用，请绑定能接收短信的手机。\n\n2.绑定的手机号码默认为接听号。</string>
+    <string name="bind_top_title">绑定手机</string>
+    <string name="bind_top_changephone_title">改绑手机号</string>
+    <string name="bind_old_phonenumber">原绑定手机号：</string>
+    <string name="bind_get_proving">获取验证码</string>
+    <string name="bind_loading">正在提交获取请求,请稍候…</string>
+    <string name="bind_success">绑定成功，您现在可以拨打电话了！</string>
+    <string name="bind_fail">绑定失败，请稍后再试！</string>
+    <string name="bind_get_success">获取成功，请稍后查看短信！</string>
+    <string name="bind_again">重新绑定</string>
+    <string name="bind_loading_ask">正在提交绑定请求,请稍候…</string>
+    <string name="bind_top_info">绑定您的手机号，方便您的使用</string>
+    <string name="input_wrong_phone">你输入的是无效的手机号码</string>
+    <string name="input_wrong_phone_1">请输入手机号</string>
+    <string name="bind_phone_fail"> 绑定失败，请重新绑定！</string>
+    <string name="bind_phone_ma_wrong">输入的验证码错误，请重新输入!</string>
+    <string name="bind_phone_btn_str">绑定手机号码</string>
+    <string name="bind_phone_btn_sure">确认绑定手机</string>
+    <string name="welcome_register_hintphone">请输入11位手机号</string>
+    <string name="verification_code_prompt">请输入验证码</string>
+    <string name="get_verification_code_btn_str">获取验证码</string>
+    <string name="welcome_main_login_info">温馨提示</string>
+    <string name="welcome_main_bindfailure_title">绑定未成功</string>
+    <string name="main_bind_phone_btn_str">绑定手机号码</string>
+    <string name="welcome_main_bindsucc_title">绑定成功</string>
+    <string name="bind_pwd_hint">请输入密码</string>
+    <string name="bind_phone_hint">请输入要绑定的新手机号</string>
+    <string name="bind_input_proving">请输入验证码</string>
+    <string name="bind_input_has_bind">您输入的手机号已经绑定过，不能再绑定，请输入新手机号重新绑定！</string>
+    <string name="bind_suc_tip">绑定成功，您现在可以拨打电话了！</string>
+    <string name="bind_change_suc_tip">改绑成功，您现在可以拨打电话了！</string>
+
+    <!-- rongcloud -->
+
+    <string name="image_content_description">"image_content_description"</string>
+    <!-- register activity -->
+    <string name="register_is_null">"邮箱、密码、昵称 不能为空"</string>
+    <string name="register_success">"注册成功"</string>
+    <string name="register_failure">"注册失败"</string>
+    <string name="register_input_email">"输入邮箱"</string>
+    <string name="register_input_password">"输入密码"</string>
+    <string name="register_input_nickname">"输入昵称"</string>
+    <string name="register_btn_argee">"注册"</string>
+    <string name="register_email_error">"邮箱地址不合法"</string>
+    <!-- login activity -->
+    <string name="login_edit_username">"用户名"</string>
+    <string name="login_edit_password">"密码"</string>
+    <string name="login_btn_register">"注册"</string>
+    <string name="login_btn_login">"登录"</string>
+    <!-- <string name="login_success">"登录成功"</string> -->
+    <string name="login_failure">"登录失败"</string>
+    <string name="login_erro_is_null">"用户名、密码不能为空"</string>
+    <string name="login_version_date">"日期:%1$s"</string>
+    <string name="login_version_code">"版本:%1$s"</string>
+    <!-- functions  activity -->
+    <string name="function_list_logout">"注 销 用 户"</string>
+    <!-- <string name="app_name">融云</string> -->
+    <!-- custom service  activity -->
+    <string name="custom_service_get_list_failure">"获取客服失改"</string>
+    <string name="custom_service_people_list">"客服人员列表"</string>
+    <string name="register_user_exits">"该邮箱已注册"</string>
+    <string name="login_pass_error">"账号或密码错误 "</string>
+    <!-- IM消息 -->
+    <string name="im_chat_huihua_title">信息</string>
+    <string name="im_chat_huihua_add">添加</string>
+    <string name="im_canot_chat_with_youself">请不要选择和自己聊天</string>
+    <string name="im_login_first">请先登录</string>
+    <string name="im_look_all">查看全文</string>
+    <string name="im_contact_loading">联系人未加载完毕，请稍等</string>
+
+    <!-- 滑屏页面 -->
+    <string name="go_to">跳过</string>
+    <string name="right_now_done">立即使用</string>
+
+    <!-- 发现界面 -->
+    <string name="found_service">便民服务</string>
+    <string name="found_help">帮助中心</string>
+    <string name="found_mmoney">赚钱计划</string>
+    <string name="found_shop">嘟嘟商城</string>
+    <string name="found_wap">官网</string>
+    <string name="found_share">分享</string>
+    <string name="found_game">游戏</string>
+    <string name="found_sina">新浪</string>
+    <string name="found_baidu">百度</string>
+    <string name="found_sign">签到</string>
+    <string name="found_recharge">充值</string>
+    <string name="found_code">二维码</string>
+    <string name="found_hand_password">手势密码</string>
+    <string name="found_guess">猜你喜欢</string>
+    <string name="found_tool">工具</string>
+    <string name="found_china_flow">国内流量</string>
+    <string name="found_china_flow_info">支持三大运营商国内流量</string>
+    <string name="found_international_flow">国际流量</string>
+    <string name="found_international_flow_info">使用漫游设备需付押金，租聘设备七天起租。</string>
+    <string name="found_international_flow_money">29元/天</string>
+    <string name="vs_redinfo_a">步骤1.登录您的微信，点击右上角"+"号后添加朋友。</string>
+    <string name="vs_redinfo_b">步骤2.点击公众号，然后在搜索框输入嘟嘟APP，点击搜索，找到我们的公众号。</string>
+    <string name="vs_redinfo_c">步骤3.点击嘟嘟APP。</string>
+    <string name="vs_redinfo_d">步骤4.在公众账号下面，点击关注，会自动进入公众号。</string>
+    <string name="vs_redinfo_e">步骤5.进入公众号后，点击绑定，进入绑定页面。</string>
+    <string name="vs_redinfo_f">步骤6.在绑定页面，输入您嘟嘟注册的手机号和密码，点击绑定完成嘟嘟与您微信账号的绑定。</string>
+
+    <!-- 银行卡绑定 -->
+    <string name="vs_unionpay_bind_title">银行卡信息:</string>
+    <string name="vs_unionpay_bind_info">尚未绑定银行卡</string>
+    <string name="vs_unionpay_bind_button">去绑定</string>
+    <string name="vs_unionpay_bind_info_name">姓名</string>
+    <string name="vs_unionpay_bind_info_inputname">请输入您的姓名</string>
+    <string name="vs_unionpay_bind_info_bank">开卡银行</string>
+    <string name="vs_unionpay_bind_info_inputbank">请输入开户银行</string>
+    <string name="vs_unionpay_bind_info_card">银行卡号</string>
+    <string name="vs_unionpay_bind_info_inputcard">请输入银行卡号</string>
+    <string name="vs_my_code_info">提示：扫描我的二维码，即可打开邀请链接，记得注册哦！</string>
+    <string name="vs_my_red_pag_info">注:提现前需要绑定相应的账号微信号，如果没有绑定则不能提现！</string>
+
+    <!--商城购物相关-->
+    <string name="ware_detail">商品详情</string>
+    <string name="goods_comment">商品评价</string>
+    <string name="cart">购物车</string>
+    <string name="my_orders">我的订单</string>
+    <string name="my_favorite">我的收藏</string>
+    <string name="my_addresses">收货地址</string>
+    <string name="choose_address">选择收货地址</string>
+    <string name="add_address">新增收货地址</string>
+    <string name="edit_address">修改收货地址</string>
+    <string name="my_info">个人资料</string>
+    <string name="create_order">填写订单</string>
+    <string name="pay_result">支付结果</string>
+    <string name="add_addresses">新建收件地址</string>
+    <string name="add_shopping_car">加入购物车</string>
+    <string name="order_wait_pay">待付款</string>
+    <string name="order_wait_send">待发货</string>
+    <string name="order_outoflibrary">出库中</string>
+    <string name="order_wait_receive">待收货</string>
+    <string name="order_done">已完成</string>
+    <string name="btn_save">保存</string>
+    <string name="order_wait_comment">待评论</string>
+    <string name="order_have_comment">已评论</string>
+    <string name="order_backmoney">已退款</string>
+    <string name="order_cancel">已取消</string>
+    <string name="pay">立即支付</string>
+    <string name="cancelorder">取消订单</string>
+    <string name="tip_send">提醒发货</string>
+    <string name="ensure_receive">确认签收</string>
+    <string name="add_comment">添加评论</string>
+
+    <string name="order_tip_1">订单已取消</string>
+    <string name="order_tip_2">该订单已失效</string>
+    <string name="order_tip_3">等待买家付款</string>
+    <string name="order_tip_4">剩余24小时自动关闭</string>
+    <string name="order_tip_5">买家已付款</string>
+    <string name="order_tip_6">订单正在处理中</string>
+    <string name="order_tip_7">您的订单已发货</string>
+    <string name="order_tip_8">还剩9天17小时自动确认</string>
+    <string name="order_tip_9">交易成功</string>
+    <string name="order_tip_10">您的订单已完成</string>
+    <string name="order_tip_11">商品已完成拣货</string>
+    <string name="order_tip_12">出库中</string>
+
+    <string name="isFreePost">（包邮）</string>
+    <string name="item_my_addresss">收货地址</string>
+    <string name="item_recharge">充值中心</string>
+    <string name="order_shere">分享好友</string>
+    <string name="order_code">我的二维码</string>
+    <string name="order_bind">扫码绑定</string>
+    <string name="order_setting">设置</string>
+    <string name="collection">我的收藏</string>
+    <string name="order_elec_deal">电子协议</string>
+    <string name="order_help">帮助中心</string>
+    <string name="logits">查看物流</string>
+    <string name="logits_info">物流详情</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="gpsNotifyMsg">当前应用需要打开定位功能。\n\n请点击\"设置\"-\"定位服务\"-打开定位功能。</string>
+    <string name="setting">设置</string>
+
+
+    <string name="em_notice_sending">发送</string>
+    <string name="noti_text_expression">[表情]</string>
+    <string name="load_more">加载中~</string>
+
+    <string name="more_load">加载中~</string>
+    <string name="more_period">已经到底啦~</string>
+    <string name="more_error">加载异常！继续上拉重新加载</string>
+    <string name="not_network">网络出问题了请检查网络设置~</string>
+    <string name="click_refresh">点击刷新</string>
+    <string name="data_empty">这里是空的呢~</string>
+    <string name="now_load">正在加载</string>
+    <string name="cancel">取消</string>
+    <string name="from_album">从相册选取</string>
+    <string name="take_photo">拍照</string>
+    <string name="select_photo_source">请选择图片来源</string>
+    <string name="sign_rule">签到积分规则</string>
+    <string name="sign_clear_rule">1.每日签到即可获得10兑换成长金\n2.该成长金不可提现，只可以在兑换专区兑换商品</string>
+    <string name="personal_center">个人中心</string>
+    <string name="task_center">任务中心</string>
+    <string name="get_integral">恭喜获得10成长金</string>
+    <string name="integral_succeed">签到成功</string>
+    <string name="integral_0">兑换成长金0</string>
+    <string name="select_all">全选</string>
+    <string name="clearing_default">结算(0)</string>
+    <string name="sum_count">合计：</string>
+    <string name="init_price">￥0.00</string>
+    <string name="sign_integral">我的积分</string>
+    <string name="recruit_hint">99元开通VIP会员</string>
+    <string name="integral">我的积分</string>
+    <string name="now_buy">立即抢购</string>
+    <string name="look_more">查看更多</string>
+    <string name="new_memner_region">新会员专区</string>
+    <string name="exchange">我的积分：</string>
+    <string name="sorry_sign">需要银卡会员才可以签到哦~</string>
+    <string name="confirm">确定</string>
+
+    <string name="exchange_region">兑换专区</string>
+    <string name="member_region">新会员专区</string>
+    <string name="sign">签到</string>
+    <string name="to_share">——  分享到  ——</string>
+    <string name="weix">微信</string>
+    <string name="search_goods">搜索商品名称</string>
+    <string name="updata_content">更新内容：</string>
+    <string name="updata_version">版本号：8.3.11</string>
+    <string name="updata_hint">检测到新版本</string>
+    <string name="updata_not">暂不升级</string>
+    <string name="updata_now">立即升级</string>
+    <string name="member_shop_hint">首单享受特惠，0元成为会员</string>
+    <string name="member_more">了解详情</string>
+    <string name="confirm_pay">确认支付</string>
+    <string name="default_price">￥0</string>
+    <string name="select_pay_way">请选择支付方式</string>
+    <string name="alipay_pay">支付宝支付</string>
+    <string name="wx_pay">微信支付</string>
+    <string name="integral_pay">我的成长金</string>
+    <string name="qcode_text">提示：扫描我的二维码，即可打开邀请链接，记得注册哦！</string>
+    <string name="default_date">1900-09-09</string>
+    <string name="buy_now">立即购买</string>
+    <string name="text_msg">消息</string>
+    <string name="text_share">分享</string>
+    <string name="home_shopping">必买街</string>
+    <string name="home_choice">为你推荐</string>
+    <string name="classify">分类</string>
+    <string name="rush_purchase">立即抢购</string>
+    <string name="no_data">现在还没有哦~</string>
+    <string name="empty_hint">内容没有找到~</string>
+    <string name="look_lj_bt">查看会员权益>>></string>
+    <string name="load">网络状态异常,下拉后刷新</string>
+    <string name="find_more">发现更多爆款</string>
+
+    <string name="refuel_detail_prompt"><![CDATA[请务必　<font color="#FF0000"><big>先到达加油站</big></font>　与工作人员确认后再付款，切勿先买单后加油，避免异常订单的产生]]></string>
+
+    <string name="become_qishou">成为骑手</string>
+    <string name="voice">语音通话</string>
+    <string name="shop_manage">商家管理</string>
+    <string name="myorder">我的订单</string>
+    <string name="dudujiayou">嘟嘟加油</string>
+    <string name="make_money">我要赚钱</string>
+    <string name="my_account">我的账户</string>
+    <string name="not_dudu_rider">您当前的手机号暂未开通嘟嘟骑手</string>
+    <string name="sign_up">报名开通</string>
+    <string name="refresh">刷新</string>
+    <string name="rider_title_one">1、成为骑手有什么要求？</string>
+    <string name="rider_intro_one">只要您身体健康，年龄在18-50周岁之间，有一部智能手机和交通工具，就可以申请成为转送骑手。在本页面报名后，会有加盟商站长联系您，请您耐心等待。</string>
+    <string name="rider_title_two">2、我需要自己准备电动车等交通工具吗？</string>
+    <string name="rider_intro_two">报名成功后，请您保持电话畅通，会有加盟商相关人员与您联系，您可以与意向站点沟通是否需自备电动车。(温馨提示：请勿相信分期购买电动车等骗局)</string>
+    <string name="rider_title_three">3、加入嘟嘟骑手收报名费吗？</string>
+    <string name="rider_intro_three">我们不收取任何报名费。(温馨提示：请勿上当受骗)</string>
+    <string name="rider_title_four">4、配送费如何计算？</string>
+    <string name="rider_intro_four">配送费受品类、距离等多方面影响。除配送费之外，各加盟商会不定期开展相关活动，请实时关注APP的通知及状态哦！</string>
+    <string name="rider_title_five">5、接单的物品一般有哪些？</string>
+    <string name="rider_intro_five">嘟嘟本地购作为国内领先的配送业务平台，拥有丰富多样的配送品类，目前除了酒水以外，还有粮油副食品、生鲜、水果、日用品等众多品类。</string>
+    <string name="rider_title_six">6、加入骑手后可以享受哪些保障？</string>
+    <string name="rider_intro_six">加盟商会为骑手提供高保额意外保险，同时，满足相应条件后还能享受大病健康关怀保障。</string>
+    <string name="goto_refuel">我要去加油</string>
+    <string name="freeze_account">用户下单后，金额会秒到商家账号上，因订单还未完成，此时金额处于冻结状态不可提现。待用户确认收到商品后，金额就会解除冻结即可以提现。</string>
+
+</resources>

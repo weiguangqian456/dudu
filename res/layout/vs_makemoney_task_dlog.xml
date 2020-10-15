@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lucency" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_whilte_btn_top_shape_bg"
+            android:gravity="center"
+            android:text="@string/vs_invite_str_hint"
+            android:textColor="@color/vs_black"
+            android:textSize="16sp" />
+
+        <View
+            android:visibility="visible"
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_whilte_btn_selecter"
+            android:gravity="center"
+            android:text="@string/vs_invite_str_msg"
+            android:textColor="@color/vs_gree"
+            android:textSize="19.5sp" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_whilte_btn_selecter"
+            android:gravity="center"
+            android:text="@string/vs_invite_str_wx"
+            android:textColor="@color/vs_gree"
+            android:textSize="19.5sp" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/line2"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_qq"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_whilte_btn_selecter"
+            android:gravity="center"
+            android:text="@string/vs_invite_str_qq"
+            android:textColor="@color/vs_gree"
+            android:textSize="19.5sp" />
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/line3"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <TextView
+           android:visibility="gone"
+            android:id="@+id/tv_friends"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_whilte_btn_bottom_shape_selecter"
+            android:gravity="center"
+            android:text="@string/vs_invite_str_wxq"
+            android:textColor="@color/vs_gree"
+            android:textSize="19.5sp" />
+
+        <Button
+            android:id="@+id/btn_wait"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/vs_whilte_btn_shape_selecter"
+            android:text="@string/vs_cannel"
+            android:textColor="@color/vs_gray"
+            android:textSize="19.5sp" />
+    </LinearLayout>
+
+</RelativeLayout>

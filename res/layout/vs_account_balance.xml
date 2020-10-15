@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 余额查询 -->
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle_orange" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:background="@color/vs_gray_simaple"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/vs_balance_spare"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/vs_personal_bg_color"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/vs_balance_income"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/vs_personal_bg_color"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="19dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/vs_balance_income"
+                    android:textColor="@color/myself_text_color"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.67dp"
+                android:layout_height="fill_parent"
+                android:background="@color/vs_line_color" />
+
+            <LinearLayout
+                android:id="@+id/vs_balance_expend"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/vs_personal_bg_color"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="19dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/vs_balance_expend"
+                    android:textColor="@color/myself_text_color"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <!-- 上划线 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/vs_line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vs_personal_bg_color"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/vs_balance_taocan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:drawableRight="@drawable/vs_right_icon"
+                android:textColor="@color/myself_text_color"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/money_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vs_balance_taocan"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/balance_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/vs_balance_money_minute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="@color/update_new_color"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/balance_money_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/myself_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/balance_money_gif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/myself_text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/vs_balance_yuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/vs_balance_money_unit"
+                    android:textColor="@color/myself_text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/balance_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money_linear"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="19.5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="("
+                    android:textColor="@color/update_new_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/balance_time_text"
+                    android:textColor="@color/update_new_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/balance_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/update_new_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=")"
+                    android:textColor="@color/update_new_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/btn_recharge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/balance_time_layout"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/vs_recharge_charge"
+                android:textColor="@color/White"
+                android:textSize="22sp"
+                app:rv_backgroundColor="@color/public_color_EC6941"
+                app:rv_isRadiusHalfHeight="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <!-- 上划线 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/vs_line_color" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vs_personal_bg_color"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/bytc_another_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="20dp"
+                android:scrollbars="none"
+                android:scrollingCache="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

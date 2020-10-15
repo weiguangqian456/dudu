@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/transparency">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        app:cardBackgroundColor="@color/whites">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_45_dip"
+                android:text="@string/select_photo_source"
+                android:textSize="15sp"
+                android:textColor="#222222"
+                android:gravity="center"/>
+
+            <View style="@style/LineH"/>
+
+            <TextView
+                android:id="@+id/tv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_45_dip"
+                android:text="@string/take_photo"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/vs_blue_slight"/>
+
+            <View style="@style/LineH"/>
+
+            <TextView
+                android:id="@+id/tv_album"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_45_dip"
+                android:text="@string/from_album"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:textColor="@color/vs_blue_slight"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        app:cardBackgroundColor="@color/whites">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_45_dip"
+            android:text="@string/cancel"
+            android:textSize="13sp"
+            android:gravity="center"/>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

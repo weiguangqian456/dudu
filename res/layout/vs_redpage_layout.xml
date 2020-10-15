@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/red_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/about_line_01"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+        
+                <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@drawable/vs_personal_bg_color"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="微信号"
+                    android:textColor="@color/vs_black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/bind_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:gravity="center_vertical"
+                    android:maxLength="16"
+                    android:numeric="decimal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/vs_black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@drawable/vs_personal_bg_color"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="金额(元)"
+                    android:textColor="@color/vs_black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/red_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:background="@drawable/vs_edittext_shape"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:maxLength="16"
+                    android:numeric="decimal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/vs_black"
+                    android:textColorHint="@color/vs_gray"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/red_recharge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/red_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/vs_btn_gree_selecter"
+        android:contentDescription="@string/app_name"
+        android:text="提交"
+        android:textColor="@color/White"
+        android:textSize="18sp" />
+
+</RelativeLayout>

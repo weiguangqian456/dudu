@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical" >
+  
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#1296FA"
+            android:visibility="gone"
+            android:gravity="center_horizontal">
+        
+          <TextView 
+              android:id="@+id/mydetail"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="30dp"
+              android:gravity="center_horizontal"
+              android:text="当前套餐"
+              android:textSize="20sp"
+              android:textColor="#DBDBDB" />
+         
+          
+          <TextView 
+              android:id="@+id/myBalancDetail"
+              android:layout_below="@id/mydetail"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="包年套餐"
+              android:layout_marginTop="5dp"
+             android:gravity="center_horizontal"
+              android:textSize="40sp"
+              android:textColor="#DBDBDB" />
+          
+          <Button 
+              android:id="@+id/myBalancChargeBtn"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="立即充值"
+              android:visibility="invisible"
+              android:layout_marginTop="15dp"
+              android:layout_marginLeft="25dp"
+              android:layout_marginRight="25dp"
+              android:layout_below="@id/myBalancDetail"
+              android:layout_centerHorizontal="true"
+              android:background="@drawable/charge_back_btn"
+              android:textSize="22sp"
+              android:textColor="@color/White" />
+          
+           <View android:layout_width="fill_parent"
+               android:layout_height="20dp"
+               android:visibility="gone"
+               android:layout_below="@id/myBalancChargeBtn"/>
+        </RelativeLayout>
+        
+        
+        <LinearLayout 
+            android:id="@+id/linearLayout1"
+        	android:layout_width="fill_parent" 
+        	android:layout_height="40.0dip"
+        	android:visibility="gone"
+        	android:background="#EEEEEE">
+        <TextView 
+            android:id="@+id/callmoney"
+            android:text="包年套餐" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" 
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="#58AEE2" 
+            android:textSize="18sp" />
+        
+        <View android:layout_width="0.67dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp"
+            android:background="#CFCFCF"/>
+        
+        <TextView 
+            android:id="@+id/calllog"
+            android:text="时长套餐" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" 
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#58AEE2" 
+            android:textSize="18sp" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        
+        	android:layout_width="fill_parent" 
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:background="#EEEEEE">
+       
+        
+    </LinearLayout>
+    
+     <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#D7D7D7">
+        
+    	<TextView 
+    	    android:layout_width="0dp"
+    	    android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000"
+        	android:gravity="center_horizontal"
+        	android:text="有效时间" />
+    	<View android:layout_width="0.67dp"
+    	    android:layout_height="fill_parent"
+    	    android:layout_marginTop="3dp"
+    	    android:layout_marginBottom="3dp"
+    	    android:background="#666666"/>
+    	<TextView 
+    	    android:layout_width="0dp"
+    	    android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000"
+        	android:gravity="center_horizontal"
+        	android:text="套餐" />
+    	<View android:layout_width="0.67dp"
+    	    android:layout_height="fill_parent"
+    	    android:layout_marginTop="3dp"
+    	    android:layout_marginBottom="3dp"
+    	    android:background="#666666"/>
+    	
+    	
+    	<TextView 
+    	    android:layout_width="0dp"
+    	    android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000"
+        	android:gravity="center_horizontal"
+        	android:text="分钟数" />
+        
+        </LinearLayout>
+        
+      <RelativeLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent">
+     <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mList"
+        ptr:ptrDrawable="@drawable/bluearrow"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="#FFFFFF"  
+        ptr:ptrHeaderTextColor="#000000"         
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+       	android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        android:background="@null"
+        android:divider="#DFDFDF"
+       	android:dividerHeight="1dp"  
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+     <TextView 
+        android:id="@+id/redlistback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:drawablePadding="5dp"
+        android:text="还没有任何记录"
+        android:layout_centerInParent="true"
+        android:textColor="#90000000"
+        android:textSize="16sp"
+        android:drawableTop="@drawable/null_img"
+        android:layout_gravity="center"
+        />
+     </RelativeLayout>   
+     
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager" 
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    
+  
+    
+
+</LinearLayout>

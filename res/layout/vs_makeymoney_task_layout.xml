@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_gray_simaple">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/systitle_orange" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="336dp"
+                android:background="@color/vs_white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/vs_task_money_logo" />
+
+                    <TextView
+                        android:id="@+id/vs_task_hint_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center"
+                        android:text="邀请累计赚得"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/vs_task_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="58dp"
+                        android:gravity="center"
+                        android:text="100"
+                        android:textColor="@color/vs_cs"
+                        android:textSize="45sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/vs_invite_time_str"
+                        android:textColor="@color/vs_cs"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/vs_task_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingRight="50dp"
+                    android:text="(120元)"
+                    android:textColor="@color/vs_gray_deep"
+                    android:textSize="14.5sp" />
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/vs_task_btn"
+                    android:layout_width="164dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="57dp"
+                    android:layout_marginBottom="81dp"
+                    android:gravity="center"
+                    android:textColor="@color/vs_white"
+                    android:textSize="19.5sp"
+                    app:rv_backgroundColor="@color/public_color_EC6941"
+                    app:rv_isRadiusHalfHeight="true" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+
+            <TextView
+                android:id="@+id/vs_task_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginRight="33dp"
+                android:textColor="@color/vs_gray_deep"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

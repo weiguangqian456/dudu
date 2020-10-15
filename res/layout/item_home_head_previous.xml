@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <!--轮播图-->
+    <com.weiwei.home.view.PagerCarouselView
+        android:id="@+id/pcv_carouse"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_240_dip"/>
+
+    <!-- 主界面栏目ViewPager (??? 例：商品采购)-->
+    <com.weiwei.salemall.widget.WrapContentHeightViewPager
+        android:id="@+id/main_home_entrance_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w_6_dip"
+        android:visibility="gone"/>
+
+    <!-- 页数大于1时显示 确认viewpager位置的小点 -->
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/main_home_entrance_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_10_dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/w_5_dip"
+        android:visibility="invisible" />
+
+    <!--推荐区域-->
+    <include layout="@layout/layout_home_head_recommend"/>
+
+    <!--必买街-->
+    <include layout="@layout/layout_home_head_shopping"/>
+
+    <!-- 中央图片 -->
+    <ImageView
+        android:id="@+id/iv_welfare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_67_dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/w_10_dip"
+        android:layout_marginLeft="@dimen/w_8_dip"
+        android:layout_marginRight="@dimen/w_8_dip"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:contentDescription="@string/app_name" />
+
+    <!-- 中央推荐栏目 需要适配的话可以用LinearLayout-->
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_190_dip"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_navigation_member"
+            android:layout_width="@dimen/w_165_dip"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icon_navigation_member"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/iv_navigation_jd"
+            android:layout_width="@dimen/w_165_dip"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_navigation_jd"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/iv_navigation_choiceness"
+            android:layout_width="@dimen/w_165_dip"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_navigation_choiceness"
+            android:contentDescription="@string/app_name"/>
+    </RelativeLayout>
+
+    <!-- 京东 - 标题 -->
+    <LinearLayout
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_39_dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view_red"
+            android:layout_width="@dimen/w_3_dip"
+            android:layout_height="@dimen/w_10_dip"
+            android:background="#c93d48" />
+
+        <ImageView
+            android:layout_width="@dimen/w_69_dip"
+            android:layout_height="@dimen/w_14_dip"
+            android:src="@drawable/top_jd"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <View style="@style/LineH"/>
+
+    <!-- 主界面京东栏目ViewPager -->
+    <com.weiwei.salemall.widget.WrapContentHeightViewPager
+        android:id="@+id/main_home_jd_entrance_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w_10_dip"
+        android:visibility="gone" />
+
+    <!-- 页数大于1时显示 确认viewpager位置的小点 -->
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/main_home_jd_entrance_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/w_10_dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/w_5_dip"
+        android:visibility="invisible" />
+
+    <!--新会员专区 - 标题栏-->
+    <RelativeLayout
+        android:id="@+id/rl_member"
+        android:layout_height="@dimen/w_39_dip"
+        android:layout_width="match_parent"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+        <ImageView
+            android:id="@+id/iv_new_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_new_member"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name" />
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/member_more"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:drawablePadding="5dp"
+            android:textSize="@dimen/w_14_dip"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/withdraw_next"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/withdraw_next"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <!--新会员专区-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!--分割线-->
+    <View style="@style/LineH"/>
+
+    <!--精选商品Banner-->
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_100_dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/shoppingcart_addto"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone"/>
+
+    <!--精选专区 - 标题栏-->
+    <LinearLayout
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_39_dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="@dimen/w_3_dip"
+            android:layout_height="@dimen/w_10_dip"
+            android:background="#565f64" />
+        <ImageView
+            android:layout_width="@dimen/w_69_dip"
+            android:layout_height="@dimen/w_14_dip"
+            android:src="@drawable/mall_recommend"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+</LinearLayout>

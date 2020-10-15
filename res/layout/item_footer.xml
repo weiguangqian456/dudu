@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <View
+            android:layout_width="1px"
+            android:layout_height="1px"
+            />
+        <LinearLayout
+            android:id="@+id/ll_item"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="@dimen/w_15_dip"
+                    android:layout_height="@dimen/w_15_dip"/>
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:id="@+id/tv_footer"
+                    android:textSize="@dimen/w_13_dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:text="@string/load_more"/>
+        </LinearLayout>
+</FrameLayout>

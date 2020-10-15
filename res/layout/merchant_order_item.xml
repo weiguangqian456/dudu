@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/w_10_dip"
+    android:background="@color/White">
+
+    <RelativeLayout
+        android:id="@+id/rl_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/w_15_dip"
+        android:paddingRight="@dimen/w_15_dip"
+        android:paddingTop="@dimen/w_8_dip"
+        android:paddingBottom="@dimen/w_8_dip"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_orderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单号：123456"
+            android:textSize="@dimen/w_13_dip"
+            android:textColor="@color/public_color_333333"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020-06-17 17:00"
+            android:layout_below="@+id/tv_orderNo"/>
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待发货"
+            android:textSize="@dimen/w_13_dip"
+            android:textColor="@color/public_color_EC6941"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_1_dip"
+        android:background="@color/public_color_E4E4E4"
+        android:layout_below="@+id/rl_order"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_order"
+        android:layout_marginTop="@dimen/w_1_dip"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_1_dip"
+        android:background="@color/public_color_E4E4E4"
+        android:layout_below="@+id/recyclerView"/>
+
+    <LinearLayout
+        android:id="@+id/ll_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/recyclerView"
+        android:layout_marginTop="@dimen/w_12_dip"
+        android:paddingRight="@dimen/w_15_dip">
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="共3件商品"
+            android:textSize="@dimen/w_14_dip"
+            android:textColor="@color/public_color_333333"
+            android:gravity="right"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品金额:"
+            android:textSize="@dimen/w_14_dip"
+            android:textColor="@color/public_color_333333"
+            android:layout_marginLeft="@dimen/w_10_dip"/>
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥20"
+            android:textStyle="italic"
+            android:textSize="@dimen/w_14_dip"
+            android:textColor="@color/public_color_333333"
+            android:layout_marginLeft="@dimen/w_10_dip"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_num"
+        android:text="合计: ￥330.00"
+        android:textStyle="italic"
+        android:textColor="@color/public_color_333333"
+        android:textSize="@dimen/w_14_dip"
+        android:gravity="right"
+        android:paddingRight="@dimen/w_15_dip"
+        android:layout_marginTop="@dimen/w_6_dip"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_total"
+        android:paddingRight="@dimen/w_15_dip"
+        android:layout_marginTop="@dimen/w_10_dip"
+        android:layout_marginBottom="@dimen/w_10_dip">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tv_status"
+            android:layout_width="@dimen/w_80_dip"
+            android:layout_height="@dimen/w_28_dip"
+            android:gravity="center"
+            android:text="派单中"
+            android:textSize="@dimen/w_14_dip"
+            android:textColor="#0AA834"
+            android:layout_alignParentRight="true"
+            app:rv_cornerRadius="@dimen/w_3_dip"
+            app:rv_strokeWidth="@dimen/w_1_dip"
+            app:rv_strokeColor="#0AA834"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

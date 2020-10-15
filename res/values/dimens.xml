@@ -1,0 +1,40 @@
+<resources>
+    <dimen name="signature_height">250dp</dimen>
+    <dimen name="vs_incall_fourbutton_right">29dp</dimen>
+    <dimen name="vs_incall_fourbutton_left">29dp</dimen>
+    <dimen name="setting_calltype_height">300dp</dimen>
+    <dimen name="setting_calltype_height_long">450dp</dimen>
+    <dimen name="vs_recharge_type_prompt_height">135dp</dimen>
+    <dimen name="vs_dial_number_height">66dp</dimen>
+    <dimen name="vs_about_logo_margintop">30dp</dimen>
+    <dimen name="vs_about_relayout_height">55.5dp</dimen>
+    <dimen name="vs_about_kefu_margintop">40dp</dimen>
+    <dimen name="vs_about_company_margintop">80dp</dimen>
+    <dimen name="vs_callphone_name_margintop">80dp</dimen>
+    <dimen name="vs_callphone_time_margintop">50dp</dimen>
+    <dimen name="vs_contacts_details_list_height">120dp</dimen>
+    <dimen name="vs_account_balance_relativelayout_height">217.5dp</dimen>
+    <dimen name="vs_account_balance_relativelayout_marginBottom">34.5dp</dimen>
+    <dimen name="vs_makemoney_task_item_small_tv">14.5sp</dimen>
+    <dimen name="vs_contact_detail_phone_layout_marginLeft">25dp</dimen>
+    <dimen name="vs_start_margtop">100dp</dimen>
+    <dimen name="vs_chat_bg_margin_img">5dip</dimen>
+    <dimen name="vs_chat_txt_size">16sp</dimen>
+
+    <!-- 通讯录备份 -->
+    <dimen name="bakcontact_bottom_text_sp">17sp</dimen>
+    <dimen name="bakcontact_top_text_sp">18sp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="text_size">13sp</dimen>
+    <dimen name="default_title_height">45dp</dimen>
+    <dimen name="text_12_dp">12dp</dimen>
+    <dimen name="default_spaced">14dp</dimen>
+    <dimen name="home_carouse_height">137dp</dimen>
+    <dimen name="home_recommend_title_height">60dp</dimen>
+
+
+</resources>

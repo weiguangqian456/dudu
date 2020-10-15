@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF" >
+
+    <ImageButton
+        android:id="@+id/DigitOneButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_01" />
+
+    <ImageButton
+        android:id="@+id/DigitTwoButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_02" />
+
+    <ImageButton
+        android:id="@+id/DigitThreeButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_03" />
+
+    <ImageButton
+        android:id="@+id/DigitFourButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_04" />
+
+    <ImageButton
+        android:id="@+id/DigitFiveButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_05" />
+
+    <ImageButton
+        android:id="@+id/DigitSixButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_06" />
+
+    <ImageButton
+        android:id="@+id/DigitSevenButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_07" />
+
+    <ImageButton
+        android:id="@+id/DigitEightButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_08" />
+
+    <ImageButton
+        android:id="@+id/DigitNineButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_09" />
+
+    <ImageButton
+        android:id="@+id/DigitHelperButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_paste" />
+
+    <ImageButton
+        android:id="@+id/DigitZeroButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_00" />
+
+    <ImageButton
+        android:id="@+id/DigitDeleteButton"
+        android:layout_width="fill_parent"
+        android:layout_height="63.5dp"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:background="@drawable/vs_dia_keyboard_del" />
+
+    <Button
+        android:id="@+id/btn_menu"
+        android:layout_width="105dp"
+        android:layout_height="63.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/vs_dia_keyboard_paste" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weiwei.salemall.fragment.LocalStoreFragment">
+
+    <!--数据空白界面-->
+    <FrameLayout
+        android:id="@+id/fl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#f0f3fa"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_no_data"
+                android:layout_width="@dimen/w_194_dip"
+                android:layout_height="@dimen/w_132_dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/w_127_dip"
+                android:src="@drawable/sec_no_store" />
+
+            <TextView
+                android:id="@+id/tv_first_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_no_data"
+                android:layout_centerHorizontal="true"
+                android:text="暂无商家~"
+                android:textColor="#82868b"
+                android:textSize="@dimen/w_16_dip" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_localstore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

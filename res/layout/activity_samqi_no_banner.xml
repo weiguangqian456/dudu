@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_bg_color"
+    tools:context="com.weiwei.salemall.activity.SamqiPurchaseActivity">
+
+    <ImageView
+        android:id="@+id/iv_image_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_business_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:background="@color/public_color_F11801"
+                tools:alpha="1" />
+
+            <LinearLayout
+                android:id="@+id/ll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/fl_back"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_seckill_back" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:text=""
+                            android:textColor="@color/White"
+                            />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/rl_shoppingCart"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_shoppingCart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="center"
+                            android:src="@drawable/shoppingcart_homepage" />
+
+                        <com.weiwei.salemall.widget.BadgeView
+                            android:id="@+id/badgeView"
+                            android:layout_width="@dimen/w_15_dip"
+                            android:layout_height="@dimen/w_15_dip"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="@dimen/w_8_dip"
+                            android:layout_marginRight="@dimen/w_7_dip" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/home_search_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <ImageView
+                        android:id="@+id/iv_search"
+                        android:layout_width="@dimen/w_13_dip"
+                        android:layout_height="@dimen/w_13_dip"
+                        android:src="@drawable/sec_search" />
+
+                    <TextView
+                        android:id="@+id/et_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@null"
+                        android:hint="@string/search_goods"
+                        android:textColor="@color/default_text"
+                        android:textSize="@dimen/w_12_dip" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:id="@+id/ll_firststyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/vs_bg_color"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View style="@style/LineH" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+
+                <!--断网界面-->
+                <RelativeLayout
+                    android:id="@+id/fl_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:visibility="visible"
+                    android:background="@color/vs_bg_color"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_no_net"
+                        android:layout_width="@dimen/w_277_dip"
+                        android:layout_height="@dimen/w_172_dip"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/mall_no_network" />
+
+                    <TextView
+                        android:id="@+id/tv_no_net"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_no_net"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/w_24_dip"
+                        android:text="网络出问题了请检查网络设置~"
+                        android:textColor="#828688"
+                        android:textSize="@dimen/w_16_dip" />
+
+                    <Button
+                        android:id="@+id/btn_fresh"
+                        parent="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="@dimen/w_98_dip"
+                        android:layout_height="@dimen/w_29_dip"
+                        android:layout_below="@+id/tv_no_net"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/w_43_dip"
+                        android:background="@drawable/bg_fresh_btn"
+                        android:text="点击刷新"
+                        android:textColor="#1084ff"
+                        android:textSize="@dimen/w_14_dip"
+                        tools:ignore="MissingPrefix" />
+                </RelativeLayout>
+
+                <!--空白界面-->
+                <RelativeLayout
+                    android:id="@+id/fl_no_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:background="@color/vs_bg_color">
+
+                    <ImageView
+                        android:id="@+id/iv_no_content"
+                        android:layout_width="@dimen/w_194_dip"
+                        android:layout_height="@dimen/w_127_dip"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/mall_no_goods" />
+
+                    <TextView
+                        android:id="@+id/tv_no_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_no_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/w_24_dip"
+                        android:text="暂无商品~"
+                        android:textColor="#828688"
+                        android:textSize="@dimen/w_16_dip" />
+
+                    <Button
+                        android:id="@+id/btn_fresh_tv"
+                        parent="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="@dimen/w_98_dip"
+                        android:layout_height="@dimen/w_29_dip"
+                        android:layout_below="@+id/tv_no_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/w_43_dip"
+                        android:background="@drawable/bg_fresh_btn"
+                        android:text="点击刷新"
+                        android:textColor="#1084ff"
+                        android:textSize="@dimen/w_14_dip"
+                        tools:ignore="MissingPrefix" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparency"
+                app:elevation="0dp">
+
+
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/magic_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w_48_dip"
+                    android:background="@color/vs_bg_color" />
+
+            </android.support.design.widget.AppBarLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:background="@drawable/bg_item_shopping">
+
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_168_dip"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/mall_foryou_default" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sec_one_discount"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_image"
+        android:layout_marginLeft="@dimen/w_6_dip"
+        android:layout_marginRight="@dimen/w_6_dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="#333333"
+        android:textSize="@dimen/w_14_dip"
+        tools:text="空气净化器" />
+
+    <TextView
+        android:id="@+id/tv_compareprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="@dimen/w_9_dip"
+        android:layout_marginTop="@dimen/w_10_dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/public_color_F92900"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_compareprice"
+        android:layout_marginBottom="@dimen/w_10_dip">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_8_dip"
+            android:layout_marginTop="@dimen/w_7_dip"
+            android:layout_marginRight="@dimen/w_15_dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/public_color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_ecoprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/w_8_dip"
+            android:layout_marginTop="@dimen/w_7_dip"
+            android:layout_marginRight="@dimen/w_7_dip"
+            android:background="@drawable/bg_economical"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/w_3_dip"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/w_11_dip" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_gray_simaple" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle" />
+    </LinearLayout>
+
+    <!--
+         <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:scrollbars="none" >
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/vs_gy_big_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/about_line_01"
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/kc_about_logo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/about_line_01"
+                android:layout_gravity="center_horizontal" >
+
+                <TextView
+                    android:id="@+id/vs_vesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingRight="0dp"
+                    android:textColor="@color/vs_black"
+                    android:textSize="14.5sp" />
+
+                <ImageView
+                    android:id="@+id/contacslButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vs_vesion"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/vs_qrcode_logo"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/about_line_02"
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:layout_below="@id/kc_about_logo_layout"
+                android:layout_marginTop="10dp"
+                android:background="@color/vs_line_color"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/about_tm_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/about_line_02"
+                android:background="@color/vs_white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/vs_about_update"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/vs_about_relayout_height"
+                    android:background="@drawable/vs_personal_bg_color"
+                    android:clickable="true"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/vs_about_update_tv_str"
+                        android:textColor="@color/vs_black"
+                        android:textSize="19.5sp" />
+
+                    <ImageView
+                        android:id="@+id/vs_about_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/vs_about_update_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/vs_about_img1"
+                        android:text="@string/vs_about_update_str"
+                        android:textColor="@color/vs_gree"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/vs_line_color"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/vs_about_help"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/vs_about_relayout_height"
+                    android:background="@drawable/vs_personal_bg_color"
+                    android:clickable="true"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/vs_about_help_tv_str"
+                        android:textColor="@color/vs_black"
+                        android:textSize="19.5sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/vs_line_color"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/vs_about_fk"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/vs_about_relayout_height"
+                    android:background="@drawable/vs_personal_bg_color"
+                    android:clickable="true"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/vs_about_fk_tv_str"
+                        android:textColor="@color/vs_black"
+                        android:textSize="19.5sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line_end"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/vs_line_color"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/vs_about_pj"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/vs_about_relayout_height"
+                    android:background="@drawable/vs_personal_bg_color"
+                    android:clickable="true"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/vs_about_pf_tv_str"
+                        android:textColor="@color/vs_black"
+                        android:textSize="19.5sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about_kf_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/about_tm_layout"
+                android:layout_marginTop="@dimen/vs_about_kefu_margintop"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/vs_about_com_wap"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/vs_about_phone_wap"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/vs_about_server_phoneNumber"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right|center_vertical"
+                        android:paddingLeft="2dp"
+                        android:text="@string/vs_about_server_QQ"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/vs_about_computer_wap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:autoLink="web"
+                        android:gravity="left"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/vs_about_phone_wap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:autoLink="web"
+                        android:gravity="left"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/vs_about_server_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="left"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/vs_about_server_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                        android:gravity="left"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/vs_about_layout_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/vs_about_company_margintop"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vs_about_company_cn"
+                android:textColor="@color/vs_gray_deep"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vs_about_company_en"
+                android:textColor="@color/vs_gray_deep"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- </ScrollView> -->
+
+</RelativeLayout>

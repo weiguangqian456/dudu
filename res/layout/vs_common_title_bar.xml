@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/title_color">
+
+    <RelativeLayout
+        android:id="@+id/title_bar_top"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/public_color_EC6941"
+        android:gravity="center">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/w_40_dip"
+            android:layout_height="@dimen/w_52_dip"
+            android:layout_below="@id/view_state_bar"
+
+            android:background="#EC6941"
+            >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/w_16_dip"
+                android:layout_height="@dimen/w_16_dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/title_btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:layout_toRightOf="@id/rl_back"
+            android:textColor="@color/vs_white"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/vs_white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/title_btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:background="@color/title_color"
+            android:textColor="@color/vs_white" />
+
+        <ImageView
+            android:id="@+id/title_image_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/title_txt_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:textColor="@color/vs_white"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_call_register"
+                android:layout_width="@dimen/w_95_dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/leftbtn_select_bg"
+                android:gravity="center"
+                android:text="全部通话"
+                android:textColor="@color/color_theme_4"
+                android:textSize="@dimen/w_12_dip" />
+
+            <Button
+                android:id="@+id/btn_contacts"
+                android:layout_width="@dimen/w_95_dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/rightbtn_nomal_bg"
+                android:gravity="center"
+                android:text="通讯录"
+                android:textColor="@color/vs_white"
+                android:textSize="@dimen/w_12_dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/common_constact"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ll_top_bg"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/constact_group"
+                style="@style/top_group"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:visibility="gone"
+                android:text="所有通话" />
+
+            <Button
+                android:id="@+id/constact_all"
+                style="@style/top_all"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:visibility="gone"
+                android:text="未接来电" />
+        </LinearLayout>
+        <!-- android:layout_alignRight="@id/common_constact"-->
+
+        <TextView
+            android:id="@+id/mms_unread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/st_btn_numb_bg"
+            android:gravity="center"
+            android:textColor="@color/vs_white"
+            android:textSize="9sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/calllog_stop"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/title_bar_top"
+        android:background="@color/vs_gray_simaple"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dial_select_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27dp"
+            android:text="全部通话"
+            android:textColor="@color/update_new_color"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/calllog_image_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/vs_calllog_down"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+</RelativeLayout>

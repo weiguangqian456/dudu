@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_138_dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/vs_white">
+
+        <!-- 自动轮播的第三方控件 -->
+        <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cbanner_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/vs_white"
+            app:canLoop="true" />
+    </FrameLayout>
+
+    <!-- 京东专区以上 首页轮播以下 -->
+    <LinearLayout
+        android:id="@+id/home_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_img"
+        android:background="@color/vs_white"
+        android:orientation="vertical">
+
+        <!-- 主界面栏目ViewPager (??? 例：商品采购)-->
+        <com.weiwei.salemall.widget.WrapContentHeightViewPager
+            android:id="@+id/main_home_entrance_vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w_6_dip"
+            android:visibility="visible" />
+
+        <!-- 京东专区商品数量大于1时显示 确认viewpager位置的小点 -->
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/main_home_entrance_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/w_10_dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/w_5_dip"
+            android:visibility="invisible" />
+
+        <!-- 中央图片 -->
+        <ImageView
+            android:id="@+id/iv_welfare"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_67_dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/w_10_dip"
+            android:layout_marginLeft="@dimen/w_8_dip"
+            android:layout_marginRight="@dimen/w_8_dip"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- 中央推荐栏目 不追求性能  追求适配的话可以用LinearLayout-->
+    <RelativeLayout
+        android:background="@color/color_white"
+        android:layout_below="@+id/home_entrance"
+        android:id="@+id/ll_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_190_dip"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_navigation_member"
+            android:layout_width="@dimen/w_165_dip"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icon_navigation_member"/>
+
+        <ImageView
+            android:id="@+id/iv_navigation_jd"
+            android:layout_width="@dimen/w_165_dip"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_navigation_jd"/>
+
+        <ImageView
+            android:id="@+id/iv_navigation_choiceness"
+            android:layout_width="@dimen/w_165_dip"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_navigation_choiceness"/>
+    </RelativeLayout>
+    <!---->
+    <!--<View-->
+        <!--android:id="@+id/view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:layout_below="@+id/home_entrance"-->
+        <!--android:background="@color/vs_bg_color" />-->
+
+    <!-- 京东专区 -->
+    <!--京东折扣店  start-->
+    <LinearLayout
+        android:id="@+id/ll_jd_discount_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_content"
+        android:background="@color/vs_white"
+        android:orientation="vertical">
+
+        <!-- 京东专区 顶部说明 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_39_dip">
+
+            <View
+                android:id="@+id/view_red"
+                android:layout_width="@dimen/w_3_dip"
+                android:layout_height="@dimen/w_10_dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_14_dip"
+                android:background="#c93d48" />
+
+            <ImageView
+                android:layout_width="@dimen/w_69_dip"
+                android:layout_height="@dimen/w_14_dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_4_dip"
+                android:layout_toRightOf="@+id/view_red"
+                android:src="@drawable/top_jd" />
+
+            <!--<ImageView-->
+            <!--android:layout_width="@dimen/w_45_dip"-->
+            <!--android:layout_height="@dimen/w_14_dip"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/w_4_dip"-->
+            <!--android:layout_marginRight="@dimen/w_14_dip"-->
+            <!--android:src="@drawable/top_jd_right" />-->
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_bg" />
+
+        <!-- 主界面京东栏目ViewPager -->
+        <com.weiwei.salemall.widget.WrapContentHeightViewPager
+            android:id="@+id/main_home_jd_entrance_vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w_10_dip"
+            android:visibility="visible" />
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/main_home_jd_entrance_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/w_10_dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/w_5_dip"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_7_dip"
+        android:layout_below="@+id/ll_jd_discount_store"
+        android:background="@color/vs_bg_color" />
+
+    <ImageView
+        android:id="@+id/iv_member_advertising"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:layout_below="@+id/view2"/>
+    <!-- 会员福利 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_member"
+        android:layout_height="@dimen/w_39_dip"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/iv_member_advertising"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:background="@color/color_white">
+        <ImageView
+            android:id="@+id/iv_new_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_new_member"
+            android:layout_centerVertical="true" />
+        <!--<View-->
+            <!--android:id="@+id/view_line"-->
+            <!--android:layout_width="@dimen/w_3_dip"-->
+            <!--android:layout_height="@dimen/w_10_dip"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="#3797f8"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_toRightOf="@+id/iv_new_member"-->
+            <!--android:layout_marginLeft="@dimen/w_14_dip"-->
+            <!--android:layout_marginRight="@dimen/w_14_dip"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="@string/new_memner_region"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="#3797f8"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:textSize="16sp"-->
+            <!--android:layout_toEndOf="@+id/view_line" />-->
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/member_more"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:drawablePadding="5dp"
+            android:textSize="@dimen/w_14_dip"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/withdraw_next"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/withdraw_next" />
+    </RelativeLayout>
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/vs_bg_color"
+        android:layout_alignParentBottom="true"/>
+    <!-- 秒杀专区 头部栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_member_welfare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_39_dip"
+        android:layout_below="@+id/view2"
+        android:visibility="gone"
+        android:background="@color/vs_white">
+
+        <View
+            android:id="@+id/view_blue"
+            android:layout_width="@dimen/w_3_dip"
+            android:layout_height="@dimen/w_10_dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w_14_dip"
+            android:background="#ea7f16" />
+
+        <ImageView
+            android:layout_width="@dimen/w_69_dip"
+            android:layout_height="@dimen/w_14_dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w_4_dip"
+            android:layout_toRightOf="@+id/view_blue"
+            android:src="@drawable/mall_factory" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w_9_dip"
+            android:layout_toLeftOf="@+id/ll_countdownView"
+            android:text=""
+            android:textColor="#636870"
+            android:textSize="@dimen/w_12_dip" />
+
+        <!--倒计时-->
+        <LinearLayout
+            android:id="@+id/ll_countdownView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/w_14_dip">
+
+            <TextView
+                android:id="@+id/tv_miaosha_shi"
+                android:layout_width="@dimen/w_20_dip"
+                android:layout_height="@dimen/w_20_dip"
+                android:background="@drawable/shape_miaosha_time"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/vs_white"
+                android:textSize="@dimen/w_10_dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/w_3_dip"
+                android:text=":" />
+
+            <TextView
+                android:id="@+id/tv_miaosha_minter"
+                android:layout_width="@dimen/w_20_dip"
+                android:layout_height="@dimen/w_20_dip"
+                android:background="@drawable/shape_miaosha_time"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/vs_white"
+                android:textSize="@dimen/w_10_dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/w_3_dip"
+                android:text=":" />
+
+            <TextView
+                android:id="@+id/tv_miaosha_second"
+                android:layout_width="@dimen/w_20_dip"
+                android:layout_height="@dimen/w_20_dip"
+                android:background="@drawable/shape_miaosha_time"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="@color/vs_white"
+                android:textSize="@dimen/w_10_dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 福利商品推荐 -->
+    <!-- 在秒杀专区头部栏下的一个图片 未使用 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_member"
+        android:layout_marginLeft="@dimen/w_6_dip"
+        android:layout_marginRight="@dimen/w_6_dip"
+        android:background="@color/vs_white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_one_discount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/mall_member_welfare_default"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_mall_member_welfare_default"
+                android:layout_width="@dimen/w_57_dip"
+                android:layout_height="@dimen/w_35_dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/mall_welfare_price"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

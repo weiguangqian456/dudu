@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_marginTop="15dp"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/White"
+        android:padding="8dp">
+
+        <io.rong.imkit.view.AsyncImageView
+            android:id="@+id/im_item_mutil_icon_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#88888888" />
+
+
+        <TextView
+            android:id="@+id/im_item_mutil_tip_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/White"
+            android:textSize="18dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:background="#77000000" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/im_item_mutil_contact_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/White">
+
+    </LinearLayout>
+
+</LinearLayout>

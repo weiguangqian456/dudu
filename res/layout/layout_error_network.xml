@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/vs_bg_color"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <ImageView
+            android:id="@+id/iv_no_net"
+            android:layout_width="@dimen/w_277_dip"
+            android:layout_height="@dimen/w_172_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_93_dip"
+            android:src="@drawable/mall_no_network" />
+
+        <TextView
+            android:id="@+id/tv_no_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="@string/not_network"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <Button
+            android:id="@+id/btn_fresh"
+            android:layout_width="@dimen/w_98_dip"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_below="@+id/tv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_43_dip"
+            android:background="@drawable/bg_fresh_btn"
+            android:text="@string/click_refresh"
+            android:textColor="#1084ff"
+            android:textSize="@dimen/w_14_dip"
+            tools:ignore="MissingPrefix" />
+</RelativeLayout>

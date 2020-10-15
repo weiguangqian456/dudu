@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <!-- 充值卡列表 -->
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle_orange" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/kc_recharge_cardlist_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_alignParentBottom="true">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/vs_recharge_cardlist_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/White"
+            android:textSize="17sp"
+            app:rv_backgroundColor="@color/public_color_EC6941"
+            app:rv_isRadiusHalfHeight="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/kc_recharge_cardlist_btn_layout"
+        android:layout_below="@id/title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/vs_recharge_cardlist_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

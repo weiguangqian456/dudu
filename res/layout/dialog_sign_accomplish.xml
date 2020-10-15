@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparency">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="42dp"
+        android:layout_marginLeft="42dp">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="35dp"
+                android:paddingBottom="35dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_sign_dialog">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sign_gift"/>
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/tv_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/integral_succeed"
+                    android:textColor="#666666"
+                    android:textSize="17sp"/>
+                <TextView
+                    android:id="@+id/tv_get"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_integral"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_close"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

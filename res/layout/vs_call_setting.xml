@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@color/vs_gray_simaple"
+    android:layout_height="fill_parent">
+
+     <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <!-- 顶部标题 -->
+
+        <include layout="@layout/systitle_orange" />
+    </LinearLayout>
+    
+      <View
+          android:id="@+id/line1"
+          android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+      
+    <LinearLayout
+        android:id="@+id/liner_call_type_one"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/line1"
+        
+        android:orientation="vertical"
+         >
+		<View
+          android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/White"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_log_text5"
+                android:textColor="#212121"
+                android:layout_marginLeft="18dp"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/call_log_text6"
+                android:textColor="#959595"
+                android:visibility="gone"
+                android:textSize="12.5sp"
+                android:layout_marginRight="60dp"
+                 />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/line" />
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/White"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_log_text7"
+                android:textColor="#212121"
+                android:layout_marginLeft="18dp"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/call_log_text8"
+                android:textColor="#959595"
+                android:textSize="12.5sp"
+                android:visibility="gone"
+                android:layout_marginRight="60dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+		<View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/line" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/White"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_call_setting_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_call_set_capacity"
+                android:textColor="#212121"
+                android:layout_marginLeft="18dp"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/call_log_text9"
+                android:textColor="#959595"
+                android:textSize="12.5sp" 
+                android:visibility="gone"
+                android:layout_marginRight="60dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+
+        
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"
+            android:background="@color/line" />
+        <LinearLayout
+            android:id="@+id/tv_third_call_type"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@color/White"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_third_call_setting_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用第三方拨打"
+                android:textColor="#212121"
+                android:layout_marginLeft="18dp"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/call_log_text9"
+                android:textColor="#959595"
+                android:textSize="12.5sp" 
+                android:visibility="gone"
+                android:layout_marginRight="60dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:visibility="invisible"
+            android:background="@color/line" />
+        
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_log_text10"
+                android:textColor="#212121"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/call_log_text11"
+                android:textColor="#959595"
+                android:textSize="12.5sp"
+                android:layout_marginRight="60dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_call_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:layout_below="@id/title"
+       
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical" 
+        >
+
+        <RadioButton
+            android:id="@+id/rb_call_back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/call_setting_selecter"
+            android:checked="true"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb_call_soft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/call_setting_selecter"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb_call_can"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:button="@drawable/call_setting_selecter"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/rb_third_call_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:button="@drawable/call_setting_selecter"
+            android:gravity="center" />
+    </RadioGroup>
+
+    
+        
+        <RelativeLayout
+            android:id="@+id/third_call_type"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:visibility="gone"
+            android:background="@color/White"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/liner_call_type_one">
+
+            <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:background="@color/line" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用第三方拨打"
+                android:layout_centerVertical="true"
+                android:textColor="#212121"
+                android:layout_marginLeft="18dp"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/call_log_text8"
+                android:textColor="#959595"
+                android:textSize="12.5sp"
+                android:visibility="gone"
+                android:layout_marginRight="60dp" />
+            
+            <ImageView
+                        android:id="@+id/iv_recharge_right_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+            
+            
+            <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.67dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+            
+        </RelativeLayout>
+
+        
+        
+</RelativeLayout>

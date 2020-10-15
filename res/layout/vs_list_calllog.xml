@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#D7D7D7">
+        <TextView 
+    	    android:layout_width="0dp"
+    	    android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000"
+        	android:gravity="center_horizontal"
+        	android:text="被叫号码" />
+    	<View android:layout_width="0.67dp"
+    	    android:layout_height="fill_parent"
+    	    android:layout_marginTop="3dp"
+    	    android:layout_marginBottom="3dp"
+    	    android:background="#666666"/>
+    	<TextView 
+    	    android:layout_width="0dp"
+    	    android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000"
+        	android:gravity="center_horizontal"
+        	android:text="时间" />
+    	<View android:layout_width="0.67dp"
+    	    android:layout_height="fill_parent"
+    	    android:layout_marginTop="3dp"
+    	    android:layout_marginBottom="3dp"
+    	    android:background="#666666"/>
+    	<TextView 
+    	    android:layout_width="0dp"
+    	    android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000"
+        	android:gravity="center_horizontal"
+        	android:text="通话时长" />
+    	<View android:layout_width="0.67dp"
+    	    android:layout_height="fill_parent"
+    	    android:layout_marginTop="3dp"
+    	    android:layout_marginBottom="3dp"
+    	    android:background="#666666"/>
+    	<TextView 
+    	    android:layout_width="0dp"
+    	    android:layout_weight="1"
+        	android:layout_height="wrap_content"
+        	android:textColor="#000"
+        	android:visibility="gone"
+        	android:gravity="center_horizontal"
+        	android:text="时间" />
+        
+        </LinearLayout>
+        
+    <RelativeLayout 
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent">
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mList"
+        ptr:ptrDrawable="@drawable/bluearrow"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderBackground="@color/vs_white"
+        ptr:ptrHeaderTextColor="#000000"         
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+       	android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        android:divider="#DFDFDF"
+       	android:dividerHeight="1dp"  
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+ <TextView 
+        android:id="@+id/redlistback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:text="还没有任何记录"
+        android:layout_centerInParent="true"
+        android:textColor="#90000000"
+        android:textSize="16sp"
+        android:drawableTop="@drawable/null_img"
+        android:layout_gravity="center"
+        />
+   </RelativeLayout>   
+</LinearLayout>

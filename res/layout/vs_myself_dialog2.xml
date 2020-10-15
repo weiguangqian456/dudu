@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/vs_whilte_btn_shape_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/message"
+        style="@style/DialogText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/vs_white"
+        android:gravity="center_vertical|left"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/vs_black"
+        android:text="@string/dialog_msg"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/dialog_chioce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:clickable="true"
+            android:src="@drawable/vs_small_chioce_false" />
+
+        <TextView
+             android:id="@+id/dialog_chioce_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-10dp"
+            android:gravity="center"
+            android:text="@string/vs_callphone_chioce_hint"
+            android:textColor="@color/vs_gray_deep"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+
+    <Button
+        android:id="@+id/dialog_call"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/vs_whilte_btn_selecter"
+        android:text="@string/vs_callphone_sq_call"
+        android:textColor="@color/vs_blue_slight"
+        android:textSize="19.5sp" />
+
+    <View
+         android:id="@+id/dialog_call_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+
+    <Button
+        android:id="@+id/dialog_inivt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/vs_whilte_btn_selecter"
+        android:text="@string/dialog_invit"
+        android:textColor="@color/vs_blue_slight"
+        android:textSize="19.5sp" />
+
+    <View
+        android:id="@+id/dialog_inivt_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+
+    <Button
+        android:id="@+id/dialog_cannel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/vs_whilte_btn_bottom_shape_selecter"
+        android:text="@string/vs_cannel"
+        android:textColor="@color/vs_gray"
+        android:textSize="19.5sp" />
+
+</LinearLayout>

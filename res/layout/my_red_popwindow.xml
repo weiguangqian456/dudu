@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="right"
+    android:orientation="vertical" >
+    
+    <ImageView 
+        android:id="@+id/money_img"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/money_close"/>
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="370dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/red_banner">
+       
+        <RelativeLayout 
+            android:id="@+id/money_rel1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:background="#FFF000">
+            
+           <LinearLayout 
+               android:id="@+id/money_lin1"
+               android:layout_width="fill_parent"
+               android:layout_height="40dp"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"
+               android:orientation="horizontal"
+               android:background="@color/vs_white">
+               
+            <TextView 
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="微信公众号:" />
+            <TextView 
+                android:id="@+id/weixin"
+                android:layout_width="100dp"
+                android:textColor="#000"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="微信号" />
+                
+            </LinearLayout>
+            
+           <LinearLayout 
+               android:id="@+id/money_lin2"
+               android:layout_width="fill_parent"
+               android:layout_height="40dp"
+               android:layout_marginTop="1dp"
+               android:layout_marginLeft="2dp"
+               android:layout_marginRight="2dp"
+               android:layout_below="@id/money_lin1"
+               android:orientation="horizontal"
+               android:background="#FFFFFF">
+               
+            <TextView 
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="金额（元）:"  />
+            <EditText 
+                android:id="@+id/money_get_edit"
+                android:layout_width="100dp"
+                android:background="@null"
+                android:hint="请输入金额"
+                android:textCursorDrawable="@color/vs_black"
+                android:textSize="15sp"
+                android:textColorHint="#B6B6B6"
+                android:textColor="#000000"
+                
+                android:inputType="numberDecimal"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true" />
+                
+            </LinearLayout>
+            
+           <RelativeLayout 
+	    		android:layout_width="fill_parent"
+	    		android:layout_height="40dp"
+	    		android:layout_below="@+id/money_lin2"
+	    		android:paddingTop="5dp"
+	    		android:background="#D63626">
+        		<TextView
+            		android:layout_width="fill_parent"
+            		android:layout_height="40dp"
+            		android:textColor="#FFF000"
+            		android:text="@string/vs_my_red_pag_info" />
+		</RelativeLayout>
+		
+        </RelativeLayout>
+        
+			
+
+    </RelativeLayout>
+    
+    
+    <com.weiwei.base.util.MyButton  
+        android:id="@+id/money_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="70dp"
+        android:text="提   交"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/vs_shape_redbag"/>
+
+</LinearLayout>

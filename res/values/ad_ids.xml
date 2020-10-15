@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="n3_desc" type="id"/>
+    <item name="n3_btn" type="id"/>
+    <item name="n3_flg" type="id"/>
+    <item name="n3_title" type="id"/>
+    <item name="n3_img1" type="id"/>
+    <item name="n3_img2" type="id"/>
+    <item name="n3_img3" type="id"/>
+    <item name="n2_t2_img" type="id"/>
+    <item name="n2_t2_img2" type="id"/>
+    <item name="n2_t2_title" type="id"/>
+    <item name="n2_t2_desc" type="id"/>
+    <item name="n2_t2_btn" type="id"/>
+    <item name="n2_t2_gdt_media" type="id"/>
+    <item name="n2_t2_flg" type="id"/>
+    <item name="n1_t2_btn" type="id"/>
+    <item name="n1_t2_title" type="id"/>
+    <item name="n1_t2_desc" type="id"/>
+    <item name="n1_t2_img" type="id"/>
+    <item name="n1_t2_flg" type="id"/>
+</resources>

@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vs_viewPagerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/vs_viewpager_textBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/vs_blue_slight"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/vs_viewpager_textSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/vs_viewpager_textBig"
+        android:textColor="@color/vs_black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/vs_viewGrouplayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="225dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/vs_calllog_btn"
+        android:layout_width="233dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/vs_viewGrouplayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/vs_green_btn_selecter"
+        android:text="@string/vs_calllog_inlog"
+        android:textColor="@color/vs_white"
+        android:textSize="19.5sp" />
+    <TextView
+        android:id="@+id/vs_call_log_load_tip_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/call_log_load_tips"
+        android:layout_below="@id/vs_calllog_btn"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/gray"/>
+	<!-- author：黄文武 修改时间:2014/10/09 -->
+	 <ImageView
+	     android:id="@+id/vs_tipsopenkeyborad_imagview"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_alignParentBottom="true"
+	     android:layout_marginLeft="9dp"
+	     android:visibility="gone"
+	     android:background="@drawable/ic_dial_tipsopen" />
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/color_white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_dudu_seckill_banner"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="嘟嘟秒杀"
+                        android:textColor="@color/public_color_FF5000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/rtv_dudu_seckill_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="00"
+                        android:textColor="@color/color_white"
+                        android:textSize="10sp"
+                        app:rv_backgroundColor="@color/color_red"
+                        app:rv_cornerRadius="3dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" : "
+                        android:textColor="@color/color_red"
+                        android:textSize="12sp" />
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/rtv_dudu_seckill_minute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="00"
+                        android:textColor="@color/color_white"
+                        android:textSize="10sp"
+                        app:rv_backgroundColor="@color/color_red"
+                        app:rv_cornerRadius="3dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" : "
+                        android:textColor="@color/color_red"
+                        android:textSize="12sp" />
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/rtv_dudu_seckill_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="00"
+                        android:textColor="@color/color_white"
+                        android:textSize="10sp"
+                        app:rv_backgroundColor="@color/color_red"
+                        app:rv_cornerRadius="3dp" />
+
+                </LinearLayout>
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/cb_dudu_seckill_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    app:canLoop="true" />
+
+            </LinearLayout>
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv_banner_one"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                android:src="@drawable/image_banner_one"-->
+            <!--                android:visibility="gone" />-->
+
+            <View style="@style/LineV" />
+            <ImageView
+                android:id="@+id/iv_banner_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_banner_three" />
+
+
+        </LinearLayout>
+
+        <View style="@style/LineH" />
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:orientation="horizontal">-->
+
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_banner_two"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@drawable/image_banner_two" />-->
+            <!--<View style="@style/LineV" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_banner_four"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@drawable/image_banner_four" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</android.support.v7.widget.CardView>

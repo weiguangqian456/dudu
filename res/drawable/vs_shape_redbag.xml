@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 按钮按下的时候的渲染效果 -->
+    <item android:state_pressed="true">
+        <shape>
+            <!-- 渐变色 --> 
+            <gradient android:startColor="#DF614E" android:endColor="#DF614E"  
+                   /> <!-- 以中心点渐变色，范围50 -->
+            <!-- 圆角 -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+    
+    <!-- 按钮获取焦点的时候的渲染效果 -->
+    <item android:state_focused="true">
+        <shape>
+            <!-- 渐变色 android:angle="270"可以控制颜色渐变的方向--> 
+            <gradient android:startColor="#DC3C23" android:endColor="#DC3C23" android:angle="270" />
+            <!-- 圆角 -->
+            <corners android:radius="8dp"/>
+        </shape>    
+    </item>
+    
+    <!-- 默认 要把这个默认效果放在最下面，不然没有效果-->
+    <item>
+        <shape>
+            <!-- 渐变色 --> 
+            <gradient android:startColor="#DC3C23" android:endColor="#DC3C23" android:angle="270" />
+            <!-- 圆角 -->
+            <corners android:radius="8dp"/>
+            <!-- 内边距 -->
+        </shape>
+    </item>
+</selector>  

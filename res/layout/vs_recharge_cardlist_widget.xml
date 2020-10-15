@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="145dp" >
+
+    <!-- 充值卡密组件布局 -->
+
+    <ImageView
+        android:id="@+id/cardlist_widget_hint_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/vs_recharge_list_success"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/cardlist_widget_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bindedit_selector"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardlist_widget_edit"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@id/cardlist_widget_edit"
+        android:layout_toRightOf="@id/cardlist_widget_hint_imageview"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recharge_card_number"
+                android:textColor="@color/msg_bind_phoneNumber"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/vs_recharge_card_number_edit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/lucency"
+                android:enabled="false"
+                android:gravity="left|center_vertical"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recharge_card_password"
+                android:textColor="@color/msg_bind_phoneNumber"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/vs_recharge_card_password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/lucency"
+                android:enabled="false"
+                android:gravity="left|center_vertical"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line" />
+
+</RelativeLayout>

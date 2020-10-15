@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 -->
+
+    <include
+        android:id="@+id/tab"
+        layout="@layout/systitle" />
+
+    <LinearLayout
+        android:id="@+id/red_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/about_line_01"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vs_personal_bg_color"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="我的红包"
+                    android:textColor="@color/vs_black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/red_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/vs_red_big"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_tv_recharge"
+                    android:textColor="@color/vs_red"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/red_recharge"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/vs_btn_gree_selecter"
+                android:contentDescription="@string/app_name"
+                android:text="提现"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/red_line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:layout_below="@id/red_layout"
+        android:layout_marginTop="25dp"
+        android:background="@color/vs_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vs_personal_bg_color"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/weixin_bind_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/vs_weixin_logo"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="收款微信号"
+                    android:textColor="@color/vs_gray_deep"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/red_bind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/app_name"
+                android:text="绑定微信号"
+                android:textColor="@color/vs_blue_slight"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vs_personal_bg_color"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/unionpay_bind_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/vs_unionpay_logo"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/vs_gray_deep"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/unionpay_bind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/app_name"
+                android:text="绑定银行卡"
+                android:textColor="@color/vs_blue_slight"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/web_relalayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="25dp" >
+
+        <LinearLayout
+            android:id="@+id/load_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="46dp"
+            android:background="@color/White"
+            android:gravity="center" >
+
+ 
+
+            <ImageView
+                android:id="@+id/load_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/load_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/load_error_ayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="46dp"
+            android:background="@color/White"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/load_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/webview_load_error" />
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/web_nextback_layout"
+            android:layout_alignParentTop="true" >
+        </WebView>
+
+        <LinearLayout
+            android:id="@+id/web_nextback_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_alignBottom="@drawable/bg_header"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/bg_header"
+            android:gravity="center|fill_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iamgeView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/pf_go_back"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/iamgeView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/pf_go_forward"
+                android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right|center" >
+
+                <ImageView
+                    android:id="@+id/refsh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/pf_ref_reload"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65.5dp"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/notificationLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/icon_notification" />
+
+    <LinearLayout
+        android:id="@+id/text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/notificationLogo"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ntTypeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/callphone_vsfree_not"
+            android:textColor="@color/callphone_notification_color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/noti_callName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="李志"
+            android:textColor="@color/callphone_notification_color"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noti_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/text_layout"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:text="21:31"
+        android:textColor="@color/callphone_notification_color"
+        android:textSize="14sp" />
+
+</RelativeLayout>

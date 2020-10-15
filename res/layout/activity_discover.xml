@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:paddingRight="14dp"
+        android:paddingLeft="14dp"
+        android:layout_height="@dimen/default_title_height"
+        android:background="@color/color_theme_3">
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="@dimen/default_title_height"
+            android:layout_height="@dimen/default_title_height">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_seckill_back"/>
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/newgoods" />
+    </RelativeLayout>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:layout_below="@+id/rl_title"
+        android:id="@+id/magic_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_45_dip"
+        android:background="@color/color_theme_3"/>
+
+    <View
+        android:layout_below="@+id/magic_indicator"
+        android:id="@+id/view_line"
+        style="@style/LineH"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_below="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ViewStub
+        android:id="@+id/view_stub"
+        android:layout_below="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_error"
+        />
+
+</RelativeLayout>

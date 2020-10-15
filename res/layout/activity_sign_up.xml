@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/temp_base_title_orange"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/not_dudu_rider"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/w_236_dip"
+        android:textColor="@color/callphone_notification_color"
+        android:textSize="@dimen/w_16_dip"/>
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="@dimen/w_15_dip"
+        android:background="@drawable/sign_up_button"
+        android:textColor="@color/White"
+        android:textSize="@dimen/w_14_dip"/>
+
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_up_refresh"
+        android:gravity="center"
+        android:text="@string/refresh"
+        android:textColor="#EC6941"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/w_46_dip"
+        android:textSize="@dimen/w_15_dip"/>
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- title -->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- 顶部整体布局 -->
+        <include layout="@layout/systitle_orange" />
+
+    </LinearLayout>
+    <!-- 下划线 -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+
+        <TextView
+            android:id="@+id/callmoney"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="话费收入"
+            android:textColor="@color/public_color_EC6941"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0.67dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#CFCFCF"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/calllog"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="话单查询"
+            android:textColor="@color/public_color_EC6941"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0.67dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#CFCFCF"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/taocan"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="套餐详情"
+            android:textColor="@color/public_color_EC6941"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cursor"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:scaleType="matrix"
+            android:tint="@color/public_color_EC6941"
+            android:src="@drawable/scour" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="matrix"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="matrix"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

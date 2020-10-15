@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/view_line"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_31_dip"
+        android:orientation="horizontal"
+        android:background="#F1F1F1"
+        android:visibility="gone">
+        <TextView
+            style="@style/TextViewStyleSize12"
+            android:text="被邀请人" />
+        <TextView
+            style="@style/TextViewStyleSize12"
+            android:text="邀请人" />
+        <TextView
+            style="@style/TextViewStyleSize12"
+            android:text="加油总金额"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_records"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vs_white"
+        android:layout_below="@id/ll_title" />
+
+    <!--空白界面-->
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vs_bg_color"
+        android:layout_below="@id/ll_title">
+
+        <ImageView
+            android:id="@+id/iv_no_content"
+            android:layout_width="@dimen/w_195_dip"
+            android:layout_height="@dimen/w_109_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_85_dip"
+            android:src="@drawable/model_account_blank" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cicler_back"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/w_18_dip"
+    android:gravity="center"
+    android:paddingRight="@dimen/w_21_dip"
+    android:paddingLeft="@dimen/w_21_dip">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/w_14_dip"
+        android:text="用户协议与隐私保护"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="感谢您使用嘟嘟！"
+        android:textColor="@color/vs_black"
+        android:textSize="@dimen/w_14_dip"
+        android:layout_marginTop="@dimen/w_24_dip" />
+
+    <TextView
+        android:layout_marginTop="@dimen/w_8_dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/w_14_dip"
+        android:text="为了给您提供更加优质和个性化的服务，我们会收集或使用您的位置、搜索、浏览等信息。"
+        android:textColor="@color/vs_black"
+        android:lineSpacingExtra="@dimen/w_10_dip"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="@dimen/w_8_dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_14_dip"
+            android:text="具体内容可详阅"
+            android:textColor="@color/vs_black"
+            android:lineSpacingExtra="@dimen/w_10_dip"
+            />
+        <TextView
+            android:id="@+id/tv_intro1"
+            android:layout_marginTop="@dimen/w_8_dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_14_dip"
+            android:text="《嘟嘟服务条款、隐私"
+            android:textColor="@color/color_theme_2"
+            android:lineSpacingExtra="@dimen/w_10_dip"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_intro2"
+            android:layout_marginTop="@dimen/w_8_dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_14_dip"
+            android:text="协议》"
+            android:textColor="@color/color_theme_2"
+            android:lineSpacingExtra="@dimen/w_10_dip"
+            />
+        <TextView
+            android:layout_marginTop="@dimen/w_8_dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_14_dip"
+            android:text="全文，我们已采用业内先进的信"
+            android:textColor="@color/vs_black"
+            android:lineSpacingExtra="@dimen/w_10_dip"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/w_8_dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/w_14_dip"
+        android:text="息保护措施，并会持续优化信息保护技术和安全管理流程，来保护您的个人信息安全。"
+        android:textColor="@color/vs_black"
+        android:lineSpacingExtra="@dimen/w_10_dip"
+        />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_1_dip"
+            android:background="@color/sendsms_background"
+            android:layout_marginTop="@dimen/w_24_dip"/>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_44_dip"
+            android:text="我知道了"
+            android:textSize="@dimen/w_16_dip"
+            android:textColor="@color/vs_black"
+            android:gravity="center"
+            android:layout_below="@id/line" />
+
+
+
+</LinearLayout>

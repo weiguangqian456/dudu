@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/temp_base_title_orange"/>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"/>
+
+    <com.flyco.roundview.RoundRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_180_dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/w_30_dip"
+        app:rv_backgroundColor="@color/White"
+        app:rv_cornerRadius="@dimen/w_10_dip"
+        android:layout_marginLeft="@dimen/w_15_dip"
+        android:layout_marginRight="@dimen/w_15_dip">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="嘟嘟骑手正在配送中"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/w_60_dip"/>
+        <TextView
+            android:id="@+id/tv_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="嘟嘟骑手已出发，开始计时！滴答，滴答！"
+            android:gravity="center_horizontal"
+            android:textColor="@color/public_color_999999"
+            android:textSize="@dimen/w_14_dip"
+            android:layout_marginTop="@dimen/w_5_dip"
+            android:layout_below="@+id/tv_status"/>
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tv_call"
+            android:layout_width="@dimen/w_112_dip"
+            android:layout_height="@dimen/w_32_dip"
+            android:layout_centerHorizontal="true"
+            app:rv_cornerRadius="@dimen/w_32_dip"
+            app:rv_strokeWidth="@dimen/w_1_dip"
+            app:rv_strokeColor="@color/public_color_333333"
+            android:layout_below="@+id/tv_intro"
+            android:text="联系配送员"
+            android:textColor="@color/public_color_333333"
+            android:gravity="center"
+            android:textSize="@dimen/w_14_dip"
+            android:layout_marginTop="@dimen/w_24_dip" />
+    </com.flyco.roundview.RoundRelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/w_80_dip"
+        android:layout_height="@dimen/w_80_dip"
+        android:src="@drawable/qishoutoux"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/w_170_dip"/>
+
+</RelativeLayout>

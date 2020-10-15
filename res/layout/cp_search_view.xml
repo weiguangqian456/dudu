@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cp_search_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    tools:showIn="@layout/cp_dialog_city_picker">
+
+    <EditText
+        android:id="@+id/cp_search_box"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="城市中文名或拼音"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:textCursorDrawable="@drawable/bg_stroke_gray_coner_small"
+        android:textColor="@color/public_color_333333"
+        android:textColorHint="#cdcdcd"
+        android:textSize="@dimen/w_10_dip" />
+
+    <ImageView
+        android:id="@+id/cp_clear_all"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_clear_black_24dp" />
+
+    <Space
+        android:layout_width="6dp"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="14dp"
+        android:background="#636870"/>
+
+    <Space
+        android:layout_width="16dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/cp_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textColor="@color/public_color_999999"
+        android:textSize="@dimen/w_10_dip" />
+</LinearLayout>

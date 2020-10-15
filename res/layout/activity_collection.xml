@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_bg_color"
+    tools:context="com.weiwei.salemall.activity.CollectionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/public_color_EC6941"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <FrameLayout
+        android:id="@+id/fl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_no_data"
+                android:layout_width="@dimen/w_194_dip"
+                android:layout_height="@dimen/w_132_dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/w_127_dip"
+                android:src="@drawable/sec_no_collection" />
+
+            <TextView
+                android:id="@+id/tv_first_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_no_data"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/w_47_dip"
+                android:text="暂无收藏~"
+                android:textColor="#82868b"
+                android:textSize="@dimen/w_16_dip" />
+
+            <TextView
+                android:id="@+id/tv_sec_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_first_line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/w_14_dip"
+                android:text="快去收藏喜欢的商家吧"
+                android:textColor="#82868b"
+                android:textSize="@dimen/w_13_dip" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_collection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/rp_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_40_dip"
+            android:background="@color/vs_white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/rb_general"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/w_14_dip"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="left"
+                android:text="综合"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/w_13_dip" />
+
+            <RadioButton
+                android:id="@+id/rb_new"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="新品"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/w_13_dip" />
+
+            <RadioButton
+                android:id="@+id/rb_near"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="附近"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/w_13_dip" />
+
+            <RadioButton
+                android:id="@+id/rb_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/w_14_dip"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableRight="@drawable/sec_price_default"
+                android:gravity="center|right"
+                android:text="价格"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="@dimen/w_13_dip" />
+        </RadioGroup>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_collection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rp_top"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/w_48_dip"
+        android:layout_above="@+id/rl_collection"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_vertical"
+        tools:ignore="RtlCompat">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/w_48_dip"
+            android:layout_height="@dimen/w_48_dip"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的收藏"
+            android:textColor="@color/vs_white"
+            android:textSize="@dimen/w_15_dip" />
+    </RelativeLayout>
+</RelativeLayout>

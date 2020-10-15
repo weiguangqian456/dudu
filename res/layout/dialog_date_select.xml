@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_dialog">
+        <!--标题栏-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp">
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_date"
+                android:layout_gravity="center"
+                android:textSize="@dimen/w_16_dip"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:textColor="@color/text_color"
+                android:text="@string/confirm"/>
+        </FrameLayout>
+        <!--分割线-->
+        <View style="@style/LineH"/>
+        <!--选择器-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <com.byl.datepicker.wheelview.WheelView
+                android:id="@+id/wv_year"
+                style="@style/WheelViewStyle"/>
+            <com.byl.datepicker.wheelview.WheelView
+                android:id="@+id/wv_month"
+                style="@style/WheelViewStyle"/>
+            <com.byl.datepicker.wheelview.WheelView
+                android:id="@+id/wv_day"
+                style="@style/WheelViewStyle"/>
+            <com.byl.datepicker.wheelview.WheelView
+                android:id="@+id/wv_hour"
+                android:visibility="gone"
+                style="@style/WheelViewStyle"/>
+            <com.byl.datepicker.wheelview.WheelView
+                android:id="@+id/wv_minute"
+                android:visibility="gone"
+                style="@style/WheelViewStyle"/>
+            <com.byl.datepicker.wheelview.WheelView
+                android:id="@+id/wv_sec"
+                android:visibility="gone"
+                style="@style/WheelViewStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

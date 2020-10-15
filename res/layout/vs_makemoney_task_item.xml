@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/vs_invite_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/vs_personal_bg_color"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/vs_invite_item_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/vs_right_icon"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/vs_invite_item_im"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/vs_invite_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:textColor="@color/vs_black"
+                android:textSize="19.5sp" />
+
+            <TextView
+                android:id="@+id/vs_invite_item_small_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/vs_gray_deep"
+                android:textSize="@dimen/vs_makemoney_task_item_small_tv" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/vs_gray_simaple"
+        android:visibility="visible" />
+
+</LinearLayout>

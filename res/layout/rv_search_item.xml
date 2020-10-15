@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/w_5_dip"
+    android:background="@color/vs_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_eqaul_data_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/w_10_dip"
+        android:layout_marginRight="@dimen/w_10_dip"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="电动牙刷"
+        android:textColor="@color/black"
+        android:textSize="@dimen/w_16_dip" />
+</LinearLayout>

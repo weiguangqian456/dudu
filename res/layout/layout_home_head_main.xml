@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main_shopping"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:orientation="vertical">
+
+    <com.weiwei.salemall.widget.WrapContentHeightViewPager
+        android:visibility="gone"
+        android:id="@+id/main_home_entrance_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 页数大于1时显示 确认viewpager位置的小点 -->
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/main_home_entrance_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/w_8_dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/w_3_dip"
+        android:visibility="visible"/>
+
+</LinearLayout>

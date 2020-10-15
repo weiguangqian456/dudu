@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/view_line"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F4F4F4">
+
+    <include layout="@layout/temp_base_title_orange"
+        android:id="@+id/title"/>
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_50_dip"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/title"
+        android:background="@color/White"
+        android:layout_marginBottom="@dimen/w_10_dip">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="加油时间"
+            android:textColor="#333333"
+            android:textSize="@dimen/w_14_dip"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/w_20_dip"
+            android:background="#E4E4E4"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="加油金额(元)"
+            android:textColor="#333333"
+            android:textSize="@dimen/w_14_dip"/>
+
+    </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/vs_white"
+            android:layout_below="@id/ll_title"/>
+
+    <!--空白界面-->
+    <RelativeLayout
+        android:id="@+id/rl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vs_bg_color"
+        android:layout_below="@id/ll_title">
+
+        <ImageView
+            android:id="@+id/iv_no_content"
+            android:layout_width="@dimen/w_197_dip"
+            android:layout_height="@dimen/w_193_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_60_dip"
+            android:src="@drawable/empty" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

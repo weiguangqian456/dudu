@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/w_60_dip"
+    android:orientation="horizontal"
+    android:background="@color/White"
+    android:paddingLeft="@dimen/w_15_dip">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_14_dip"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#B8B8B8"
+            android:textSize="@dimen/w_10_dip"
+            android:layout_marginTop="@dimen/w_4_dip"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="@dimen/w_14_dip"
+        android:textColor="#636870"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/w_14_dip"
+        android:textColor="#FC1615"
+        android:layout_weight="1"
+        android:gravity="center"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/w_5_dip"
+    android:background="@color/vs_white"
+    android:paddingBottom="@dimen/w_15_dip"
+    android:paddingTop="@dimen/w_14_dip">
+
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/w_10_dip"
+        android:background="@drawable/bg_coner">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/w_101_dip"
+            android:layout_height="@dimen/w_101_dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/mall_foryou_default" />
+
+        <ImageView
+            android:layout_width="@dimen/w_26_dip"
+            android:layout_height="@dimen/w_26_dip"
+            android:src="@drawable/sec_one_discount"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fl_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_image"
+            android:layout_marginLeft="@dimen/w_15_dip"
+            android:layout_marginRight="@dimen/w_14_dip"
+            android:layout_marginTop="@dimen/w_7_dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="null"
+            android:textColor="#333333"
+            android:textSize="@dimen/w_14_dip" />
+
+        <TextView
+            android:id="@+id/tv_compareprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="@dimen/w_15_dip"
+            android:layout_marginTop="@dimen/w_12_dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="null"
+            android:textColor="#83868b"
+            android:textSize="@dimen/w_12_dip" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_compareprice"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/w_8_dip"
+            android:layout_marginTop="@dimen/w_15_dip">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:text="null"
+                android:textColor="#ff4e52"
+                android:textSize="@dimen/w_18_dip" />
+
+            <TextView
+                android:id="@+id/tv_ecoprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_14_dip"
+                android:layout_toRightOf="@+id/tv_price"
+                android:background="@drawable/bg_economical"
+                android:padding="@dimen/w_3_dip"
+                android:text="null"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/w_11_dip" />
+
+            <ImageView
+                android:layout_width="@dimen/w_14_dip"
+                android:layout_height="@dimen/w_3_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_14_dip"
+                android:src="@drawable/sec_more" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

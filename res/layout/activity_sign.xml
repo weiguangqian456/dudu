@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 签到 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <TextView
+            android:id="@+id/tv_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_sign_integral"
+            android:gravity="center"
+            android:minWidth="78dp"
+            android:text="@string/integral_0"
+            android:textColor="@color/whites" />
+
+        <ImageView
+            android:id="@+id/iv_sign"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="17dp"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_sign_go" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp">
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_sign_bg" />
+
+            <ImageView
+                android:id="@+id/iv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:contentDescription="@null"
+                android:paddingRight="13dp"
+                android:src="@drawable/icon_sign_shark" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_sign_rule"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/bg_sign_rule"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="@string/sign_rule"
+            android:textColor="#FF6600"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_rule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="12dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="@string/sign_clear_rule"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</FrameLayout>

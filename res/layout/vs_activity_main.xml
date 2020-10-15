@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clipChildren="false">
+
+    <View
+        android:id="@+id/view_state_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:background="@color/color_theme_4" />
+
+
+    <LinearLayout
+        android:id="@+id/title_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_state_bar">
+
+        <com.weiwei.base.widgets.TitleBarView
+            android:id="@+id/title_tar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/public_color_EC6941"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/custom"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/title_main"
+        android:background="@color/color_white"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/tv_left_contact"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/webview_btn_back_selecter" />
+
+        <!-- middle 文字 -->
+
+
+        <TextView
+            android:id="@+id/sys_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/im_chat_huihua_title"
+            android:textColor="@color/vs_white"
+            android:textSize="20sp" />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_32_dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w_18_dip"
+            android:layout_toLeftOf="@+id/rl_right"
+            android:layout_toRightOf="@+id/iv_back"
+            android:background="@drawable/home_search_bg_gray"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/w_13_dip"
+                android:layout_height="@dimen/w_13_dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/sec_search" />
+
+            <TextView
+                android:id="@+id/et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_7_dip"
+                android:layout_toRightOf="@+id/iv_search"
+                android:background="@null"
+                android:hint="搜索商品"
+                android:textColor="@color/public_color_333333"
+                android:textColorHint="#999da2"
+                android:textSize="@dimen/w_13_dip" />
+
+            <ImageView
+                android:id="@+id/iv_cancle"
+                android:layout_width="@dimen/w_15_dip"
+                android:layout_height="@dimen/w_15_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_8_dip"
+                android:src="@drawable/sec_cancle"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_right"
+            android:layout_width="@dimen/w_48_dip"
+            android:layout_height="@dimen/w_48_dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w_10_dip"
+            android:layout_marginTop="@dimen/w_5_dip">
+
+            <ImageView
+                android:id="@+id/tv_right_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="center" />
+
+            <com.weiwei.salemall.widget.BadgeView
+                android:id="@+id/badgeView"
+                android:layout_width="@dimen/w_15_dip"
+                android:layout_height="@dimen/w_15_dip"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/w_25_dip"
+                android:layout_marginTop="@dimen/w_5_dip"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/LineH"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:layout_below="@+id/custom"
+        android:background="@color/vs_line_color"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <RelativeLayout
+        android:id="@+id/ll_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@+id/line1"
+        android:orientation="vertical">
+
+        <!--商城 class="com.weiwei.home.fragment.HomeMallFragment"class="com.weiwei.base.fragment.VsSaleMallFragment"-->
+
+
+        <fragment
+            android:id="@+id/fragment_main"
+            class="com.weiwei.home.fragment.HomeMallFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <!--拨号-->
+
+
+        <fragment
+            android:id="@+id/fragment_dial"
+            class="com.weiwei.base.fragment.VsDialFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <!-- 分类 重构再改-->
+
+
+        <fragment
+            android:id="@+id/fragment_classify"
+            class="com.weiwei.home.fragment.MyOrderFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <!--购物车-->
+
+        <fragment
+            android:id="@+id/fragment_shoppingcart"
+            class="com.weiwei.base.fragment.VsShoppingCartFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <!--我的-->
+
+
+        <fragment
+            android:id="@+id/fragment_myself"
+            class="com.weiwei.base.fragment.VsMyselfFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <fragment
+            android:id="@+id/fragment_contacts_list"
+            class="com.weiwei.base.fragment.VsContactsListFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <fragment
+            android:id="@+id/fragment_refuel_main"
+            class="com.weiwei.home.fragment.RefuelMainFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/w_48_dip"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFEFF"
+        android:clipChildren="false">
+
+        <!--<View-->
+            <!--android:id="@+id/line_top"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.67dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:background="@color/vs_line_color" />-->
+
+        <!--android:layout_below="@id/line_top"-->
+
+
+        <com.weiwei.base.fragment.FragmentIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+         />
+
+<!-- android:layout_alignParentStart="true"-->
+        <RelativeLayout
+            android:id="@+id/ll_mybottom"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/w_56_dip"
+
+            android:layout_alignParentTop="true"
+
+            android:background="#e3e3e3"
+            android:clickable="true"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.67dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/vs_mian_keyborad_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/vs_mian_keyborad_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_dial_focused_blue_up" />
+
+                    <TextView
+                        android:id="@+id/vs_mian_keyborad_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tab_dial"
+                        android:textColor="@color/vs_blue"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_bottom_call"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/w_40_dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_green_btn_selecter"
+                    android:text="@string/call_to"
+                    android:textColor="@color/White"
+                    android:textSize="19.5sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/vs_mian_contact_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/vs_mian_contact_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/delete_num" />
+
+                    <TextView
+                        android:id="@+id/vs_mian_contact_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="删除"
+                        android:textColor="@color/text_gray"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

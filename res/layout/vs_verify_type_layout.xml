@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_lucency" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/vs_msg_verify_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_whilte_btn_top_shape_selecter"
+            android:text="@string/vs_voice_verify_str"
+            android:textColor="@color/vs_blue_slight"
+            android:textSize="19.5sp" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+
+        <Button
+            android:id="@+id/vs_voice_verify_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/vs_whilte_btn_bottom_shape_selecter"
+            android:text="@string/vs_msg_verify_str"
+            android:textColor="@color/vs_blue_slight"
+            android:textSize="19.5sp" />
+
+        <Button
+            android:id="@+id/vs_cannel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/vs_whilte_btn_shape_selecter"
+            android:text="@string/vs_cannel"
+            android:textColor="@color/vs_gray"
+            android:textSize="19.5sp" />
+    </LinearLayout>
+
+</RelativeLayout>

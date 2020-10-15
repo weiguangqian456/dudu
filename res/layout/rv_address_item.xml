@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/w_4_dip"
+    android:background="@color/vs_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w_14_dip"
+        android:layout_marginRight="@dimen/w_14_dip"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w_16_dip">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/public_color_333333"
+                android:textSize="@dimen/w_15_dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w_29_dip"
+                android:layout_toRightOf="@+id/tv_name"
+                android:textColor="@color/public_color_333333"
+                android:textSize="@dimen/w_15_dip"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.weiwei.salemall.widget.SDAdaptiveTextView
+            android:id="@+id/tv_address_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/w_16_dip"
+            android:layout_marginTop="@dimen/w_12_dip"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/public_color_333333"
+            android:textSize="@dimen/w_14_dip" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_37_dip"
+        android:layout_marginLeft="@dimen/w_14_dip"
+        android:layout_marginRight="@dimen/w_14_dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+
+            <CheckBox
+                android:id="@+id/cb_address_default"
+                android:layout_width="@dimen/w_14_dip"
+                android:layout_height="@dimen/w_14_dip"
+                android:layout_gravity="center"
+                android:button="@drawable/default_address_seletor" />
+
+            <TextView
+                android:id="@+id/tv_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/w_7_dip"
+                android:text="设为默认"
+                android:textColor="@color/nodeColor"
+                android:textSize="@dimen/w_13_dip" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <LinearLayout
+                android:id="@+id/ll_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/w_14_dip"
+                    android:layout_height="@dimen/w_14_dip"
+                    android:layout_gravity="center"
+                    android:src="@drawable/mall_address_edit" />
+
+                <TextView
+                    android:id="@+id/tv_address_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/w_7_dip"
+                    android:text="编辑"
+                    android:textColor="@color/nodeColor"
+                    android:textSize="@dimen/w_13_dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w_33_dip">
+
+                <ImageView
+                    android:layout_width="@dimen/w_14_dip"
+                    android:layout_height="@dimen/w_14_dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/vs_incall_fourbutton_right"
+                    android:src="@drawable/mall_address_delete" />
+
+                <TextView
+                    android:id="@+id/tv_address_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/w_7_dip"
+                    android:text="删除"
+                    android:textColor="@color/nodeColor"
+                    android:textSize="@dimen/w_13_dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

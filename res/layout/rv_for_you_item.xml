@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/w_2_dip"
+    android:layout_marginRight="@dimen/w_2_dip"
+    android:background="@color/vs_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_for_you"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_150_dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/w_9_dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/mall_foryou_default" />
+
+        <TextView
+            android:id="@+id/tv_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_6_dip"
+            android:layout_marginTop="@dimen/w_8_dip"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#1D1D1D"
+            android:textSize="@dimen/w_13_dip" />
+
+        <TextView
+            android:id="@+id/tv_jd_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_6_dip"
+            android:text=""
+            android:textColor="#636870"
+            android:textSize="@dimen/w_11_dip" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_mall_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_6_dip"
+                android:text=""
+                android:textColor="#FF4152"
+                android:textSize="@dimen/w_17_dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ecoprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_8_dip"
+                android:layout_marginRight="@dimen/w_15_dip"
+                android:layout_marginTop="@dimen/w_7_dip"
+                android:background="@drawable/bg_economical"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="@dimen/w_3_dip"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/w_11_dip" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

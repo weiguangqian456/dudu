@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <!-- title -->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- 顶部整体布局 -->
+        <include layout="@layout/systitle_orange" />
+
+    </LinearLayout>
+    <!-- 下划线 -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+    <!-- title end-->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <com.weiwei.base.util.CircleImageView
+            android:id="@+id/myself_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/myself_head"
+            app:border_color="@color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/mydetail_lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myself_head"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mydetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="我的积分（元）"
+                    android:textColor="#999999"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/myBalancDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="¥0.00"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.67dp"
+                android:layout_height="fill_parent"
+                android:background="@color/vs_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="会员权益"
+                    android:textColor="#999999"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/baonian"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="暂无"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/myBalancChargeBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mydetail_lin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+
+            android:background="@drawable/charge_back_btn"
+            android:text="立即充值"
+            android:textColor="@color/White"
+            android:textSize="19sp" />
+
+        <View
+            android:id="@+id/js_line1"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_below="@id/myBalancChargeBtn" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:layout_below="@id/js_line1"
+            android:background="@color/vs_gray" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/charge_package_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:cacheColorHint="@android:color/transparent"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+
+        <ImageView
+            android:id="@+id/ad_img_back"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/recharge_banner"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/slid_title"
+            layout="@layout/vs_sliding_advertisement"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- 下面隐藏的是之前的分页切换列表 -->>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/callmoney"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="话费收入"
+            android:textColor="#53b8f7"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0.67dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#CFCFCF"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/calllog"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="话单查询"
+            android:textColor="#53b8f7"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0.67dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#CFCFCF"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/taocan"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="套餐详情"
+            android:textColor="#53b8f7"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEEEEE"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/cursor"
+
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:scaleType="matrix"
+            android:src="@drawable/scour" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="matrix"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="matrix"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="2dp"
+        android:visibility="gone" />
+
+
+    <!-- body end -->
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/w_128_dip"
+    android:layout_marginTop="@dimen/w_5_dip"
+    android:background="@drawable/bg_click_feedback"
+    android:paddingTop="@dimen/w_14_dip">
+
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="@dimen/w_100_dip"
+        android:layout_height="@dimen/w_100_dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/w_10_dip"
+        android:background="@drawable/bg_coner">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/mall_foryou_default" />
+
+        <ImageView
+            android:id="@+id/iv_soldout"
+            android:layout_width="@dimen/w_26_dip"
+            android:layout_height="@dimen/w_26_dip"
+            android:src="@drawable/soldout"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!--右边显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fl_image"
+        android:orientation="vertical">
+
+        <!--商品名称-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_image"
+            android:layout_marginLeft="@dimen/w_15_dip"
+            android:layout_marginRight="@dimen/w_14_dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="@dimen/w_14_dip" />
+
+        <!--价格行-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="@dimen/w_6_dip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1.5">
+
+                <LinearLayout
+                    android:id="@+id/ll_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#ff4152"
+                        android:textSize="@dimen/w_18_dip" />
+
+                    <TextView
+                        android:id="@+id/tv_com_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/w_5_dip"
+                        android:layout_toRightOf="@+id/tv_price"
+                        android:text=""
+                        android:textColor="#9b9b9b"
+                        android:textSize="@dimen/w_14_dip" />
+                </LinearLayout>
+
+                <com.weiwei.salemall.widget.PercentProgressBar
+                    android:id="@+id/pb_seckill"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="@dimen/w_160_dip"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_price"
+                    android:layout_marginTop="@dimen/w_5_dip"
+                    android:progressDrawable="@drawable/progressbar_horizontal" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btn_buy"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/w_29_dip"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape_v2"
+                android:gravity="center"
+                android:text="立即抢购"
+                android:textColor="@color/vs_white"
+                android:textSize="@dimen/w_13_dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/LineH"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

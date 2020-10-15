@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pop_shape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_delivery_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w_22_dip">
+
+        <View
+            android:id="@+id/view_left"
+            android:layout_width="@dimen/w_40_dip"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w_28_dip"
+            android:layout_toLeftOf="@+id/tv_delivery_method"
+            android:background="@color/line_bg" />
+
+        <TextView
+            android:id="@+id/tv_delivery_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="配送方式"
+            android:textColor="@color/public_color_333333"
+            android:textSize="@dimen/w_16_dip" />
+
+        <View
+            android:id="@+id/view_right"
+            android:layout_width="@dimen/w_40_dip"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w_28_dip"
+            android:layout_toRightOf="@+id/tv_delivery_method"
+            android:background="@color/line_bg" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_delivery_method"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_117_dip"
+        android:layout_below="@+id/rl_delivery_method"
+        android:layout_marginBottom="@dimen/w_27_dip"
+        android:layout_marginTop="@dimen/w_27_dip"
+        android:orientation="vertical">
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_express_delivery"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_delivery_method0"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="@dimen/w_30_dip"-->
+        <!--android:text=""-->
+        <!--android:textColor="@color/cp_color_gray_dark"-->
+        <!--android:textSize="@dimen/w_15_dip" />-->
+
+        <!--<CheckBox-->
+        <!--android:id="@+id/cb_express_delivery"-->
+        <!--android:layout_width="@dimen/w_21_dip"-->
+        <!--android:layout_height="@dimen/w_21_dip"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="@dimen/w_30_dip"-->
+        <!--android:button="@drawable/cb_btn_paytype_checked"-->
+        <!--android:checked="true" />-->
+        <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_logistics"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_delivery_method1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="@dimen/w_30_dip"-->
+        <!--android:text=""-->
+        <!--android:textColor="@color/cp_color_gray_dark"-->
+        <!--android:textSize="@dimen/w_15_dip" />-->
+
+        <!--<CheckBox-->
+        <!--android:id="@+id/cb_logistics"-->
+        <!--android:layout_width="@dimen/w_21_dip"-->
+        <!--android:layout_height="@dimen/w_21_dip"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="@dimen/w_30_dip"-->
+        <!--android:button="@drawable/cb_btn_paytype_checked" />-->
+        <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_delivery_method"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_confirm"
+        android:layout_width="@dimen/w_298_dip"
+        android:layout_height="@dimen/w_40_dip"
+        android:layout_below="@+id/ll_delivery_method"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/w_18_dip"
+        android:background="@drawable/btn_shape_v4"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/vs_white"
+        android:textSize="@dimen/w_17_dip" />
+</RelativeLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/temp_base_title_orange"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/White">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/White"
+            app:elevation="0dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_210_dip"
+                android:background="@color/public_color_F4F4F4"
+                android:padding="@dimen/w_15_dip"
+                app:layout_scrollFlags="scroll">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/card"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总收入"
+                    android:textSize="@dimen/w_14_dip"
+                    android:textColor="@color/public_color_333333"
+                    android:layout_marginLeft="@dimen/w_16_dip"
+                    android:layout_marginTop="@dimen/w_32_dip"/>
+                <TextView
+                    android:id="@+id/tv_total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/w_16_dip"
+                    android:textColor="@color/public_color_333333"
+                    android:textSize="@dimen/w_20_dip"
+                    android:textStyle="bold"
+                    android:text="￥ 12345.00"
+                    android:layout_marginTop="@dimen/w_50_dip"/>
+                <TextView
+                    android:id="@+id/tv_freeze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/w_14_dip"
+                    android:textColor="@color/public_color_666666"
+                    android:layout_below="@+id/tv_total_amount"
+                    android:layout_marginLeft="@dimen/w_16_dip"
+                    android:drawableRight="@drawable/wenhao"
+                    android:drawablePadding="@dimen/w_5_dip"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已提现"
+                    android:textSize="@dimen/w_15_dip"
+                    android:textColor="@color/public_color_333333"
+                    android:layout_marginLeft="@dimen/w_16_dip"
+                    android:layout_marginTop="@dimen/w_122_dip"/>
+                <TextView
+                    android:id="@+id/tv_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥ 1234.00"
+                    android:textSize="@dimen/w_15_dip"
+                    android:textStyle="bold"
+                    android:textColor="@color/public_color_333333"
+                    android:layout_marginLeft="@dimen/w_16_dip"
+                    android:layout_marginTop="@dimen/w_145_dip"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="可提现"
+                    android:textSize="@dimen/w_15_dip"
+                    android:textColor="@color/public_color_333333"
+                    android:layout_marginLeft="@dimen/w_185_dip"
+                    android:layout_marginTop="@dimen/w_122_dip"/>
+                <TextView
+                    android:id="@+id/tv_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥ 4321.00"
+                    android:textSize="@dimen/w_15_dip"
+                    android:textStyle="bold"
+                    android:textColor="@color/public_color_333333"
+                    android:layout_marginLeft="@dimen/w_185_dip"
+                    android:layout_marginTop="@dimen/w_145_dip"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_bind"
+                android:layout_width="@dimen/w_220_dip"
+                android:layout_height="@dimen/w_40_dip"
+                android:background="@drawable/bind_button"
+                android:layout_gravity="center_horizontal"
+                android:text="未绑定微信公众号"
+                android:textSize="@dimen/w_14_dip"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/w_15_dip"
+                app:layout_scrollFlags="scroll"/>
+            <TextView
+                android:id="@+id/tv_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绑定微信公众号提现步骤"
+                android:textColor="@color/public_color_EC6941"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/w_10_dip"
+                app:layout_scrollFlags="scroll"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_1_dip"
+                android:background="@color/public_color_E4E4E4"
+                android:layout_marginTop="@dimen/w_5_dip"
+                app:layout_scrollFlags="scroll"/>
+
+            <com.androidkun.xtablayout.XTabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_50_dip"
+                app:tabMode="fixed"
+                app:xTabIndicatorHeight="@dimen/w_3_dip"
+                app:xTabIndicatorWidth="@dimen/w_32_dip"
+                app:xTabIndicatorColor="@color/public_color_EC6941"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="@dimen/w_33_dip"
+                        android:layout_height="@dimen/w_3_dip"
+                        android:background="@color/public_color_EC6941"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="@dimen/w_33_dip"
+                        android:layout_height="@dimen/w_3_dip"
+                        android:background="@color/public_color_EC6941"
+                        android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

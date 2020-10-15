@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.weiwei.base.widgets.VsViewPager
+        android:id="@+id/ad_scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="#FF888888"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ad_point_ll"
+        android:background="#88444444"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:gravity="right"
+        android:layout_alignParentBottom="true">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ad_id_tv"
+        android:textColor="@color/White"
+        android:textSize="14dp"
+        android:text="@string/product"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/ad_point_ll"
+        android:layout_alignBottom="@id/ad_point_ll"
+        android:layout_alignLeft="@id/ad_point_ll"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="25dp"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

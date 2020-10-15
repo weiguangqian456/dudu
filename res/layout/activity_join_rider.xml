@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F4F4F4">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/temp_base_title_orange"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/title">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_275_dip"
+                android:background="@drawable/sign_up_banner"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/w_195_dip"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:layout_marginRight="@dimen/w_15_dip"
+                app:cardBackgroundColor="@color/White"
+                app:cardCornerRadius="@dimen/w_10_dip"
+                android:layout_marginBottom="@dimen/w_40_dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/w_15_dip"
+                    android:paddingRight="@dimen/w_15_dip"
+                    android:paddingTop="@dimen/w_20_dip"
+                    android:paddingBottom="@dimen/w_10_dip">
+                    <TextView
+                       style="@style/SignUpTextView"
+                        android:text="意向工作城市" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_address"
+                           style="@style/SignUpTextViewStyle_col6"
+                            android:text="请选择"
+                            android:textColor="@color/public_color_333333"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/iv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="0dp"
+                            android:src="@drawable/location"
+                            android:padding="@dimen/w_10_dip"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/w_1_dip"
+                        android:background="@color/public_color_E4E4E4"/>
+                    <TextView
+                        style="@style/SignUpTextView"
+                        android:text="意向工作地点"
+                        android:layout_marginTop="@dimen/w_15_dip"/>
+                    <EditText
+                        android:id="@+id/et_address_detail"
+                        style="@style/SignUpStyleEditText"
+                        android:hint="请填写"
+                        />
+                    <View
+                       style="@style/SignUpStyleLine"/>
+                    <TextView
+                        style="@style/SignUpTextView"
+                        android:text="姓名"
+                        android:layout_marginTop="@dimen/w_15_dip"/>
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        style="@style/SignUpStyleEditText"
+                        android:hint="请填写" />
+
+                    <View
+                        style="@style/SignUpStyleLine"/>
+
+                    <TextView
+                        style="@style/SignUpTextView"
+                        android:text="手机号"
+                        android:layout_marginTop="@dimen/w_15_dip"/>
+
+                    <EditText
+                        android:id="@+id/et_mobile"
+                        style="@style/SignUpStyleEditText"
+                        android:hint="请填写"
+                        android:inputType="phone"/>
+
+                    <View
+                        style="@style/SignUpStyleLine"/>
+
+                    <TextView
+                        style="@style/SignUpTextView"
+                        android:text="*填写以上信息，三个工作日内获得反馈"
+                        android:layout_marginTop="@dimen/w_20_dip"
+                        android:textSize="@dimen/w_12_dip" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/w_20_dip">
+                        <View
+                            android:layout_width="@dimen/w_15_dip"
+                            android:layout_height="@dimen/w_1_dip"
+                            android:background="@color/public_color_999999"
+                            android:layout_toLeftOf="@+id/tv_question"
+                            android:layout_centerVertical="true"/>
+                        <TextView
+                            android:id="@+id/tv_question"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="常见问题"
+                            android:textColor="@color/public_color_999999"
+                            android:textSize="@dimen/w_15_dip"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/w_10_dip"
+                            android:layout_marginRight="@dimen/w_10_dip"/>
+                        <View
+                            android:layout_width="@dimen/w_15_dip"
+                            android:layout_height="@dimen/w_1_dip"
+                            android:background="@color/public_color_999999"
+                            android:layout_toRightOf="@+id/tv_question"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+                    <TextView
+                       style="@style/SignUpTextViewStyle_14"
+                        android:text="@string/rider_title_one" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_13"
+                        android:text="@string/rider_intro_one" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_14"
+                        android:text="@string/rider_title_two" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_13"
+                        android:text="@string/rider_intro_two" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_14"
+                        android:text="@string/rider_title_three" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_13"
+                        android:text="@string/rider_intro_three" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_14"
+                        android:text="@string/rider_title_four" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_13"
+                        android:text="@string/rider_intro_four" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_14"
+                        android:text="@string/rider_title_five" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_13"
+                        android:text="@string/rider_intro_five" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_14"
+                        android:text="@string/rider_title_six" />
+                    <TextView
+                        style="@style/SignUpTextViewStyle_13"
+                        android:text="@string/rider_intro_six" />
+                    <Button
+                        android:id="@+id/btn_rider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/join_rider_button"
+                        android:layout_marginTop="@dimen/w_10_dip"
+                        android:text="报名成为骑手"
+                        android:textSize="@dimen/w_15_dip"
+                        android:textColor="@color/White"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

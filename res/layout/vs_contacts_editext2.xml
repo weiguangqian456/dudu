@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="none" >
+
+    <FrameLayout
+        android:id="@+id/vs_contact_searchLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vs_gray_simaple"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/vs_contact_searchLayoutChild"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/vs_contact_cts_keyword"
+                android:layout_width="fill_parent"
+                android:layout_height="34dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/vs_contact_search"
+                android:drawablePadding="18dp"
+                android:gravity="center_vertical"
+                android:hint="@string/contacts_editext_text"
+                android:maxLines="1"
+                android:paddingLeft="35dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="20dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/contact_keysearch" />
+
+        <ImageView
+            android:id="@+id/vs_contact_deleteImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="15dp"
+            android:paddingRight="35dp"
+            android:src="@drawable/vs_del"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

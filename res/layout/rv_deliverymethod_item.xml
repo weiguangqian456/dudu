@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/w_56_dip"
+    android:paddingBottom="@dimen/w_5_dip"
+    android:paddingTop="@dimen/w_5_dip">
+
+    <TextView
+        android:id="@+id/tv_delivery_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/w_30_dip"
+        android:text=""
+        android:textColor="@color/public_color_333333"
+        android:textSize="@dimen/w_15_dip" />
+
+    <CheckBox
+        android:id="@+id/cb_delivery_method"
+        android:layout_width="@dimen/w_21_dip"
+        android:layout_height="@dimen/w_21_dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/w_30_dip"
+        android:button="@drawable/cb_btn_paytype_checked" />
+</RelativeLayout>

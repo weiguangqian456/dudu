@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="auto_focus" type="id" />
+    <item name="decode" type="id" />
+    <item name="decode_failed" type="id" />
+    <item name="decode_succeeded" type="id" />
+    <item name="restart_preview" type="id" />
+    <item name="quit" type="id" />
+
+    <item name="gridview" type="id" />
+    <item name="webview" type="id" />
+    <item name="scrollview" type="id" />
+
+    <item name="tag_first" type="id"></item>
+
+    <item name="tag_second" type="id"></item>
+
+    <item name="tag_item_position" type="id" />
+
+    <item name="tag_click" type="id" />
+
+</resources>

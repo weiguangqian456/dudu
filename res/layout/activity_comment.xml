@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3FA">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/systitle_orange" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_below"
+        style="@style/line_below"
+        android:layout_below="@+id/title" />
+
+    <LinearLayout
+        android:id="@+id/ll_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_below"
+        android:background="@color/vs_white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_123_dip"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="请填写您的评论内容，分享您的心得吧~"
+            android:textColor="#888888"
+            android:textSize="@dimen/w_13_dip" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/w_20_dip"
+            android:layout_marginRight="@dimen/w_15_dip"
+            android:gravity="right"
+            android:text="(最多200字)"
+            android:textColor="#CBD0D4"
+            android:textSize="@dimen/w_14_dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_comment_content"
+        android:layout_marginTop="@dimen/indicator_right_padding"
+        android:background="@color/vs_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_49_dip">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:src="@drawable/mall_comment"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/w_9_dip"
+                android:gravity="center_vertical"
+                android:text="商品评分"
+                android:textColor="#333333"
+                android:textSize="@dimen/w_16_dip" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e4e6F0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/w_20_dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_49_dip"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w_15_dip"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="描述相符"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/w_15_dip" />
+
+                <com.weiwei.salemall.widget.StarBar
+                    android:id="@+id/star_describe"
+                    android:layout_marginLeft="@dimen/w_70_dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:splitMotionEvents="false"
+                    ratingbar:starCount="5"
+                    ratingbar:starDistance="@dimen/w_10_dip"
+                    ratingbar:starEmpty="@drawable/comment_empty_start"
+                    ratingbar:starFill="@drawable/comment_full_start"
+                    ratingbar:starSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_49_dip"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w_15_dip"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="发货速度"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/w_15_dip" />
+
+                <com.weiwei.salemall.widget.StarBar
+                    android:id="@+id/star_service"
+                    android:layout_marginLeft="@dimen/w_70_dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:splitMotionEvents="false"
+                    ratingbar:starCount="5"
+                    ratingbar:starDistance="@dimen/w_10_dip"
+                    ratingbar:starEmpty="@drawable/comment_empty_start"
+                    ratingbar:starFill="@drawable/comment_full_start"
+                    ratingbar:starSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_49_dip"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/w_15_dip"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="服务态度"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/w_15_dip" />
+
+                <com.weiwei.salemall.widget.StarBar
+                    android:id="@+id/star_delivery"
+                    android:layout_marginLeft="@dimen/w_70_dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:splitMotionEvents="false"
+                    ratingbar:starCount="5"
+                    ratingbar:starDistance="@dimen/w_10_dip"
+                    ratingbar:starEmpty="@drawable/comment_empty_start"
+                    ratingbar:starFill="@drawable/comment_full_start"
+                    ratingbar:starSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

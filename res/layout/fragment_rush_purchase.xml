@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_theme_3">
+
+    <!--标题-->
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:paddingLeft="@dimen/default_spaced"
+        android:paddingRight="@dimen/default_spaced"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_title_height">
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="@dimen/default_title_height"
+            android:layout_height="@dimen/default_title_height">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_gravity="center_vertical"
+                android:layout_width="18dp"
+                android:layout_height="26dp"
+                android:src="@drawable/icon_back"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"/>
+            <!--内容-->
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/srl_load"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_load"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:background="@color/bg_color"/>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.weiwei.home.view.CustomErrorView
+        android:layout_below="@id/ll_title"
+        android:id="@+id/cev_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

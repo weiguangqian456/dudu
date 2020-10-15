@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/vs_whilte_btn_shape_bg"
+    android:minWidth="280dip"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vs_whilte_btn_top_shape_bg" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/DialogText.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/vs_whilte_btn_top_shape_bg"
+            android:gravity="bottom"
+            android:textColor="@color/Black" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/message"
+        style="@style/DialogText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/vs_white"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/vs_black"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vs_whilte_btn_bottom_shape_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/vs_whilte_btn_bottom_left_shape_selecter"
+            android:singleLine="true"
+            android:textColor="@color/vs_blue_slight"
+            android:textSize="19.5sp" />
+
+        <View
+            android:layout_width="0.67dp"
+            android:layout_height="match_parent"
+            android:background="@color/vs_line_color" />
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/vs_whilte_btn_bottom_right_shape_selecter"
+            android:singleLine="true"
+            android:textColor="@color/vs_blue_slight"
+            android:textSize="19.5sp"
+             />
+    </LinearLayout>
+
+</LinearLayout>

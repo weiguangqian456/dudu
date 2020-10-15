@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    tools:context="com.weiwei.base.widgets.CustomDialogActivity" >
+
+    <TextView
+        android:id="@+id/contact_titleview"
+        android:layout_width="fill_parent"
+        android:layout_height="23dp"
+        android:background="#f7f7f7"
+        android:gravity="center_vertical"
+        android:paddingLeft="18.5dp"
+        android:textColor="@color/Black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="18.5dp"
+        android:layout_marginTop="12dp" >
+
+        <LinearLayout
+            android:id="@+id/linear_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/select_item_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/select_img"
+                android:contentDescription="@string/app_name"
+                android:focusable="false"
+                android:src="@drawable/sel_yes_img"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/contact_list_item_head_text"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/myself_head"
+                android:contentDescription="@string/app_name"
+                android:focusable="false"
+                android:gravity="center"
+                android:textColor="@color/whites" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name_pinyin_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/linear_left"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/contact_nameview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/Grayish"
+                android:textSize="18sp" />
+            <!-- 名字的拼音 -->
+
+            <TextView
+                android:id="@+id/contact_namepyview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dial_detailed_info"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contact_num_local_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_pinyin_ll"
+            android:layout_marginTop="-8dp"
+            android:layout_toRightOf="@id/linear_left"
+            android:orientation="horizontal" >
+
+            <!-- 号码 -->
+
+            <TextView
+                android:id="@+id/contact_num_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/dial_detailed_info"
+                android:textSize="12sp" />
+            <!-- 归属地 -->
+
+            <TextView
+                android:id="@+id/contact_local_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/dial_detailed_info"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <!-- 多个号码 -->
+
+        <LinearLayout
+            android:id="@+id/select_num_local_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/contact_num_local_layout"
+            android:layout_below="@id/contact_num_local_layout"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/isvsuser_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/vs_call_icon"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

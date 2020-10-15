@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_hint"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_39_dip"
+        android:gravity="center_vertical"
+        android:text="@string/recruit_hint"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/seckill_zone"
+        android:drawableStart="@drawable/seckill_zone" />
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_220_dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/image_member_banner"
+        android:contentDescription="@string/app_name" />
+    <View style="@style/LineH"/>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/info_title"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_order"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_50_dip"
+        android:paddingLeft="@dimen/w_15_dip"
+        android:paddingRight="@dimen/w_15_dip"
+        android:layout_marginTop="@dimen/w_50_dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商家订单"
+            android:textSize="@dimen/w_15_dip"
+            android:textColor="@color/public_color_333333"
+            android:drawableLeft="@drawable/icon_order"
+            android:drawablePadding="@dimen/w_5_dip"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="@dimen/w_16_dip"
+            android:layout_height="@dimen/w_16_dip"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_1_dip"
+        android:background="#E4E4E4"
+        android:layout_marginLeft="@dimen/w_41_dip"
+        android:layout_marginRight="@dimen/w_15_dip"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_question"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_50_dip"
+        android:paddingLeft="@dimen/w_15_dip"
+        android:paddingRight="@dimen/w_15_dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常见问题"
+            android:textSize="@dimen/w_15_dip"
+            android:textColor="@color/public_color_333333"
+            android:drawableLeft="@drawable/icon_question"
+            android:drawablePadding="@dimen/w_5_dip"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="@dimen/w_16_dip"
+            android:layout_height="@dimen/w_16_dip"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_1_dip"
+        android:background="#E4E4E4"
+        android:layout_marginLeft="@dimen/w_41_dip"
+        android:layout_marginRight="@dimen/w_15_dip"/>
+
+
+</LinearLayout>

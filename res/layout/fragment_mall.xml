@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 -->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+     	android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 顶部标题 -->
+        <include layout="@layout/systitle" />
+
+        <TextView
+            android:id="@+id/select_contact_num"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/croci"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/load_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="46dp"
+            android:background="@color/White"
+            android:gravity="center" >
+
+            <!--
+            <ImageView
+                android:id="@+id/load_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/load_ing1" />
+            -->
+
+            <ImageView
+                android:id="@+id/load_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/load_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/load_error_ayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="46dp"
+            android:background="@color/White"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/load_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/webview_load_error" />
+        </LinearLayout>
+   <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:id="@+id/view_line"
+              android:layout_below="@+id/web_nextback_layout"
+            android:background="@color/vs_line_color" />
+       <WebView
+            android:id="@+id/webview"
+            android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/view_line"
+            android:layout_gravity="center|bottom" >
+        </WebView>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/web_nextback_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_alignBottom="@drawable/bg_header"
+            android:layout_alignParentTop="true"
+            android:background="@color/White"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iamgeView2"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/webview_btn_back_selecter"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/iamgeView1"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/vs_go_next"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+               android:textColor="@color/vs_black"
+            android:textSize="19.5sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="right|center" >
+
+                <ImageView
+                    android:id="@+id/refsh"
+                     android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/webview_btn_refresh_selecter"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

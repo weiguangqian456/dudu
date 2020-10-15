@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/w_10_dip"
+    android:background="@color/White"
+    android:paddingLeft="@dimen/w_15_dip"
+    android:paddingRight="@dimen/w_15_dip"
+    android:paddingBottom="@dimen/w_25_dip">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w_5_dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shijian"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25分钟"
+                android:textColor="@color/public_color_EC6941"
+                android:textSize="@dimen/w_12_dip"
+                android:layout_toRightOf="@+id/time"
+                android:layout_marginLeft="@dimen/w_9_dip"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内送达"
+                android:textSize="@dimen/w_12_dip"
+                android:layout_toRightOf="@+id/tv_time"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:id="@+id/rl_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离"
+                    android:textSize="@dimen/w_12_dip"
+                    android:layout_toLeftOf="@+id/tv_distance"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="233米"
+                    android:textColor="@color/public_color_EC6941"
+                    android:textSize="@dimen/w_12_dip"
+                    android:layout_centerVertical="true"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="该订单已取消"
+            android:textColor="@color/public_color_EC6941"
+            android:textSize="@dimen/w_16_dip"
+            android:visibility="gone"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="@dimen/w_20_dip">
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="深圳店"
+            android:textSize="@dimen/w_12_dip"
+            android:textColor="@color/public_color_333333"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/green_circle"
+            android:drawablePadding="@dimen/w_5_dip"/>
+
+        <View
+            android:id="@+id/circle1"
+            android:layout_width="@dimen/w_3_dip"
+            android:layout_height="@dimen/w_3_dip"
+            android:background="@drawable/gray_circle"
+            android:layout_below="@+id/tv_city"
+            android:layout_marginLeft="@dimen/w_3_dip"/>
+
+        <View
+            android:id="@+id/circle2"
+            android:layout_width="@dimen/w_3_dip"
+            android:layout_height="@dimen/w_3_dip"
+            android:background="@drawable/gray_circle"
+            android:layout_below="@+id/circle1"
+            android:layout_marginLeft="@dimen/w_3_dip"
+            android:layout_marginTop="@dimen/w_3_dip"/>
+
+        <View
+            android:id="@+id/circle3"
+            android:layout_width="@dimen/w_3_dip"
+            android:layout_height="@dimen/w_3_dip"
+            android:background="@drawable/gray_circle"
+            android:layout_below="@+id/circle2"
+            android:layout_marginLeft="@dimen/w_3_dip"
+            android:layout_marginTop="@dimen/w_3_dip"/>
+
+        <TextView
+            android:id="@+id/tv_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="南山区方大大厦"
+            android:textSize="@dimen/w_12_dip"
+            android:textColor="@color/public_color_333333"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/gray_circle"
+            android:drawablePadding="@dimen/w_5_dip"
+            android:layout_below="@+id/circle3"
+            android:maxEms="16"
+            android:singleLine="true"
+            android:ellipsize="marquee"/>
+
+        <TextView
+            android:id="@+id/tv_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导航至商家"
+            android:drawableTop="@drawable/daohang"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/w_10_dip"
+            android:textColor="@color/public_color_999999"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_detail"
+        android:layout_marginTop="@dimen/w_25_dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消订单"
+                android:drawableTop="@drawable/cancel_order"
+                android:textSize="@dimen/w_10_dip"
+                android:textColor="@color/public_color_666666"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_14_dip"
+                android:drawablePadding="@dimen/w_3_dip"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/tv_call_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系客服"
+                android:drawableTop="@drawable/phone"
+                android:textSize="@dimen/w_10_dip"
+                android:drawablePadding="@dimen/w_3_dip"
+                android:textColor="@color/public_color_666666"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_14_dip"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rl_cancel">
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="@dimen/w_285_dip"
+                android:layout_height="@dimen/w_42_dip"
+                android:max="100"
+                android:progress="0"
+                android:thumb="@drawable/thumb_image"
+                android:progressDrawable="@drawable/seek_bar_bg"
+                android:thumbOffset="0dp"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="右滑确认抢单"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/w_15_dip"
+                android:textColor="@color/White"/>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rider_order_red_button"
+                android:text="知道了"
+                android:textColor="@color/White"
+                android:textSize="@dimen/w_15_dip"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_height="60dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/im_item_sub_mutil_tv"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:maxLines="2"
+            android:textColor="@color/Black"
+            android:textSize="14dp" />
+
+        <io.rong.imkit.view.AsyncImageView
+            android:id="@+id/im_item_sub_mutil_icon_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#88888888" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/vs_blue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/w_48_dip"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/w_9_dip"
+                android:layout_height="@dimen/w_16_dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_4_dip"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="定位城市"
+                android:textColor="@color/vs_white"
+                android:textSize="@dimen/w_18_dip" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/cp_search_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cp_city_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:id="@+id/cp_overlay"
+            android:layout_width="@dimen/w_100_dip"
+            android:layout_height="@dimen/w_100_dip"
+            android:layout_centerInParent="true"
+            android:background="#636870"
+            android:gravity="center"
+            android:textColor="@color/vs_gray"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!--右侧字母导航-->
+        <com.weiwei.salemall.citypicker.view.SideIndexBar
+            android:id="@+id/cp_side_index_bar"
+            android:layout_width="@dimen/w_36_dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+        <include layout="@layout/cp_empty_view" />
+    </RelativeLayout>
+</LinearLayout>

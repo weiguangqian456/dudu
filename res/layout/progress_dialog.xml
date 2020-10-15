@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/w_150_dip"
+    android:layout_height="@dimen/w_147_dip"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_coner_progress">
+
+    <ImageView
+        android:id="@+id/loadingIv"
+        android:layout_width="@dimen/w_95_dip"
+        android:layout_height="@dimen/w_90_dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/w_10_dip"
+        android:background="@drawable/loading_frame" />
+
+    <TextView
+        android:id="@+id/loadingTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loadingIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/w_17_dip"
+        android:text="正在加载中..."
+        android:layout_marginBottom="@dimen/w_10_dip"
+        android:textSize="@dimen/w_15_dip"
+        android:textColor="@color/nodeColor"/>
+</RelativeLayout>

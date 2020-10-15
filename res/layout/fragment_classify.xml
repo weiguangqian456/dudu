@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_title"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_title"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <FrameLayout
+                android:id="@+id/fl_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_white">
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/load"/>
+            </FrameLayout>
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <View
+        android:id="@+id/view_line"
+        android:layout_toEndOf="@+id/srl_title"
+        android:layout_toRightOf="@+id/srl_title"
+        style="@style/LineV" />
+    <com.weiwei.home.view.SlideViewPager
+        android:layout_toRightOf="@+id/view_line"
+        android:layout_toEndOf="@+id/view_line"
+        android:id="@+id/vp_classify"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.weiwei.home.view.CustomErrorView
+        android:id="@+id/cev_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

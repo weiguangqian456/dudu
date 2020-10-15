@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_theme">#447aff</color>
+    <color name="color_theme_2">#ff6a1c</color>
+    <color name="color_theme_3">#ef0022</color>
+
+    <color name="color_theme_4">#FF5000</color>
+    <color name="color_text_4">#383838</color>
+    <color name="color_text_d">#A7A7A7</color>
+
+    <color name="transparency">#00000000</color>
+    <color name="color_orange">#FF6600</color>
+    <color name="color_red">#FF0000</color>
+    <color name="color_white">#FFFFFF</color>
+
+    <color name="color_bg">#F0F3FA</color>
+
+    <color name="default_text">#666666</color>
+
+    <color name="common_title">#F9F9F9</color>
+    <color name="whites">#ffffff</color>
+    <color name="black">#000000</color>
+    <!-- 手势密码 -->
+    <color name="gesture_background">#ff303237</color>
+    <color name="color_hei_8">#00000000</color>
+
+    <drawable name="trans">@color/color_hei_8</drawable>
+    <!-- 界面颜色 开始 -->
+    <!-- 黑色s1 -->
+    <color name="vs_black">#272727</color>
+    <!-- 灰色s2 -->
+    <color name="vs_gray">#cbcbcb</color>
+    <!-- 深灰s3 -->
+    <color name="vs_gray_deep">#595959</color>
+    <!-- 白色s4 -->
+    <color name="vs_white">#ffffff</color>
+    <!-- 绿s5 -->
+    <color name="vs_gree">#06bf04</color>
+    <!-- 深绿s6 -->
+    <color name="vs_gree_deep">#029d00</color>
+    <!-- 蓝色 s7 -->
+    <color name="vs_blue">#1086FF</color>
+    <!-- 浅蓝 -->
+    <color name="vs_blue_light">#447aff</color>
+    <!-- 深蓝 s8 -->
+    <color name="vs_blue_deep">#2053c7</color>
+    <color name="vs_blue_sdeep">#2087C9</color>
+    <color name="vs_blue_slight">#3EA9FA</color>
+    <color name="vs_gray_light">#58AEE2</color>
+    <!-- 浅灰背景s9 -->
+    <color name="vs_gray_simaple">#f8f8f8</color>
+    <!-- 半透明背景s9 -->
+    <color name="vs_lucency_half">#eeeeee</color>
+    <!-- 线的颜色 -->
+    <color name="vs_line_color">#e5e5e5</color>
+    <!-- 半透明背景 -->
+    <color name="vs_lucency_half2">#5fffffff</color>
+    <!-- 透明 -->
+    <color name="vs_lucency">#00000000</color>
+    <!-- 红色s10 -->
+    <color name="vs_red">#ed402e</color>
+    <!-- 直拨归属地颜色 -->
+    <color name="vs_callphone_local_color">#a6c5ef</color>
+    <!-- 直拨归属地黄色 -->
+    <color name="vs_yellow">#fff843</color>
+    <!-- 直拨动画开始颜色 -->
+    <color name="vs_call_start">#7ea3e8</color>
+    <!-- 直拨动画结束颜色 -->
+    <color name="vs_call_end">#91feff</color>
+    <!-- 浅黑 s11 -->
+    <color name="vs_recharge_hint_color">#969696</color>
+    <!-- 褐色 -->
+    <color name="vs_hs">#873300</color>
+    <!-- 浅褐色 -->
+    <color name="vs_hs_light">#b45300</color>
+    <!-- 橙色 -->
+    <color name="vs_cs">#FF6600</color>
+    <!-- 按下颜色 -->
+    <color name="PersonalSelBg">#e4e4e4</color>
+    <!-- 界面颜色结束 -->
+
+    <!--列表默认颜色-->
+    <color name="itemNorColor">#FFFEFFFF</color>
+    <!--列表点击颜色-->
+    <color name="itemPreColor">#EEEEEE</color>
+    <!--地点名称文字颜色-->
+    <color name="positionNameColor">#0B0F12</color>
+
+    <color name="line_bg">#e4e6f0</color>
+    <!-- 查询余额头部颜色 -->
+    <color name="vs_balance_head">#0aac62</color>
+    <!-- 查询余额包月字体颜色 -->
+    <color name="vs_balance_taocantext">#F3FF2B</color>
+    <!-- 查询余额有效期颜色 -->
+    <color name="vs_balance_validityntext">#004626</color>
+
+    <!--vip 金色-->
+    <color name="vs_vip_gold">#ddce8c</color>
+
+    <!-- 网络变化提醒色值 -->
+    <color name="network_change_color">#fffbdc</color>
+    <!-- 我标签未绑定的色值 -->
+    <color name="my_line_color">#369fe2</color>
+    <color name="my_nobind_color">#fffd72</color>
+    <!-- 联系人详情个人标签颜色 -->
+    <color name="contact_tag_color">#aaaaaa</color>
+    <!-- 闪屏颜色 -->
+    <color name="splash_color">#329DE2</color>
+    <!-- 邀请好友颜色 -->
+    <color name="invite_number_gray">#929292</color>
+    <!-- 邀请按钮颜色 -->
+    <color name="invite_button_gray">#009FF1</color>
+    <!-- 滑屏颜色 -->
+    <color name="invite_addcolor">#00a8ff</color>
+    <!-- 滑屏颜色 -->
+    <color name="slide_btn_text_color">#A8A8A8</color>
+    <!-- 滑屏颜色 -->
+    <color name="viewpage_textcolor_one">#5EB1F6</color>
+    <color name="activity_backgroud_color">#F9F9F9</color>
+    <!-- 公共颜色 -->
+    <color name="White">#FFFFFF</color>
+    <color name="bg_color">#eeeded</color>
+    <color name="line">#c8c7cc</color>
+    <!-- 注册界面 -->
+    <color name="register_bg">#329EE2</color>
+    <color name="register_text_bg">#ffffff</color>
+    <color name="register_hint_text_bg">#a4a4a4</color>
+    <color name="register_hint_button_text_bg">#2B8BC9</color>
+    <color name="register_dialog_message_color">#4e4e4e</color>
+
+    <!-- 充值 -->
+    <color name="recharge_center_color">#f4f4f4</color>
+    <color name="recharge_packages_color">#181818</color>
+    <color name="recharge_packages_link_color">#859bb2</color>
+    <color name="recharge_mobilecard">#ff5a20</color>
+    <!-- 直拨 -->
+    <color name="callphone_keyboard_color">#fafafa</color>
+    <color name="callphone_change_hint_color">#65ca28</color>
+    <color name="callphone_notification_color">#999999</color>
+    <!-- 登录、修改密码 -->
+    <color name="login_lose_pasword_color">#329EE2</color>
+    <color name="bind_edit_tc">#d5d5d5</color>
+    <!-- 拨号盘line -->
+    <color name="keyboard_line">#e6e6e6</color>
+    <color name="dial_line">#dadada</color>
+    <color name="login_line_color">#d4d4d5</color>
+    <!-- 短信验证 -->
+    <color name="msg_verify_agin_color">#2b8bc9</color>
+    <color name="msg_verify_msg_show">#bf000000</color>
+    <color name="msg_bind_phoneNumber">#969696</color>
+    <color name="msg_bind_textcolor">#d8d8d8</color>
+
+    <!-- 通话记录详情 -->
+    <color name="calllog_detail_textcolor">#9d9d9d</color>
+    <color name="contact_detail_textcolor">#b0b0b0</color>
+    <color name="kc_callback_anim_color">#1985cb</color>
+    <!-- 首字母提示字母颜色 -->
+    <color name="list_popup_cahr">#ffffffff</color>
+    <!-- 橘黄色 -->
+    <color name="croci">#FC471C</color>
+    <!-- 浅黑色 -->
+    <color name="lightblack">#343434</color>
+    <color name="TextGreen">#49997c</color>
+    <color name="BgSelColor">#d5d5d5</color>
+    <color name="Grayish">#222121</color>
+    <color name="dial_detailed_info">#787E7B</color>
+    <!-- 浅蓝色字体 -->
+    <color name="titlebar_blue">#329de2</color>
+    <color name="gray_Black">#181818</color>
+    <color name="textyellow">#ff5a20</color>
+    <color name="gray">#969696</color>
+    <color name="text_gray">#8e8e8e</color>
+    <!-- 个人中心选中背景色 -->
+    <color name="TextBlack">#1e1e1e</color>
+    <color name="TextYellow">#ff5a20</color>
+    <color name="BgColor">#FFFFFF</color>
+    <!-- 滑屏配置的3种颜色 -->
+    <color name="color_switching_one">#f1f8ff</color>
+    <color name="color_switching_two">#0000</color>
+    <color name="color_switching_three">#0000</color>
+    <color name="Black">#000000</color>
+    <color name="lucency">#00000000</color>
+
+    <!-- 联系人界面颜色 -->
+    <color name="contacts_often_image">#c7cacf</color>
+    <color name="contacts_invde_bg">#ebebeb</color>
+    <!-- 发送短信界面颜色 -->
+    <color name="sendsms_background">#ededed</color>
+    <!-- AlertDialog Title字体颜色 -->
+    <color name="alert_dialog_title">#252525</color>
+    <color name="alert_dialog_button">#1E1E1E</color>
+    <color name="dial_new_line">#d4d4d4</color>
+    <!-- 通话记录 -->
+    <color name="call_log_title">#212121</color>
+    <color name="call_log_title2">#fe7431</color>
+    <!-- 设置 -->
+    <color name="seting_about_bag">#efeeee</color>
+    <color name="seting_about_text">#908f8f</color>
+
+    <!-- 我的帐号 -->
+    <color name="balance_text_color">#cdedff</color>
+    <color name="balance_text_color2">#bebebe</color>
+    <color name="balance_tc_bg">#f5f5f5</color>
+    <color name="balance_tc_list_bg">#efeeee</color>
+    <color name="balance_tc_list_item">#bdbcbc</color>
+    <color name="EditText">#292929</color>
+    <!-- 活动资讯 -->
+    <color name="information_dark_gray">#a0a0a0</color>
+    <color name="information_image_gray">#dadada</color>
+    <color name="information_black">#4a4a4a</color>
+    <color name="information_bule">#00b8ba</color>
+    <color name="information_line">#d9d9d9</color>
+    <color name="information_item_select">#b9b9b9</color>
+    <color name="transparent">#0000</color>
+    <!-- 备份字体颜色 -->
+    <color name="bakcontact_prompt">#383737</color>
+    <color name="bakcontact_prompt_info">#ACACAC</color>
+    <color name="bakcontact_localcontact">#7F7F7F</color>
+    <color name="bakcontact_info">#FF660D</color>
+    <color name="bakcontact_lasttime">#828181</color>
+    <!-- 消息中心 -->
+    <!-- 灰色 -->
+    <color name="notice_text_color">#a1a0a0</color>
+    <!-- 黑色 -->
+    <color name="notice_text_color1">#232323</color>
+    <!-- im -->
+    <color name="ic_back_sel">#181819</color>
+    <color name="all_list_item_bg">#1da1fd</color>
+    <color name="im_bg">#eeeeee</color>
+    <color name="im_edit_color">#595959</color>
+    <color name="main_com_top_bg">#3b3b3b</color>
+
+    <!-- 融云 -->
+    <color name="welcome_onrange">#FF6402</color>
+    <color name="title_bg">#3498DB</color>
+    <color name="item_function_list_divider">#E4E4E4</color>
+
+    <!-- 拨号界面颜色 -->
+    <color name="name_text">#010101</color>
+    <color name="local_text">#707070</color>
+
+    <!-- 顶部title颜色 -->
+    <color name="title_color">#FFFFFF</color>
+
+    <!-- 我界面字体颜色 -->
+    <color name="update_new_color">#797979</color>
+    <color name="myself_text_color">#010101</color>
+    <color name="money_text_color">#1fa709</color>
+    <color name="miss_call_text_color">#ff3b30</color>
+
+    <color name="share_text">#33759f</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="line_border">#D0D0D0</color>
+    <color name="translucent_background">#60000000</color>
+    <color name="upomp_lthj_line_color">#FFA6B4C3</color>
+
+    <color name="colorPrimary">#ec0f38</color>
+    <color name="colorPrimaryDark">#ec0f38</color>
+    <color name="colorAccent">#ec0f38</color>
+    <color name="divider">#ffd2d2d2</color>
+
+    <color name="xml_color_text_normal_style">#333333</color>
+    <color name="nodeColor">#636870</color>
+    <color name="nodeTextColor">#00bcb4</color>
+
+    <color name="list_item_focus">#0a000000</color>
+    <color name="white_alpha_percent_45">#73ffffff</color>
+
+    <color name="vs_default_gray">#636870</color>
+    <color name="vs_bg_color">#F0F3FA</color>
+
+    <color name="welfare_first_bg">#fbf5f2</color>
+    <color name="welfare_second_bg">#f6f6f6</color>
+    <color name="welfare_third_bg">#f5f4f6</color>
+
+    <color name="noclick">#b5bac0</color>
+    <color name="soldout">#cecece</color>
+    <color name="orange">#f67a00</color>
+    <!-- 进度条渐变  -->
+    <color name="progress_start">#1694fe</color>
+    <color name="progress_center">#5ef4fd</color>
+    <color name="progress_end">#5ef4fd</color>
+
+    <color name="public_color_CDCDCD">#CDCDCD</color>
+    <color name="public_color_999999">#999999</color>
+    <color name="public_color_666666">#666666</color>
+    <color name="public_color_333333">#333333</color>
+    <color name="public_color_EDEDED">#EDEDED</color>
+    <color name="public_color_F5F5F5">#F5F5F5</color>
+    <color name="public_color_transparent">#00000000</color>
+    <color name="public_color_white">#FFFFFF</color>
+    <color name="public_color_black">#000000</color>
+    <color name="public_color_CCCCCC">#CCCCCC</color>
+    <color name="public_color_222222">#222222</color>
+    <color name="public_color_red">#FF0000</color>
+
+    <color name="public_color_FF6177">#FF6177</color>
+    <color name="public_color_DBDBDB">#DBDBDB</color>
+    <color name="public_color_FD4900">#FD4900</color>
+    <color name="public_color_FFC6AF">#FFC6AF</color>
+    <color name="public_color_FF5000">#FF5000</color>
+    <color name="public_color_DE5A3C">#DE5A3C</color>
+    <color name="public_color_EC6941">#EC6941</color>
+    <color name="public_color_FEB705">#FEB705</color>
+    <color name="public_color_F11801">#F11801</color>
+    <color name="public_color_FF3333">#FF3333</color>
+    <color name="public_color_F61E09">#F61E09</color>
+    <color name="public_color_09C809">#09C809</color>
+    <color name="public_color_33CC00">#33CC00</color>
+    <color name="public_color_F92900">#F92900</color>
+    <color name="public_color_FC9A40">#FC9A40</color>
+    <color name="public_color_E52C08">#E52C08</color>
+    <color name="public_color_FF6666">#FF6666</color>
+    <color name="public_color_DD593A">#DD593A</color>
+    <color name="public_color_8F9AFC">#8F9AFC</color>
+    <color name="public_color_00CC8E">#00CC8E</color>
+    <color name="public_color_9F9E9E">#9F9E9E</color>
+    <color name="public_color_FFFFFF">#FFFFFF</color>
+    <color name="public_color_D9435A">#D9435A</color>
+    <color name="public_color_F4F4F4">#F4F4F4</color>
+    <color name="public_color_F5F6F7">#F6F5F8</color>
+    <color name="public_color_E4E4E4">#E4E4E4</color>
+    <color name="public_color_E21A38">#E21A38</color>
+    <!-- 透明  -->
+    <color name="colorEmpty">#00000000</color>
+</resources>

@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hwtx.dududh">
+    <!-- Required -->
+    <permission
+        android:name="com.hwtx.dududh.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.hwtx.dududh.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" /> <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" /> <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 添加系统浮窗 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 获取通话记录的权限 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- 屏幕保持唤醒不锁屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 访问SD卡权限> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许读取本地资源：手机号码 -->
+    <!-- 添加桌面快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> <!-- 删除桌面快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> <!-- 读取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 读取信息 -->
+    <uses-permission android:name="android.permission.READ_SMS" /> <!-- 写信息 -->
+    <uses-permission android:name="android.permission.WRITE_SMS" /> <!-- 基站位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 直拨 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- SDK、Pro支付 -->
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 允许振动提示 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 银联 -->
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.DELETE_CACHE_FILES"
+        tools:ignore="ProtectedPermissions" /> <!-- 访问WIFI网络状态的权限 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" /> <!-- 接受系统启动完毕的 Broadcast 的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许读取本地资源：SIM卡信息 -->
+    <uses-permission android:name="android.permission.SIM_STATE_READY" /> <!-- 允许获取安装信息 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" /> <!-- 允许设置时区 -->
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许监听开关屏权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- Push service 运行需要的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- round -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 录音 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"
+        tools:ignore="ProtectedPermissions" /> <!-- 百度定位 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation,ProtectedPermissions" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 广告开始（重复权限已删除） -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name="com.weiwei.base.application.VsApplication"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.weiwei.home.activity.OrderActivity"></activity>
+        <!-- app版本号 -->
+        <meta-data
+            android:name="RELEASE_APP_VERSION"
+            android:value="8.3.10" /> <!-- jpush start -->
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service> <!-- since 3.0.9 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.hwtx.dududh.DataProvider"
+            android:exported="false"
+            android:process=":pushcore" /> <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.hwtx.dududh" />
+            </intent-filter>
+        </service> <!-- since 3.1.0 Required SDK 核心功能 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.hwtx.dududh.DownloadProvider"
+            android:exported="true" /> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.hwtx.dududh" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver> <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" /> <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.weiwei.salemall.jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.hwtx.dududh" />
+            </intent-filter>
+        </receiver> <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name="com.weiwei.salemall.jpush.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.hwtx.dududh" />
+            </intent-filter>
+        </receiver> <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="34092b070660236e23311bda" /> <!-- </>值来自开发者平台取得的AppKey -->
+        <!-- jpush end -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="m0OOjMr6V0sGWD8NjrilU6RFnPgExoXw" /> <!-- 适配全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" /> <!-- Glide配置 -->
+        <meta-data
+            android:name="com.weiwei.salemall.base.GlideConfiguration"
+            android:value="GlideModule" />
+
+        <provider
+            android:name="com.weiwei.base.db.provider.SkypeProvider"
+            android:authorities="com.hwtx.dududh.provider.customprovider" /> <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" /> <!-- 友盟分享 -->
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent1105818982" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:screenOrientation" />
+
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="f97c5a961792ed1d3511aa3ce0889c54" /> <!-- QQ分享 -->
+        <meta-data
+            android:name="tencent_qq_appid"
+            android:value="1105818982" />
+        <meta-data
+            android:name="weixin_key"
+            android:value="wxefb0bdad32cbbb70" /> <!-- 友盟统计 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a4b65e8f29d980581000140" /> <!-- zhihao:551a1417fd98c5a95f0002e0 ; old:54111aadfd98c54ed00c05ce -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="weishuo" /> <!-- 友盟微信回调Activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.VIEW" /> -->
+
+
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+
+
+            <!-- &lt;!&ndash;这里填写你申请的app id&ndash;&gt; -->
+            <!-- <data android:scheme="wxefb0bdad32cbbb70" /> -->
+            <!-- </intent-filter> -->
+        </activity> <!-- 友盟用户反馈 -->
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:ignore="MissingClass" /> <!-- 友盟用户反馈结束 -->
+        <!-- 引导界面 -->
+        <activity
+            android:name="com.weiwei.netphone.SplashActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"> <!-- .Fullscreen -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.weishuo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_PRIVILEGED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="vsadspace" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity> <!-- 滑屏界面 -->
+        <activity
+            android:name="com.weiwei.netphone.SlideActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.weiwei.base.activity.contacts.VsInviteFriendsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            tools:ignore="MissingClass" /> <!-- 话单查询界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsCheckPhoneActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" /> <!-- 改绑 -->
+        <activity
+            android:name="com.weiwei.base.activity.setting.VsChangePhoneActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" /> <!-- 个人中心 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMyInfoTextActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" /> <!-- 个人中心 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMyTextDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" /> <!-- 注册界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.login.VsRegisterActivity"
+            android:screenOrientation="portrait" /> <!-- 送话费弹出框 -->
+        <activity
+            android:name="com.weiwei.base.widgets.VsDlogMakeMoney"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- 余额详情界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMyBalanceDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 红包详情界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMyRedPagActivity"
+            android:screenOrientation="portrait" /> <!-- 充值历史界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsChangeListActivity"
+            android:screenOrientation="portrait" /> <!-- 包年套餐详情界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsPackageYearActivity"
+            android:screenOrientation="portrait" /> <!-- 时长套餐详情界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsPackageTimeActivity"
+            android:screenOrientation="portrait" /> <!-- 套餐详情界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMyMealActivity"
+            android:screenOrientation="portrait" /> <!-- 升级界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.setting.VsUpdateActivity"
+            android:screenOrientation="portrait" /> <!-- 升级提醒界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.login.VsStartActivity"
+            android:screenOrientation="portrait" /> <!-- 登录界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.login.VsLoginActivity"
+            android:screenOrientation="portrait" /> <!-- 确认号码界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.login.VsSetPhoneActivity"
+            android:screenOrientation="portrait" /> <!-- 验证码界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.login.VsMsgVerifyActivity"
+            android:screenOrientation="portrait" /> <!-- 修改密码界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.login.VsSetPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 拨打按键音、自动接听设置界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.setting.VsSetingVoiceHangActivity"
+            android:screenOrientation="portrait" /> <!-- 修改密码界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.setting.VsChangePwdActivity"
+            android:screenOrientation="portrait" /> <!-- 话费列表界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsBalanceMoney"
+            android:screenOrientation="portrait" /> <!-- 话单列表界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsCallLogActivity"
+            android:screenOrientation="portrait" /> <!-- 赚话费任务界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMakeMoneyTaskActivity"
+            android:screenOrientation="portrait" /> <!-- 话费充值中心界面【由一级话费界面fragment变为activity】 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsRechargeActivity"
+            android:screenOrientation="portrait" /> <!-- 主界面TAB -->
+        <activity
+            android:name="com.weiwei.netphone.VsMainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.hwtx.dududh"
+                    android:path="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity> <!-- 邀请好友 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMakeMoneyActivity"
+            android:screenOrientation="portrait" /> <!-- 备份联系人 -->
+        <activity
+            android:name="com.weiwei.base.activity.contacts.VsContactBackUpActivity"
+            android:screenOrientation="portrait" /> <!-- 联系人详情 -->
+        <activity
+            android:name="com.weiwei.base.activity.contacts.VsContactsDetailsActivity"
+            android:screenOrientation="portrait" /> <!-- 通话记录详情 -->
+        <activity
+            android:name="com.weiwei.base.activity.calllog.VsCallLogDetailsActivity"
+            android:screenOrientation="portrait" /> <!-- 弹出框界面 -->
+        <activity
+            android:name="com.weiwei.base.widgets.CustomDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/registerDialogTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- 直拨转回拨提示 -->
+        <activity
+            android:name="com.weiwei.base.callback.VSCallBackHintActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" /> <!-- 新直拨界面 -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- 注释掉可能有其他问题。。。TODO -->
+        <!-- 拨号界面 -->
+        <activity
+            android:name="com.weiwei.softphone.TutorialRegistrationCall"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black" /> <!-- 充值中心 -->
+        <activity
+            android:name="com.weiwei.base.activity.recharge.VsRechargePayTypes"
+            android:screenOrientation="portrait" /> <!-- 充值卡充值 -->
+        <activity
+            android:name="com.weiwei.base.activity.recharge.VsRechargeMobileCard"
+            android:screenOrientation="portrait" /> <!-- TD自己的充值卡充值 -->
+        <activity
+            android:name="com.weiwei.base.activity.recharge.VsRechargeBangbangCard"
+            android:screenOrientation="portrait" /> <!-- 充值列表 -->
+        <activity
+            android:name="com.weiwei.base.activity.recharge.VsRechargeCardList"
+            android:screenOrientation="portrait" /> <!-- 手势密码 -->
+        <activity
+            android:name="com.weiwei.base.activity.more.CreateGesturePasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 手势密码 -->
+        <activity
+            android:name="com.weiwei.base.activity.more.KcUnlockedActivity"
+            android:screenOrientation="portrait" /> <!-- 绘制手势密码 -->
+        <activity
+            android:name="com.weiwei.base.activity.more.UnlockGesturePasswordActivity"
+            android:screenOrientation="portrait" /> <!-- 设置 -->
+        <activity
+            android:name="com.weiwei.base.activity.setting.VsSetingActivity"
+            android:screenOrientation="portrait" /> <!-- 迷你小游戏 -->
+        <activity
+            android:name="com.weiwei.base.activity.more.VsMiniGameActivity"
+            android:screenOrientation="portrait" /> <!-- 拨打设置 -->
+        <activity
+            android:name="com.weiwei.base.activity.setting.VsCallTypeSetingActivity"
+            android:screenOrientation="portrait" /> <!-- 关于KC -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsAboutActivity"
+            android:screenOrientation="portrait" /> <!-- 关于我们 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.KcQcodeActivity"
+            android:screenOrientation="portrait" /> <!-- 第三方信息 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsthirdTypeActivity"
+            android:screenOrientation="portrait" /> <!-- 我的二维码 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.KcMyQcodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SimBackTheme" /> <!-- 绑定微信步骤 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsredinfoActivity"
+            android:screenOrientation="portrait" /> <!-- 银行卡信息 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsUninopayBindActivity"
+            android:screenOrientation="portrait" /> <!-- 红包弹框 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMyRedPopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/translucent" /> <!-- 绑定银行卡 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsUninopayGetActivity"
+            android:screenOrientation="portrait" /> <!-- 二维码 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsQRCodeActivity"
+            android:screenOrientation="portrait" /> <!-- 余额查询 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsBalanceActivity"
+            android:screenOrientation="portrait" /> <!-- 包月套餐 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsRechargeMealActivity"
+            android:screenOrientation="portrait" /> <!-- 我 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsMyselfActivity"
+            android:screenOrientation="portrait" /> <!-- 开通来显 -->
+        <activity
+            android:name="com.weiwei.base.activity.setting.VsCallerIdentificationActivity"
+            android:screenOrientation="portrait" /> <!-- 通知栏点击界面 -->
+        <activity
+            android:name="com.weiwei.netphone.activity.other.VsShowNoTice"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.weishuo.noticeactivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- 选择联系人界面 -->
+        <activity
+            android:name="com.weiwei.base.activity.VsContactsSelectActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.hwtx.dududh.kccontactsselectactivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- 签到 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.VsSignInFirstActivity"
+            android:screenOrientation="portrait" /> <!-- 签到提醒 -->
+        <activity
+            android:name="com.weiwei.base.activity.me.KcDrainageDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/registerDialogTheme" /> <!-- 分享界面 -->
+        <activity
+            android:name="com.weiwei.weibo.WeiboShareWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.weiwei.base.service.VsCoreService">
+            <intent-filter>
+                <action android:name="com.weiwei.dataprovider.KcCoreService" />
+
+                <category android:name="android.intent.category.default" />
+            </intent-filter>
+        </service>
+        <service android:name="com.weiwei.softphone.ConnectionService"
+            tools:ignore="MissingClass" /> <!-- SDK服务 -->
+        <service android:name="com.yzx.service.ConnectionControllerService"
+            tools:ignore="MissingClass" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:permission="android.permission.BAIDU_LOCATION_SERVICE"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.9" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.yzx.service.AlarmReceiver"
+            tools:ignore="MissingClass" />
+        <receiver android:name="com.yzx.service.MsgBackReceiver"
+            tools:ignore="MissingClass" /> <!-- 开机启动广播 -->
+        <receiver android:name="com.weiwei.netphone.ui.receiver.VsTurnOnDeviceReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver> <!-- 手机网络状态监听 -->
+        <receiver android:name="com.weiwei.netphone.ui.receiver.VsNetConnectionReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver> <!-- 电话强度改变广播 -->
+        <receiver android:name="com.weiwei.netphone.ui.receiver.VsPhoneIntensityBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SIG_STR" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver> <!-- 奖励通知 -->
+        <receiver android:name="com.weiwei.netphone.ui.receiver.VsNoticeBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.weiwei.KCNOTICEBROADCAST" />
+            </intent-filter>
+        </receiver> <!-- 登录通知 -->
+        <receiver android:name="com.weiwei.netphone.ui.receiver.VsSucceedLoginReceiver">
+            <intent-filter>
+                <action android:name="com.kc.succeed_register" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.weiwei.base.service.VsCallNotificationService">
+            <intent-filter>
+                <action android:name="com.weiwei.callnotification_Service" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="api_key"
+            android:value="U9mfzIkk6lIuC92AmbAgUOvx" /> <!-- 声明广告SDK所需要的组件 -->
+        <service
+            android:name="com.pfu.popstar.DownloadService"
+            android:exported="false"
+            tools:ignore="MissingClass" />
+        <service
+            android:name="com.ij.f.d.download.service.FADDLService"
+            android:exported="false"
+            tools:ignore="MissingClass" /> <!-- 请开发者注意字母的大小写，ADActivity，而不是AdActivity -->
+        <activity
+            android:name="com.pfu.popstar.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.pfu.popstar.PortraitADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.pfu.popstar.LandscapeADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.umeng.analytics.prov.v.view.AdVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.umeng.analytics.prov.v.view.AdVideoLandscapeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.ij.f.d.ad.KSVideoAdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            tools:ignore="MissingClass" /> <!-- tt -->
+        <service android:name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService" />
+        <service android:name="com.ss.android.socialbase.downloader.downloader.DownloadService" />
+        <service
+            android:name="com.ss.android.socialbase.downloader.downloader.IndependentProcessDownloadService"
+            android:process=":downloader">
+            <intent-filter>
+                <action android:name="com.ss.android.socialbase.downloader.remote" />
+            </intent-filter>
+        </service>
+        <service android:name="com.ss.android.socialbase.downloader.impls.DownloadHandleService" />
+        <service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService" />
+
+        <activity
+            android:name="com.ss.android.socialbase.appdownloader.view.DownloadSizeLimitActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.ss.android.downloadlib.activity.TTDelegateActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver android:name="com.ss.android.downloadlib.core.download.DownloadReceiver" />
+        <receiver
+            android:name="com.bytedance.embedapplog.collector.Collector"
+            android:enabled="true"
+            android:exported="true" /> <!-- 下面的activity和service必须注册 -->
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService" />
+
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${JPUSH_PKGNAME}.TTMultiProvider"
+            android:exported="false" /> <!-- targetSDKVersion >= 24时才需要添加这个provider。provider的authorities属性的值为${applicationId}.fileprovider，请开发者根据自己的${applicationId}来设置这个值. -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${JPUSH_PKGNAME}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/gdt_file_path" />
+        </provider>
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities="${JPUSH_PKGNAME}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/tt_file_path" />
+        </provider> <!-- 广告SDK所需结束 -->
+        <provider
+            android:name="com.weiwei.base.provider.Android7FileProvider"
+            android:authorities="${JPUSH_PKGNAME}.android7.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.weiwei.base.activity.contacts.VsContactListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zbar.lib.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.weiwei.base.activity.more.VsSetingVoicePianoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.weiwei.base.activity.me.VsPersonalizedActivity"
+            android:screenOrientation="portrait" /> <!-- 商品详情 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.GoodsDetailActivity"
+            android:alwaysRetainTaskState="true"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 我的订单 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.MyOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 订单详情 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 地址管理 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.AddressListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 地址添加 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.AddressAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 评论 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.CommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 确认订单 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.OrderEnsureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 订单物流 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.OrderLogitsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 查看更多 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.CheckMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 欢迎页 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 支付完成 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.PayDoneActivity"
+            android:screenOrientation="portrait" /> <!-- 购物车 -->
+        <!-- 搜索框 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.SearchViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 本地商家 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.LocalStoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 切换城市 -->
+        <!-- 广告 start -->
+        <!-- <activity -->
+        <!-- android:name="com.birdads.out.DSPActivity" -->
+        <!-- android:taskAffinity="com.task.h" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.birdads.out.ADActivity" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|orientation|screenSize" /> -->
+        <!-- <service -->
+        <!-- android:name="com.birdads.out.BGService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.bird.hello.action" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service android:name="com.birdads.out.DSPService" /> -->
+        <!-- <service android:name="com.birdads.out.DLService" android:exported="false" /> -->
+        <!-- <service android:name="com.birdads.out.KPService" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE"/> -->
+        <!-- 广告 end -->
+        <!-- 我的收藏 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.CollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 商家详情 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.StoreDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 商企 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.LocalGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 选择城市 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.SelectCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.weiwei.salemall.activity.ShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 外链 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.WebViewActivity"
+            android:screenOrientation="portrait" /> <!-- 广告 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.AdActivity"
+            android:screenOrientation="portrait" /> <!-- 客服 -->
+        <activity android:name="com.weiwei.salemall.activity.CustomerServiceActivity" /> <!-- 我的成长金 -->
+        <activity
+            android:name="com.weiwei.account.MyScoresActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 兑换专区 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.ExchangeGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- vip会员 -->
+        <activity
+            android:name="com.weiwei.account.VipMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 商企采购专区 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.SamqiPurchaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 秒杀专区界面 -->
+        <activity
+            android:name="com.weiwei.salemall.activity.SecKillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 环信聊天界面 -->
+        <activity
+            android:name="com.weiwei.salemall.emsemob.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity android:name="com.weiwei.common.activity.SimplenessActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.weiwei.home.activity.SimBackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SimBackTheme" />
+        <activity
+            android:name="com.weiwei.mall.activity.GoodsJdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.DiscoverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.CarryCargoPrefectureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.DuduSeckillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.base.activity.me.TwitterEquitiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.account.GrowMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.account.RefuelBalanceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 嘟嘟加油界面 -->
+        <activity
+            android:name="com.weiwei.home.activity.RefuelMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.MoreRefuelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.RefuelDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.RefuelOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.RefuelCouponMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.weiwei.weibo.WebPageNavigationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.RefuelOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.RefuelSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <!--
+  <activity android:name="com.weiwei.home.activity.DialMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme"/>
+        -->
+        <activity
+            android:name="com.weiwei.home.activity.MakeMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.account.MyGrowMoneyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.account.InviteDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.salemall.activity.SamqiNoBannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 申请骑手 -->
+        <activity
+            android:name="com.weiwei.rider.activity.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" /> <!-- 快速报名通道 -->
+        <activity
+            android:name="com.weiwei.rider.activity.JoinRiderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.home.activity.RefuelVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.rider.activity.WorkLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.rider.activity.RiderInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.rider.activity.RiderCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.rider.activity.RiderOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.rider.activity.RiderOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.rider.activity.RiderSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.rider.activity.RiderLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.merchant.activity.MerchantInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.merchant.activity.MerchantOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.merchant.activity.MerchantOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+        <activity
+            android:name="com.weiwei.merchant.activity.MoveLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomerAppTheme" />
+    </application>
+
+</manifest>

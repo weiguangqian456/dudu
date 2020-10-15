@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/vs_update_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/vs_update_btn"
+            android:layout_width="164dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="@string/seting_software_update_hint"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            app:rv_backgroundColor="@color/public_color_EC6941"
+            app:rv_isRadiusHalfHeight="true" />
+
+        <TextView
+            android:id="@+id/vs_update_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:text="@string/kc_viewpage_tv_jump"
+            android:textColor="@color/vs_gree_text_selecter"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

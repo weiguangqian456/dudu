@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg">
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:rv_backgroundColor="@color/color_white"
+        app:rv_cornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/iv_goods_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            tools:src="@drawable/icon_l" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/public_color_333333"
+                android:textSize="14sp"
+                tools:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_goods_discounts_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/color_red"
+                        android:textSize="17sp"
+                        tools:text="￥:999" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/public_color_666666"
+                        android:textSize="12sp"
+                        tools:text="￥:999" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <com.flyco.roundview.RoundTextView
+                        android:id="@+id/rtv_immediately_purchase"
+                        android:layout_width="70dp"
+                        android:layout_height="22dp"
+                        android:gravity="center"
+                        android:text="立即抢购"
+                        android:textColor="@color/color_white"
+                        android:textSize="14sp"
+                        app:rv_backgroundColor="@color/color_red"
+                        app:rv_cornerRadius="3dp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="已售60%"
+                            android:textColor="@color/public_color_666666"
+                            android:textSize="11sp" />
+
+                        <com.weiwei.home.view.RoundedProgressBar
+                            android:id="@+id/rpb_task_progress"
+                            android:layout_width="70dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="5dp" />
+
+                        <!--                        <com.weiwei.home.view.FlikerProgressBar-->
+                        <!--                            android:id="@+id/fpb_task_progress"-->
+                        <!--                            android:layout_width="70dp"-->
+                        <!--                            android:layout_height="10dp"-->
+                        <!--                            android:layout_marginLeft="5dp"-->
+                        <!--                            android:visibility="gone"-->
+                        <!--                            app:loadingColor="@color/public_color_FF6177"-->
+                        <!--                            app:p_textSize="0sp"-->
+                        <!--                            app:radius="7dp"-->
+                        <!--                            app:stopColor="@color/public_color_FF6177" />-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.flyco.roundview.RoundLinearLayout>
+
+</LinearLayout>

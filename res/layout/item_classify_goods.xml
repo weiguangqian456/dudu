@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/shoppingcart_default"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_28_dip"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/w_12_dip"
+        tools:text="广西买的桔子 2.5G装 火龙果形态 8成新 只吃了3瓣" />
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_13_dip"
+            android:textColor="@color/color_theme_3"
+            android:layout_alignParentBottom="true"
+            tools:text="￥399"/>
+        <TextView
+            android:id="@+id/tv_price_order"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/tv_price"
+            android:layout_toRightOf="@id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_11_dip"
+            android:layout_alignParentBottom="true"
+            android:textColor="#999999"
+            tools:text="￥499"/>
+    </RelativeLayout>
+</LinearLayout>

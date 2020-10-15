@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--标题栏-->
+    <include android:id="@+id/title" layout="@layout/temp_base_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_share" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="@dimen/w_194_dip"
+            android:layout_height="@dimen/w_59_dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/w_50_dip"
+            android:src="@drawable/bg_share_btn" />
+    </RelativeLayout>
+</RelativeLayout>

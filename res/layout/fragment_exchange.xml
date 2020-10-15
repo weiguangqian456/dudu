@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weiwei.salemall.fragment.LocalStoreFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_localgoods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--空白界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vs_bg_color">
+
+        <ImageView
+            android:id="@+id/iv_no_content"
+            android:layout_width="@dimen/w_194_dip"
+            android:layout_height="@dimen/w_127_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_145_dip"
+            android:src="@drawable/mall_no_goods" />
+
+        <TextView
+            android:id="@+id/tv_no_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="暂无商品~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

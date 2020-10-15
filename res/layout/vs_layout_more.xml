@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical" >
+
+    <!-- title -->
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <!-- 顶部整体布局 -->
+
+        <include layout="@layout/systitle" />
+    </LinearLayout>
+    <!-- 下面广告条 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/vs_gray_simaple"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/local_ad"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:visibility="gone"
+                android:background="@drawable/found_top"
+                android:contentDescription="@string/app_name" />
+
+            <include
+                android:id="@+id/slid_title"
+                android:layout_width="fill_parent"
+                android:layout_height="180dp"
+                layout="@layout/vs_sliding_advertisement"
+                />
+
+            <com.weiwei.base.widgets.AlwaysMarqueeTextView
+                android:id="@+id/more_ad_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFBDB"
+                android:clickable="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="#D18232"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/vs_more_share"
+                android:layout_width="fill_parent"
+                android:layout_height="59dp"
+                
+                android:background="@drawable/vs_personal_bg_color" >
+
+                <ImageView
+                    android:id="@+id/vs_left_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/share_makemoney"
+                    android:contentDescription="@string/app_name" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/vs_left_img"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_tv12"
+                        android:textColor="@color/vs_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_tv13"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/more_jt_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/vs_right_icon"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/vs_gray_deep"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+            <!-- 下划线 -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+
+            <LinearLayout
+                android:id="@+id/recommend_row_1"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/vs_personal_bg_color"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/more_layout_01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_01"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/share_server"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_service"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vs_gray" />
+
+                <LinearLayout
+                    android:id="@+id/more_layout_02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_02"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/share_game"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_game"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vs_gray" />
+
+                <LinearLayout
+                    android:id="@+id/more_layout_03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_03"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/share_open"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_share"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vs_gray" />
+
+                <LinearLayout
+                    android:id="@+id/more_layout_04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_04"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/share_recharge"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_recharge"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 下划线 -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_gray" />
+
+            <LinearLayout
+                android:id="@+id/recommend_row_2"
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/vs_personal_bg_color"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/more_layout_05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_05"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/vs_hand_password_img"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_hand_password"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                
+               
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vs_gray" />
+
+                <LinearLayout
+                    android:id="@+id/more_layout_06"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_06"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/share_scan"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_code"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                
+ 			
+                
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vs_gray" />
+
+                <LinearLayout
+                    android:id="@+id/more_layout_07"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:orientation="vertical"
+                     >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_07"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/vs_qrcode_img"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_code"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vs_gray" />
+
+                <LinearLayout
+                    android:id="@+id/more_layout_08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:orientation="vertical"
+                     >
+
+                    <ImageView
+                        android:id="@+id/more_imageview_08"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/vs_qrcode_img"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/more_textview_08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/found_code"
+                        android:textColor="@color/myself_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 下划线 -->
+
+            <View
+                android:id="@+id/vs_more_line9"
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_gray" />
+
+            <com.weiwei.base.widgets.KcMyGridView
+                android:id="@+id/more_GridView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:horizontalSpacing="5dip"
+                android:listSelector="@null"
+                android:numColumns="3"
+                android:padding="5dip"
+                android:scrollingCache="false"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dip"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

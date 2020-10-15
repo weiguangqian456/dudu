@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_bg_color"
+    tools:context="com.weiwei.salemall.activity.LocalGoodsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_48_dip"
+        android:layout_alignParentTop="true"
+        android:background="#1A338E"
+        tools:ignore="RtlCompat">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/w_48_dip"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/w_9_dip"
+                android:layout_height="@dimen/w_16_dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_32_dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rl_shoppingCart"
+            android:layout_toRightOf="@+id/rl_back"
+            android:background="@drawable/bg_searchview_top"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/w_13_dip"
+                android:layout_height="@dimen/w_13_dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_8_dip"
+                android:layout_toRightOf="@+id/view_line"
+                android:src="@drawable/sec_search" />
+
+            <EditText
+                android:id="@+id/et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_7_dip"
+                android:layout_toRightOf="@+id/iv_search"
+                android:background="@null"
+                android:hint="搜索商品名称"
+                android:textColor="@color/public_color_333333"
+                android:textColorHint="#999da2"
+                android:textSize="@dimen/w_13_dip" />
+
+            <ImageView
+                android:id="@+id/iv_cancle"
+                android:layout_width="@dimen/w_15_dip"
+                android:layout_height="@dimen/w_15_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_8_dip"
+                android:src="@drawable/sec_cancle"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/rl_shoppingCart"
+            android:layout_width="@dimen/w_48_dip"
+            android:layout_height="@dimen/w_48_dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_10_dip">
+
+            <ImageView
+                android:id="@+id/iv_shoppingCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:src="@drawable/shoppingcart_homepage" />
+
+            <com.weiwei.salemall.widget.BadgeView
+                android:id="@+id/badgeView"
+                android:layout_width="@dimen/w_15_dip"
+                android:layout_height="@dimen/w_15_dip"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/w_8_dip"
+                android:layout_marginRight="@dimen/w_7_dip" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!--兑换专区-->
+    <LinearLayout
+        android:id="@+id/ll_firststyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_navigation"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_48_dip" />
+
+        <!--        <View style="@style/LineH"/>-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <!--断网界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_navigation"
+        android:background="@color/vs_bg_color"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_net"
+            android:layout_width="@dimen/w_277_dip"
+            android:layout_height="@dimen/w_172_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_93_dip"
+            android:src="@drawable/mall_no_network" />
+
+        <TextView
+            android:id="@+id/tv_no_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="网络出问题了请检查网络设置~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <Button
+            android:id="@+id/btn_fresh"
+            parent="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/w_98_dip"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_below="@+id/tv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_43_dip"
+            android:background="@drawable/bg_fresh_btn"
+            android:text="点击刷新"
+            android:textColor="#1084ff"
+            android:textSize="@dimen/w_14_dip"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+
+    <!--空白界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_navigation"
+        android:background="@color/vs_bg_color">
+
+        <ImageView
+            android:id="@+id/iv_no_content"
+            android:layout_width="@dimen/w_194_dip"
+            android:layout_height="@dimen/w_127_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_145_dip"
+            android:src="@drawable/mall_no_goods" />
+
+        <TextView
+            android:id="@+id/tv_no_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="暂无商品~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <Button
+            android:id="@+id/btn_fresh_tv"
+            parent="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/w_98_dip"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_below="@+id/tv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_43_dip"
+            android:background="@drawable/bg_fresh_btn"
+            android:text="点击刷新"
+            android:textColor="#1084ff"
+            android:textSize="@dimen/w_14_dip"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+
+</RelativeLayout>

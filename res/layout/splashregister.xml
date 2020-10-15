@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_ad_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <FrameLayout
+        android:id="@+id/fl_ad_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/rtv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:text="跳过"
+        android:textColor="@color/public_color_white"
+        android:textSize="14sp"
+        app:rv_backgroundColor="#80000000"
+        app:rv_isRadiusHalfHeight="true" />
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/ll_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w_32_dip"
+        android:background="@color/White"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="@dimen/w_5_dip"
+        android:layout_marginLeft="@dimen/w_16_dip"
+        android:layout_marginRight="@dimen/w_16_dip"
+        android:visibility="gone">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/White"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/w_18_dip"
+               android:text="用户协议与隐私保护"
+               android:textColor="@color/vs_black"
+               android:gravity="center_horizontal"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="感谢您使用嘟嘟！"
+               android:textColor="@color/vs_black"
+               android:textSize="@dimen/w_16_dip"
+               android:layout_marginTop="@dimen/w_16_dip"
+               android:layout_marginLeft="@dimen/w_16_dip"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/w_16_dip"
+               android:text="为了给您提供更加优质和个性化的服务，我们会收集或使用您的位置、搜索、浏览等信息。"
+               android:layout_marginTop="@dimen/w_15_dip"
+               android:paddingLeft="@dimen/w_16_dip"
+               android:paddingRight="@dimen/w_16_dip"
+               android:lineSpacingExtra="@dimen/w_10_dip"/>
+
+           <TextView
+               android:id="@+id/tv_intro"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/w_20_dip"
+               android:layout_marginTop="@dimen/w_15_dip"
+               android:lineSpacingExtra="@dimen/w_10_dip"
+               android:paddingLeft="@dimen/w_16_dip"
+               android:paddingRight="@dimen/w_16_dip"/>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/w_2_dip"
+               android:background="@color/gray"
+               android:layout_marginTop="@dimen/w_16_dip"/>
+
+           <TextView
+               android:id="@+id/tv_ok"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/w_50_dip"
+               android:text="我知道了"
+               android:textSize="@dimen/w_18_dip"
+               android:textColor="@color/vs_black"
+               android:gravity="center"/>
+       </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!--android:background="@drawable/vs_splash_img"
+    <com.zte.functions.ad.AdDataView
+        android:id="@+id/ad_data_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="visible" /> -->
+
+    <!-- <LinearLayout
+        android:id="@+id/center_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/Black"
+            android:textSize="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您生活必备的手机软件"
+            android:textColor="@color/gray"
+            android:textSize="18dp" />
+    </LinearLayout> -->
+
+
+</RelativeLayout>

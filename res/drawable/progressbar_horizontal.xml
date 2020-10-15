@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:gravity="center_vertical|fill_horizontal">
+        <shape android:shape="rectangle">
+            <!--android:tint="?attr/colorControlNormal">-->
+            <size android:height="@dimen/w_11_dip" />
+            <solid android:color="#f9bc86" />
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/orange" />
+            <corners android:radius="@dimen/w_3_dip" />
+        </shape>
+    </item>
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:gravity="center_vertical|fill_horizontal">
+        <scale android:scaleWidth="100%">
+            <shape android:shape="rectangle">
+                <!--android:tint="?attr/colorControlActivated">-->
+                <size android:height="@dimen/w_11_dip" />
+                <solid android:color="#f9bc86" />
+                <stroke
+                    android:width="0.5dp"
+                    android:color="@color/orange" />
+                <corners android:radius="@dimen/w_3_dip" />
+            </shape>
+        </scale>
+    </item>
+    <item
+        android:id="@android:id/progress"
+        android:gravity="center_vertical|fill_horizontal">
+        <scale android:scaleWidth="100%">
+            <shape android:shape="rectangle">
+                <!--android:tint="?attr/colorControlActivated">-->
+                <size android:height="@dimen/w_11_dip" />
+                <solid android:color="@color/orange" />
+                <stroke
+                    android:width="0.5dp"
+                    android:color="@color/orange" />
+                <corners android:radius="@dimen/w_3_dip" />
+            </shape>
+        </scale>
+    </item>
+</layer-list>

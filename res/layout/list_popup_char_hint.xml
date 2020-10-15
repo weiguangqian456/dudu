@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="18sp"
+        android:padding="1.5dp" />
+
+    <TextView
+        android:id="@+id/tv_num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="15sp" 
+        android:padding="1.5dp"/>
+
+    <TextView
+        android:id="@+id/tv_num3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="18sp"
+        android:padding="1.5dp" />
+
+    <TextView
+        android:id="@+id/tv_num4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_hitchar"
+        android:gravity="center"
+        android:textColor="@color/vs_white"
+        android:textSize="35sp"
+        android:padding="1.5dp" />
+
+    <TextView
+        android:id="@+id/tv_num5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="18sp"
+        android:padding="1.5dp" />
+
+    <TextView
+        android:id="@+id/tv_num6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="18sp" 
+        android:padding="1.5dp"/>
+
+    <TextView
+        android:id="@+id/tv_num7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="18sp"
+        android:padding="1.5dp" />
+    <TextView
+        android:id="@+id/tv_num8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="18sp" 
+        android:padding="1.5dp"/>
+
+    <TextView
+        android:id="@+id/tv_num9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/vs_gray_deep"
+        android:textSize="18sp"
+        android:padding="1.5dp" />
+
+</LinearLayout>

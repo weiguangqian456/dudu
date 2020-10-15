@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vs_callphone_bg" >
+
+    <LinearLayout
+        android:id="@+id/contact_info_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/vs_callphone_edit"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@color/lucency"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/vs_white"
+                android:textColorHint="@color/vs_white"
+                android:textCursorDrawable="@color/lucency"
+                android:textSize="33sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/vs_callphone_callName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/vs_callphone_local_color"
+                    android:textSize="33sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/called_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/vs_callphone_local_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/vs_callphone_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/vs_callphone_local_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vs_callphone_calltime_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="直拨电话呼叫中..."
+            android:textColor="@color/vs_yellow"
+            android:textSize="18sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/vs_callphone_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/vs_callphone_leftbtn"
+                android:layout_width="126dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/vs_btn_red_selecter"
+                android:gravity="center"
+                android:text="挂断"
+                android:textColor="@color/register_text_bg"
+                android:textSize="19.5sp" />
+
+            <Button
+                android:id="@+id/vs_callphone_rightbtn"
+                android:layout_width="126dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/vs_btn_gree_selecter"
+                android:gravity="center"
+                android:text="@string/callphone_re"
+                android:textColor="@color/register_text_bg"
+                android:textSize="19.5sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 操作按钮布局 -->
+
+        <LinearLayout
+            android:id="@+id/vs_callphone_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/vs_callphone_btn_layout"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/vs_callphone_voice_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vs_callphone_voice_" />
+
+                <TextView
+                    android:id="@+id/vs_callphone_void_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/callphone_hint_void"
+                    android:textColor="@color/vs_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/vs_callphone_hf_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vs_callphone_hf_" />
+
+                <TextView
+                    android:id="@+id/vs_callphone_hf_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/callphone_hint_hf"
+                    android:textColor="@color/vs_white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/vs_callphone_keyboard_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vs_callphone_keyboard_btn_selecter_" />
+
+                <TextView
+                    android:id="@+id/vs_callphone_keyboard_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/callphone_hint_keyboard"
+                    android:textColor="@color/vs_white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 拨号盘 -->
+
+        <RelativeLayout
+            android:id="@+id/vs_callphone_keyboard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/vs_callphone_btn_layout"
+            android:background="@color/lucency"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/keyboard_layout_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitOneButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_01_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitTwoButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_02_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitThreeButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_03_" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keyboard_layout_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keyboard_layout_1"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitFourButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_04_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitFiveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_05_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitSixButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_06_" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keyboard_layout_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keyboard_layout_2"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitSevenButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_07_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitEightButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_08_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitNineButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_09_" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/keyboard_layout_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/keyboard_layout_3"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitFlagButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_xh_selecter_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitZeroButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_00_" />
+
+                <ImageButton
+                    android:id="@+id/DTMF_DigitJingButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/vs_small_keyboard_jh_selecter_" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

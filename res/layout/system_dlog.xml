@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/notice_back_img"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+ 
+    <TextView
+        android:id="@+id/tv_dlog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="公告"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+   
+
+    <TextView
+        android:id="@+id/tv_dlog_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dlog_title"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:text="欢迎使用嘟嘟电话！"
+        android:autoLink="web"
+        android:textColor="#434343"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_dlog_obtain"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_dlog_content"
+        android:background="@drawable/vs_green_btn_selecter"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        
+        android:layout_marginBottom="30dp"
+        android:text="@string/dial_text6"
+        android:textColor="@color/White"
+        android:textSize="18sp" />
+	
+</RelativeLayout>

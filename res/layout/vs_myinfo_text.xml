@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical" >
+
+    <!-- title -->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <!-- 顶部整体布局 -->
+        <include layout="@layout/systitle_orange" />
+        
+    </LinearLayout>
+    <!-- 下划线 -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color" />
+    <!-- title end-->
+    
+    
+	<!-- body -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+
+			<!-- 我的基本信息 -->
+            <RelativeLayout
+                android:id="@+id/vs_myselft_qcodelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vs_personal_bg_color2"
+                android:paddingBottom="12dp"
+                android:visibility="gone"
+                android:paddingTop="12dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="19dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/vs_myselft_account"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/vs_myselft_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+                </LinearLayout>                               
+            </RelativeLayout>
+            
+            <!-- 我的头像 -->
+            <RelativeLayout
+                android:id="@+id/vs_myselft_infolayout"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="@drawable/vs_personal_bg_color"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp" >
+                
+					<TextView
+					   android:id="@+id/vs_myselft_infoimgTextNum" 
+					   android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="头像"
+                       android:layout_centerVertical="true"
+                       android:textSize="18sp"
+                       android:layout_marginLeft="18dp"
+                       android:layout_marginTop="5dp"
+                       android:textColor="#383838"/>
+					
+					
+					<ImageView
+                       android:id="@+id/imgright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+                                        
+					
+					
+					<com.weiwei.base.util.CircleImageView
+                        android:id="@+id/vs_myselft_infoimgView"
+                        android:layout_width="60dp"
+                		android:layout_height="60dp"
+                		android:gravity="center"
+                		android:src="@drawable/myself_head"
+                		app:border_color="@color/transparent"
+                		app:border_width="0dp"
+                		android:layout_toLeftOf="@id/imgright"
+                		android:layout_marginLeft="10dp"
+                		android:layout_marginRight="10dp"
+                		/>
+            </RelativeLayout>
+            
+            <!-- 下划线 -->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+            
+            
+           
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/vs_white"
+                android:orientation="vertical" >
+
+                <!-- 我的昵称-->
+                <RelativeLayout
+                    android:id="@+id/rl_my_nickname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="昵称"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/jt_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/my_nickname_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@id/jt_01"
+                        android:textColor="@color/vs_gray_deep"
+                        android:text="未设置"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    
+                    android:background="@color/vs_line_color" />
+                
+                
+                <!-- 账号-->
+                <RelativeLayout
+                    android:id="@+id/rl_my_account"
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="账户"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/jt_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/my_account_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        
+                        android:layout_toLeftOf="@id/jt_02"
+                        android:text="15013885296"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/vs_gray_simaple" />
+                <!-- 二维码-->
+                <RelativeLayout
+                    android:id="@+id/rl_my_qrcodeimg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                       
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="二维码"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/jt__mms_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                        android:id="@+id/my_mms_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/qrcode"
+                        android:layout_toLeftOf="@id/jt__mms_01"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                   
+                    android:background="@color/vs_line_color" />
+                
+                
+                <!-- 邮箱 -->
+                <RelativeLayout
+                    android:id="@+id/rl_my_mailbox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                       
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="邮箱"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_right_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/vs_my_mailbox_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@id/iv_right_icon1"
+                        android:contentDescription="@string/app_name"
+                        android:text="未设置"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        />
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    
+                    android:background="@color/vs_line_color" />
+                
+                <!-- 签到 -->
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_sigin_tow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:drawableLeft="@drawable/vs_my_sigin"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_tv8"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                       
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                       
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/vs_red_dot"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+                 <!-- 下划线 -->
+                 <View
+                     android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:layout_marginLeft="19dp"
+                    android:background="@color/vs_line_color" />
+                
+                <!-- 性别 -->
+                <RelativeLayout
+                    android:id="@+id/rl_my_sex"
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="性别"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_recharge_right_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/vs_my_sex_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        android:layout_toLeftOf="@id/iv_recharge_right_icon"
+                        android:contentDescription="@string/app_name"
+                        android:text="未设置" />
+                </RelativeLayout>
+                <!-- 下划线 -->
+                 <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    
+                    android:background="@color/vs_line_color" />
+                 <!-- 生日 -->
+                <RelativeLayout
+                    android:id="@+id/vs_my_birthday"
+                    android:layout_width="fill_parent"
+                  
+                    android:layout_height="59dp"
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                  <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="生日"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/vs_about_img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/vs_my_birthday_text"
+                       android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp"
+                        
+                        android:contentDescription="@string/app_name"
+                        android:text="未设置"
+                        android:layout_toLeftOf="@id/vs_about_img1"
+                         />
+                </RelativeLayout>
+                
+            <!-- 地址-->
+                <RelativeLayout
+                    android:id="@+id/vs_my_address"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="59dp"
+                    android:background="@drawable/vs_personal_bg_color" >
+
+                  <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="地区"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/vs_about_img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/vs_right_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/vs_my_address_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/vs_about_img2"
+                        android:text="未设置"
+                        android:layout_marginRight="8dp"
+                         android:textColor="@color/vs_gray_deep"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+                 <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color" />
+            </LinearLayout>
+           
+        </LinearLayout>
+    </ScrollView>
+    <!-- body end -->
+
+</LinearLayout>

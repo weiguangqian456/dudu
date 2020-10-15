@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_48_dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/public_color_EC6941">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="@dimen/w_48_dip"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/w_9_dip"
+                android:layout_height="@dimen/w_16_dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:singleLine="true"
+            android:textColor="@color/vs_white"
+            android:textSize="20sp" />
+
+        <FrameLayout
+            android:id="@+id/fl_shoppingCart"
+            android:layout_width="@dimen/w_48_dip"
+            android:layout_height="@dimen/w_48_dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_10_dip">
+
+            <ImageView
+                android:id="@+id/iv_shoppingCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:src="@drawable/shoppingcart_homepage" />
+
+            <com.weiwei.salemall.widget.BadgeView
+                android:id="@+id/badgeView"
+                android:layout_width="@dimen/w_15_dip"
+                android:layout_height="@dimen/w_15_dip"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/w_8_dip"
+                android:layout_marginRight="@dimen/w_7_dip" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_more_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:background="#F0F3FA"
+        android:visibility="gone" />
+
+    <!--空白界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_top"
+        android:background="@color/vs_bg_color">
+
+        <ImageView
+            android:id="@+id/iv_no_content"
+            android:layout_width="@dimen/w_194_dip"
+            android:layout_height="@dimen/w_127_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_145_dip"
+            android:src="@drawable/mall_no_goods" />
+
+        <TextView
+            android:id="@+id/tv_no_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="暂无商品~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+    </RelativeLayout>
+</RelativeLayout>

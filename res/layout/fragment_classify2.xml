@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:background="@drawable/home_search_bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="14dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/w_13_dip"
+            android:layout_height="@dimen/w_13_dip"
+            android:src="@drawable/sec_search" />
+
+        <TextView
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_12_dip"
+            android:hint="搜索商品名称"
+            android:background="@null"
+            android:textColor="@color/default_text"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@+id/ll_search"
+        android:id="@+id/srl_title"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="#F2F2F2">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_title"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <FrameLayout
+                android:id="@+id/fl_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/load"/>
+            </FrameLayout>
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <View
+        android:visibility="gone"
+        android:id="@+id/view_line"
+        android:layout_toEndOf="@+id/srl_title"
+        android:layout_toRightOf="@+id/srl_title"
+        style="@style/LineV" />
+    <com.weiwei.home.view.SlideViewPager
+        android:layout_below="@+id/ll_search"
+        android:layout_toRightOf="@+id/view_line"
+        android:layout_toEndOf="@+id/view_line"
+        android:id="@+id/vp_classify"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.weiwei.home.view.CustomErrorView
+        android:id="@+id/cev_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/w_40_dip"
+    android:background="@color/White"
+    android:layout_marginTop="@dimen/w_1_dip"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/w_15_dip"
+    android:paddingRight="@dimen/w_15_dip">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/public_color_333333"
+        android:textSize="@dimen/w_14_dip"
+        android:text="2020-06-16 15:51"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提现成功"
+        android:textSize="@dimen/w_12_dip"
+        android:textColor="@color/public_color_333333"
+        android:layout_toRightOf="@+id/tv_time"
+        android:layout_marginLeft="@dimen/w_50_dip"/>
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="￥50"
+        android:textColor="@color/public_color_333333"
+        android:textSize="@dimen/w_16_dip"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3FA"
+    android:orientation="vertical">
+    <!-- 存在购物车记录 -->
+    <LinearLayout
+        android:id="@+id/ll_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_bg_default"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <!-- 分割线 -->
+        <View style="@style/LineH" />
+        <!-- 全选与底部栏 -->
+        <RelativeLayout
+            android:id="@+id/rl_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_53_dip"
+            android:background="@android:color/white">
+
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                android:layout_width="@dimen/w_20_dip"
+                android:layout_height="@dimen/w_20_dip"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/w_15_dip"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:button="@drawable/shoppingcart_seletor" />
+
+            <TextView
+                android:id="@+id/tv_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/w_15_dip"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:layout_toEndOf="@id/cb_select_all"
+                android:layout_toRightOf="@id/cb_select_all"
+                android:text="@string/select_all"
+                android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/btn_commit_order"
+                android:layout_width="@dimen/w_90_dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#1086FF"
+                android:text="@string/clearing_default"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_sum_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/w_10_dip"
+                android:layout_marginRight="@dimen/w_10_dip"
+                android:layout_toStartOf="@id/btn_commit_order"
+                android:layout_toLeftOf="@id/btn_commit_order"
+                android:text="@string/init_price"
+                android:textColor="#F0222F"
+                android:textSize="@dimen/w_16_dip" />
+
+            <TextView
+                android:id="@+id/tv_text_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/tv_sum_price"
+                android:layout_toLeftOf="@id/tv_sum_price"
+                android:text="@string/sum_count"
+                android:textSize="@dimen/w_16_dip" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

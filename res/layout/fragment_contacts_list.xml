@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_contact_list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 顶部标题 -->
+        <include layout="@layout/systitle_orange" />
+
+        <TextView
+            android:id="@+id/select_contact_num"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/croci"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:background="@color/vs_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_contact_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/selectAllButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/vs_green_btn_selecter"
+            android:gravity="center"
+            android:tag="yes"
+            android:text="@string/select_all_string"
+            android:textColor="@color/Black"
+            android:textSize="16sp"></Button>
+
+        <LinearLayout
+            android:id="@+id/confirmButton_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/vs_lucency_half"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="163dp"
+                android:layout_height="50dp"
+                android:background="@drawable/vs_green_btn_selecter"
+                android:gravity="center"
+                android:text="@string/confirm_string"
+                android:textColor="@color/vs_white"
+                android:textSize="19.5sp"></Button>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/contacts_editext"
+        layout="@layout/vs_contacts_editext2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/select_contact_button_layout"
+        android:layout_below="@id/contacts_editext">
+
+        <LinearLayout
+            android:id="@+id/server_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/vs_myhead_contact_a"
+                android:gravity="center"
+                android:text="客"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="客服电话"
+                android:textColor="#000"
+                android:textSize="17dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/contactlistview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/server_layout"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/vs_line_color"
+            android:dividerHeight="0.67dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="none" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <include
+                android:id="@+id/pop_view"
+                layout="@layout/list_popup_char_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/load_contact_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/load_contact_progress"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/load_contact_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/vs_contact_loading"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/aazz"
+        layout="@layout/a_to_z"
+        android:layout_width="28dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/title"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="97dp" />
+
+    <!-- 键盘 -->
+    <include
+        layout="@layout/vs_input_keyboard"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/empty_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/vs_contact_nulltext"
+                android:textColor="@color/Black"
+                android:textSize="19.5sp" />
+
+            <TextView
+                android:id="@+id/empty_no_anthory1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/vs_contact_no_authorytext1"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/empty_no_anthory2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/vs_contact_no_authorytext2"
+                android:textColor="@color/vs_gray_deep"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/empty_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:background="@drawable/vs_green_btn_selecter"
+                android:gravity="center"
+                android:minWidth="125dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:singleLine="true"
+                android:text="@string/import_contacts"
+                android:textColor="@color/White"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

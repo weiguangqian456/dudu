@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vs_dlog_makemoney_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="512.5dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/vs_dlog_makemoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" 
+        android:background="@drawable/dlog_write_bg">
+
+        <ImageView
+            android:id="@+id/vs_dlog_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/makemoney_top_icon" />
+       <!-- <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dlog_write_bg" /> -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vs_dlog_top"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/makemoney_bottom_icon" >
+
+            <TextView
+                android:id="@+id/vs_dlog_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="20"
+                android:textColor="@color/White"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vs_dlog_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/vs_dlog_number"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="40dp"
+                android:text="邀请赚话费"
+                android:textColor="#873301"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/vs_dlog_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/vs_dlog_number"
+                android:text="+"
+                android:textColor="@color/White"
+                android:textSize="45sp"
+                />
+
+            <TextView
+                android:id="@+id/vs_dlog_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/vs_dlog_number"
+                android:text="分钟"
+                android:textColor="@color/White"
+                android:paddingTop="8dp"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/vs_dlog_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vs_dlog_number"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="65dp"
+                android:text="(1.60元)"
+                android:textColor="@color/White"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vs_callback_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/vs_dlog_makemoney"
+        android:background="@color/transparent" />
+
+</RelativeLayout>

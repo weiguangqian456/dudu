@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/w_6_dip">
+
+        <ImageView
+            android:id="@+id/entrance_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="@dimen/w_2_dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sec_entrance_default" />
+
+        <TextView
+            android:id="@+id/entrance_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/w_1_dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#80000000"
+            android:textSize="@dimen/w_11_dip" />
+    </LinearLayout>
+</FrameLayout>

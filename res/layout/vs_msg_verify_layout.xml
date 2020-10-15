@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_gray_simaple">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/systitle_orange" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:layout_below="@id/title"
+        android:background="@color/vs_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vs_msg_verify_tv"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_marginLeft="27.5dp"
+            android:layout_marginRight="27.5dp"
+            android:gravity="center_vertical"
+            android:text="@string/vs_reghist_hint"
+            android:textColor="@color/vs_gray_deep"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/vs_msg_verify_agin_layout"
+                    android:layout_width="120dp"
+                    android:layout_height="53dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/vs_whilte_btn_selecter"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/vs_msg_verify_agin_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vs_msg_verify_agin_hint"
+                        android:textColor="@color/public_color_EC6941"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/vs_msg_verify_agin_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/vs_blue_slight"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/spit_line"
+                    android:layout_width="0.67dp"
+                    android:layout_height="53dp"
+                    android:layout_toLeftOf="@+id/vs_msg_verify_agin_layout"
+                    android:background="@color/vs_line_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/spit_line"
+                    android:background="@color/vs_white">
+
+                    <ImageView
+                        android:id="@+id/vs_set_msg_verify_eidt_del"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:padding="15dp"
+                        android:src="@drawable/vs_del"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/vs_msg_verify_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_toLeftOf="@id/vs_set_msg_verify_eidt_del"
+                        android:background="@drawable/vs_edittext_shape"
+                        android:gravity="center_vertical"
+                        android:hint="@string/vs_verify_hint"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:paddingLeft="28dp"
+                        android:paddingRight="28dp"
+                        android:singleLine="true"
+                        android:textColor="@color/vs_black"
+                        android:textColorHint="@color/vs_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.67dp"
+                android:background="@color/vs_line_color" />
+        </LinearLayout>
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/vs_msg_verify_next_btn"
+            android:layout_width="164dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="38dp"
+            android:gravity="center"
+            android:text="@string/vs_next_hint"
+            android:textColor="@color/vs_white"
+            android:textSize="19.5sp"
+            app:rv_backgroundColor="@color/public_color_EC6941"
+            app:rv_isRadiusHalfHeight="true" />
+    </LinearLayout>
+
+</RelativeLayout>

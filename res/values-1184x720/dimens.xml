@@ -1,0 +1,20 @@
+<resources>
+
+    <dimen name="signature_height">300dp</dimen>
+    <dimen name="vs_incall_fourbutton_right">29dp</dimen>
+    <dimen name="vs_incall_fourbutton_left">29dp</dimen>
+    <dimen name="setting_calltype_height">300dp</dimen>
+    <dimen name="setting_calltype_height_long">450dp</dimen>
+    <dimen name="vs_recharge_type_prompt_height">135dp</dimen>
+    <dimen name="vs_dial_number_height">66dp</dimen>
+    <dimen name="vs_about_logo_margintop">30dp</dimen>
+    <dimen name="vs_about_relayout_height">55.5dp</dimen>
+    <dimen name="vs_about_kefu_margintop">40dp</dimen>
+    <dimen name="vs_about_company_margintop">30dp</dimen>
+    <dimen name="vs_callphone_name_margintop">80dp</dimen>
+    <dimen name="vs_callphone_time_margintop">50dp</dimen>
+    <dimen name="vs_contacts_details_list_height">120dp</dimen>
+	<dimen name="vs_account_balance_relativelayout_height">217.5dp</dimen>
+	<dimen name="vs_account_balance_relativelayout_marginBottom">34.5dp</dimen> 
+	<dimen name="vs_makemoney_task_item_small_tv">14.5sp</dimen> 
+</resources>

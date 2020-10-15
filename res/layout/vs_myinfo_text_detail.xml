@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/vs_gray_simaple"
+    android:orientation="vertical">
+
+    <!-- title -->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- 顶部整体布局 -->
+        <include layout="@layout/systitle_orange" />
+
+    </LinearLayout>
+
+
+    <!-- body -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- 我的基本信息 -->
+            <RelativeLayout
+                android:id="@+id/vs_myselft_qcodelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vs_personal_bg_color2"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                tools:visibility="visible"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="19dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/vs_myselft_account"
+                        android:textColor="@color/vs_gray_deep"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/vs_myselft_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/vs_black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 昵称 -->
+            <LinearLayout
+                android:id="@+id/vs_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_qrcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/vs_personal_bg_color">
+
+                    <EditText
+                        android:id="@+id/rl_my_text_oldName"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:background="@color/transparent"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/vs_black"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/vs_gray_simaple" />
+
+            </LinearLayout>
+
+
+            <!--手机 -->
+            <LinearLayout
+                android:id="@+id/vs_detail_phonenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_phonenum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/vs_personal_bg_color">
+
+                    <EditText
+                        android:id="@+id/rl_my_text_phoneName"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:background="@color/transparent"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/vs_black"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/vs_gray_simaple" />
+
+            </LinearLayout>
+
+
+            <!--性别 -->
+            <LinearLayout
+                android:id="@+id/vs_detail_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_sexm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/vs_personal_bg_color">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="男"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/sexm"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/sexok"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="19dp"
+                    android:background="@color/vs_gray_simaple" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_sexf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/vs_personal_bg_color">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="女"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+
+                    <ImageView
+                        android:id="@+id/sexfem"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/sexok"
+                        android:visibility="gone" />
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/vs_gray_simaple" />
+
+            </LinearLayout>
+
+
+            <!--生日 -->
+            <LinearLayout
+                android:id="@+id/vs_detail_bir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_bir"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/vs_personal_bg_color">
+
+                    <EditText
+                        android:id="@+id/rl_my_text_bir"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:background="@color/transparent"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/vs_black"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/vs_gray_simaple" />
+
+            </LinearLayout>
+
+
+            <!--邮箱-->
+            <LinearLayout
+                android:id="@+id/vs_detail_mailbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_mailbox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/vs_personal_bg_color">
+
+                    <EditText
+                        android:id="@+id/rl_my_text_mailbox"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:background="@color/transparent"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/vs_black"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/vs_gray_simaple" />
+
+            </LinearLayout>
+
+
+            <!--地区 -->
+            <LinearLayout
+                android:id="@+id/vs_detail_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.67dp"
+                    android:background="@color/vs_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_area"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+
+                    android:background="@drawable/vs_personal_bg_color">
+
+                    <TextView
+                        android:id="@+id/rl_my_text_area"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:background="@color/transparent"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/vs_black"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+                <!-- 下划线 -->
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/vs_gray_simaple" />
+
+            </LinearLayout>
+
+
+            <!-- 地区 -->
+
+            <LinearLayout
+                android:id="@+id/area_wheel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dip"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dip"
+                        android:text="请选择省市区"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dip"
+                    android:orientation="horizontal">
+
+                    <com.weiwei.base.area.WheelView
+                        android:id="@+id/id_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></com.weiwei.base.area.WheelView>
+
+                    <com.weiwei.base.area.WheelView
+                        android:id="@+id/id_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"></com.weiwei.base.area.WheelView>
+
+                    <com.weiwei.base.area.WheelView
+                        android:id="@+id/id_district"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"></com.weiwei.base.area.WheelView>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="10dp"
+                    android:background="#D7D7D7"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- body end -->
+
+</LinearLayout>

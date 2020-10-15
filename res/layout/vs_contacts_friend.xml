@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/agent_ll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/agent_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginRight="18.5dp"
+            android:maxLines="2"
+            android:textColor="@color/vs_black"
+            android:textSize="19.5sp"
+            android:layout_marginLeft="10dp" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/vs_line_color"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/vs_contact_userlayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/vs_personal_bg_color"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/vs_contact_user_imge"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18.5dp"
+            android:background="@drawable/vs_friend_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/vs_contact_user_imge"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contacts_vsuser"
+                    android:textColor="@color/vs_black"
+                    android:textSize="19.5sp" />
+
+                <TextView
+                    android:id="@+id/groupSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/vs_black"
+                    android:textSize="19.5sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/vs_contact_vmark_hint"
+                android:textColor="@color/vs_gray_deep"
+                android:textSize="14.5sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/vs_contact_seting_line01_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/vs_right_icon" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--顶部导航指示栏-->
+    <LinearLayout
+        android:id="@+id/ll_title_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/public_color_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_54_dip">
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="@dimen/w_48_dip"
+                android:layout_height="@dimen/w_48_dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_back_black" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/dudujiayou"
+                android:textSize="@dimen/w_17_dip"/>
+            <RelativeLayout
+                android:id="@+id/rl_share"
+                android:layout_width="@dimen/w_48_dip"
+                android:layout_height="@dimen/w_48_dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="@dimen/w_18_dip"
+                    android:layout_height="@dimen/w_18_dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_share_black" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/ll_title_root">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:descendantFocusability="blocksDescendants">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_290_dip">
+
+                <!-- 自动轮播的第三方控件 -->
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/vp_item_goods_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/vs_white"
+                    app:canLoop="true" />
+
+              <android.support.v4.view.ViewPager
+                  android:id="@+id/viewPager"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:visibility="gone"
+                  android:background="@color/White"/>
+                <LinearLayout
+                    android:id="@+id/ll_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_48_dip"
+                android:text="@string/dudujiayou"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:textColor="@color/public_color_222222"
+                android:textSize="@dimen/w_16_dip"/>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/w_40_dip"
+                android:background="#f6f6f6">
+
+                <View
+                    android:layout_width="@dimen/w_13_dip"
+                    android:layout_height="@dimen/w_1_dip"
+                    android:background="@color/public_color_CCCCCC"
+                    android:layout_toLeftOf="@+id/tv_intro"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图文详情"
+                    android:textSize="@dimen/w_13_dip"
+                    android:textColor="@color/public_color_666666"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/w_8_dip"
+                    android:layout_marginRight="@dimen/w_8_dip"/>
+                <View
+                    android:layout_width="@dimen/w_13_dip"
+                    android:layout_height="@dimen/w_1_dip"
+                    android:background="@color/public_color_CCCCCC"
+                    android:layout_toRightOf="@+id/tv_intro"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            
+            <com.tencent.smtt.sdk.WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w_60_dip"
+        android:background="@color/White"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_refuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/refuel_video_button"
+            android:layout_centerInParent="true"
+            android:text="@string/goto_refuel"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp_14"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone"/>
+
+</RelativeLayout>

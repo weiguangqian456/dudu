@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="5dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:background="#3797f8"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/view_line"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/new_memner_region"
+            android:textColor="#3797f8"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:layout_toEndOf="@+id/view_line" />
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/look_more"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/withdraw_next"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/withdraw_next" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whites"
+    tools:context="com.weiwei.base.fragment.VsSaleMallFragment">
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.weiwei.salemall.widget.MyClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_for_you"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_bg"
+            android:visibility="gone" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <!--没网界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/vs_bg_color"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_net"
+            android:layout_width="@dimen/w_277_dip"
+            android:layout_height="@dimen/w_172_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_93_dip"
+            android:src="@drawable/mall_no_network" />
+
+        <TextView
+            android:id="@+id/tv_no_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="网络出问题了请检查网络设置~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <Button
+            android:id="@+id/btn_fresh"
+            parent="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/w_98_dip"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_below="@+id/tv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_43_dip"
+            android:background="@drawable/bg_fresh_btn"
+            android:text="点击刷新"
+            android:textColor="#1084ff"
+            android:textSize="@dimen/w_14_dip"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+
+    <!--空白界面-->
+    <RelativeLayout
+        android:id="@+id/fl_no_content"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/vs_bg_color">
+
+        <ImageView
+            android:id="@+id/iv_no_content"
+            android:layout_width="@dimen/w_194_dip"
+            android:layout_height="@dimen/w_127_dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_145_dip"
+            android:src="@drawable/mall_no_goods" />
+
+        <TextView
+            android:id="@+id/tv_no_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_24_dip"
+            android:text="暂无数据~"
+            android:textColor="#828688"
+            android:textSize="@dimen/w_16_dip" />
+
+        <Button
+            android:id="@+id/btn_fresh_tv"
+            parent="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="@dimen/w_98_dip"
+            android:layout_height="@dimen/w_29_dip"
+            android:layout_below="@+id/tv_no_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/w_43_dip"
+            android:background="@drawable/bg_fresh_btn"
+            android:text="点击刷新"
+            android:textColor="#1084ff"
+            android:textSize="@dimen/w_14_dip"
+            tools:ignore="MissingPrefix" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/vs_contact_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vs_personal_bg_color" >
+
+        <LinearLayout
+            android:id="@+id/vs_contact_detail_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/vs_personal_bg_color"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/vs_contact_detail_selectnumber"
+                style="@style/CheckB_sendFreindCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="-25dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/vs_contact_detail_itm_call_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vs_contact_dial"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vs_contact_detail_phone_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/vs_contact_detail_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="18688821047"
+                    android:textColor="@color/money_text_color"
+                    android:textSize="19.5sp" />
+
+                <LinearLayout
+                    android:id="@+id/vs_contact_type_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/vs_contact_detail_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/local_text"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/vs_contact_detail_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/local_text"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/vs_contact_detail_near"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/contact_detail_textcolor"
+                        android:textSize="14.5sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 免费信息 -->
+
+            <RelativeLayout
+                android:id="@+id/vs_contact_detail_itm_freemsg_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/vs_whilte_btn_selecter"
+                android:paddingRight="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/vs_contact_detail_itm_freemsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="65dp"
+                    android:background="@drawable/vs_contact_msg" />
+            </RelativeLayout>
+
+            <!-- 免费电话 -->
+
+            <RelativeLayout
+                android:id="@+id/vs_contact_detail_itm_freecall_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/vs_whilte_btn_selecter"
+                android:paddingRight="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/vs_contact_detail_itm_freecall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/vs_contact_dial" />
+            </RelativeLayout>
+
+            <!-- TD电话 -->
+
+            <RelativeLayout
+                android:id="@+id/vs_contact_detail_itm_call_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/vs_whilte_btn_selecter"
+                android:paddingRight="10dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/vs_contact_detail_itm_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/vs_contact_dial" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.67dp"
+            android:layout_below="@id/vs_contact_detail_linearlayout"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@color/vs_line_color" />
+    </RelativeLayout>
+
+</RelativeLayout>

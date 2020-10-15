@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 顶部标题 -->
+
+    <include
+        android:id="@+id/tab"
+        layout="@layout/systitle_orange" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/load_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="46dp"
+            android:background="@color/White"
+            android:gravity="center" >
+
+            <!--
+            <ImageView
+                android:id="@+id/load_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/load_ing1" />
+            -->
+
+            <ImageView
+                android:id="@+id/load_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/load_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/load_error_ayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="46dp"
+            android:background="@color/White"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/load_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/webview_load_error" />
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/web_nextback_layout"
+            android:layout_alignParentTop="true" >
+        </WebView>
+
+        <LinearLayout
+            android:id="@+id/web_nextback_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_alignBottom="@drawable/bg_header"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|bottom"
+            android:background="@drawable/bg_header"
+            android:gravity="center|fill_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iamgeView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/pf_go_back"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/iamgeView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/pf_go_forward"
+                android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right|center" >
+
+                <ImageView
+                    android:id="@+id/refsh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/pf_ref_reload"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

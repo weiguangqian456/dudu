@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F0F3FA">
+
+    <!--有数据界面-->
+    <RelativeLayout
+        android:id="@+id/rl_cart_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        tools:visibility="visible"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_shoppingcart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/line_bottom"
+            android:layout_marginTop="@dimen/w_6_dip"/>
+
+        <View
+            android:id="@+id/line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_1_dip"
+            android:layout_above="@+id/rl_bottom_container"
+            android:background="#e4E6F0"></View>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/w_53_dip"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white">
+
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                android:layout_width="@dimen/w_20_dip"
+                android:layout_height="@dimen/w_20_dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_15_dip"
+                android:button="@drawable/shoppingcart_seletor" />
+
+            <TextView
+                android:id="@+id/tv_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_8_dip"
+                android:layout_toRightOf="@+id/cb_select_all"
+                android:text="全选"
+                android:textColor="#000000"
+                android:textSize="@dimen/w_14_dip" />
+
+            <TextView
+                android:id="@+id/cart_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_5_dip"
+                android:layout_toLeftOf="@+id/tv_cart_money"
+                android:text=""
+                android:textColor="#636870"
+                android:textSize="@dimen/w_13_dip"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_cart_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/cart_money"
+                android:text="合计："
+                android:textColor="#333333"
+                android:textSize="@dimen/w_15_dip" />
+
+            <TextView
+                android:id="@+id/cart_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w_10_dip"
+                android:layout_toLeftOf="@+id/btn_commit_order"
+                android:text="¥0.00"
+                android:textColor="#F0222F"
+                android:textSize="@dimen/w_16_dip" />
+
+            <Button
+                android:id="@+id/btn_commit_order"
+                android:layout_width="@dimen/w_90_dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/public_color_EC6941"
+                android:text="结算(0)"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--空界面-->
+    <LinearLayout
+        android:id="@+id/ll_no_order_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_no_order"
+            android:layout_width="@dimen/w_277_dip"
+            android:layout_height="@dimen/w_163_dip"
+            android:layout_gravity="center"
+            android:src="@drawable/shoppingcart_nodata" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/w_22_dip"
+            android:gravity="center"
+            android:text="购物车空空如也~"
+            android:textColor="#82868b"
+            android:textSize="@dimen/w_17_dip" />
+
+        <TextView
+            android:id="@+id/btn_back_mall"
+            android:layout_width="@dimen/w_110_dip"
+            android:layout_height="@dimen/w_30_dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/w_54_dip"
+            android:background="@drawable/coner_ll_orange"
+            android:gravity="center"
+            android:text="去逛逛"
+            android:textColor="@color/public_color_EC6941"
+            android:textSize="@dimen/w_14_dip" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/White" >
+
+    <RelativeLayout
+        android:id="@+id/balance_combo_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/balance_combo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="包月话费300分钟"
+            android:textColor="@color/TextBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/balance_combo_calltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="300分钟"
+            android:textColor="@color/TextBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/balance_combo_calltime"
+            android:text="@string/balance_combo_time_text"
+            android:textColor="@color/TextBlack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/balance_combo_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balance_combo_name_layout"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balance_combo_time_start"
+            android:textColor="@color/TextBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/balance_combo_starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013-09-03 10:16:36"
+            android:textColor="@color/balance_tc_list_item"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balance_combo_time_layout"
+        android:paddingBottom="20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balance_combo_time_end"
+            android:textColor="@color/TextBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/balance_combo_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013-10-03 10:16:36"
+            android:textColor="@color/balance_tc_list_item"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

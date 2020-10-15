@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/rtv_order_status"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            app:rv_backgroundColor="@color/public_color_00CC8E"
+            app:rv_isRadiusHalfHeight="true"
+            app:rv_isWidthHeightEqual="true" />
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="43.99升 92# 汽油 中国石油南园..."
+            android:textColor="@color/public_color_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="￥273.61"
+            android:textColor="@color/public_color_333333"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_order_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="43.99升 92# 汽油 中国石油南园..."
+            android:textColor="@color/public_color_999999"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_pay_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="￥273.61"
+            android:textColor="@color/public_color_00CC8E"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/include_line" />
+
+</LinearLayout>

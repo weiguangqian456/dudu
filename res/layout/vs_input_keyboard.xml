@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/input_keyboard"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/vs_white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.67dp"
+        android:background="@color/keyboard_line" />
+
+    <!-- 拨号键 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/DigitOneButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_01"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+		<View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitTwoButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_02"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+		<View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitThreeButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_03"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <View android:layout_width="fill_parent"
+		    android:layout_height="0.67dp"
+		    android:background="@color/vs_gray"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/DigitFourButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_04"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+        <View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitFiveButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_05"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+        <View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitSixButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_06"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <View android:layout_width="fill_parent"
+		    android:layout_height="0.67dp"
+		    android:background="@color/vs_gray"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/DigitSevenButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_07"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+        <View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitEightButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_08"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+        <View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitNineButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_09"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <View android:layout_width="fill_parent"
+		    android:layout_height="0.67dp"
+		    android:background="@color/vs_gray"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageView
+            android:id="@+id/DigitHideButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_paste"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+        <View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitZeroButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_00"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+
+        <View android:layout_width="0.67dp"
+		    android:layout_height="fill_parent"
+		    android:background="@color/vs_gray"/>
+
+        <ImageView
+            android:id="@+id/DigitDeleteButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/vs_dial_number_height"
+            android:layout_weight="1"
+            android:background="@drawable/vs_dia_keyboard_del"
+            android:contentDescription="@string/app_name"
+            android:gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>

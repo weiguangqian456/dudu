@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="18dp"
+    android:gravity="center_vertical">
+
+    <View
+        android:id="@+id/view_select"
+        android:layout_width="2dp"
+        android:layout_height="@dimen/w_30_dip"
+        android:background="@drawable/bg_class_select"
+        android:visibility="invisible"/>
+    
+    <TextView
+        tools:text="食品"
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/default_text"
+        android:textSize="@dimen/w_14_dip"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+    
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/friendly_prompt_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vs_white"
+    android:gravity="center"
+    android:orientation="vertical"    
+    android:visibility="visible" >
+
+    <ImageView
+        android:id="@+id/iv_prompt"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:src="@drawable/ic_mall" />
+    
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+		android:layout_gravity="center"
+        android:src="@drawable/ic_mall"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_error_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="网络繁忙，请稍候再试"
+        android:textColor="@color/vs_red"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_prompt_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="点击屏幕，重新加载数据"
+        android:textColor="@color/vs_red"
+        android:textSize="17sp" />
+    <Button
+        android:id="@+id/setting_network"
+        android:layout_width="219.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="15.0dip"
+        android:background="@color/vs_white"
+        android:gravity="center"
+        android:text="网络设置"
+        android:textColor="@color/vs_white"
+        android:textSize="16.0sp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    tools:context="com.weiwei.home.activity.RefuelDetailActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/iv_oil_station_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/bg_my_integral_top" />
+
+                <com.flyco.roundview.RoundTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom"
+                    app:rv_backgroundColor="@color/public_color_white"
+                    app:rv_cornerRadius_TL="10dp"
+                    app:rv_cornerRadius_TR="10dp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/public_color_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_oil_station_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/public_color_333333"
+                            android:textSize="15sp"
+                            tools:text="中国石油南园加油站" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_refuel_location" />
+
+                            <TextView
+                                android:id="@+id/tv_oil_station_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/public_color_CCCCCC"
+                                android:textSize="12sp"
+                                tools:text="南新路南园村段天马大厦南侧" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="嘟嘟价￥"
+                                android:textColor="@color/public_color_999999"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tv_oil_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/public_color_EC6941"
+                                android:textSize="23sp"
+                                tools:text="6.22" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <com.flyco.roundview.RoundTextView
+                                android:id="@+id/tv_international_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="2dp"
+                                android:singleLine="true"
+                                android:textColor="@color/public_color_white"
+                                android:textSize="10sp"
+                                app:rv_backgroundColor="@color/public_color_8F9AFC"
+                                app:rv_cornerRadius="2dp"
+                                app:rv_isRippleEnable="false"
+                                tools:text="比国标价降0.60元" />
+
+                            <com.flyco.roundview.RoundTextView
+                                android:id="@+id/tv_depreciate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:ellipsize="end"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="2dp"
+                                android:singleLine="true"
+                                android:textColor="@color/public_color_white"
+                                android:textSize="10sp"
+                                app:rv_backgroundColor="@color/public_color_8F9AFC"
+                                app:rv_cornerRadius="2dp"
+                                app:rv_isRippleEnable="false"
+                                tools:text="比本站降0.60元" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_navigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableTop="@drawable/ic_refuel_list_navigation"
+                        android:drawablePadding="2dp"
+                        android:gravity="center"
+                        android:text="0.0km"
+                        android:textColor="@color/public_color_EC6941"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <com.androidkun.xtablayout.XTabLayout
+                    android:id="@+id/tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/w_45_dip"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/public_color_white"
+                    app:xTabDisplayNum="2"
+                    app:xTabDividerGravity="center"
+                    app:xTabDividerWidthWidthText="true"
+                    app:xTabIndicatorColor="@color/public_color_EC6941"
+                    app:xTabIndicatorHeight="@dimen/w_1_dip"
+                    app:xTabMode="scrollable"
+                    app:xTabSelectedTextColor="@color/public_color_EC6941"
+                    app:xTabSelectedTextSize="@dimen/w_15_dip"
+                    app:xTabTextColor="#b8b8b8"
+                    app:xTabTextSize="@dimen/w_15_dip" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:text="选择油号："
+                    android:textColor="@color/public_color_333333"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/oil_no_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:text="选择枪号："
+                    android:textColor="@color/public_color_333333"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/gun_no_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="3" />
+
+                <com.flyco.roundview.RoundLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="重要提示"
+                        android:textColor="@color/public_color_red"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="3dp"
+                        android:text="请务必 先到达油站 与工作人员确认后再付款，切勿先买单后加油，避免异常订单的产生!"
+                        android:textColor="@color/public_color_EC6941"
+                        android:textSize="13sp" />
+
+                </com.flyco.roundview.RoundLinearLayout>
+
+                <com.flyco.roundview.RoundTextView
+                    android:id="@+id/rtv_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/public_color_white"
+                    android:textSize="17sp"
+                    app:rv_backgroundColor="@color/public_color_EC6941"
+                    app:rv_cornerRadius="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="35dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:text="若无您选择的油枪号，请联系油站工作人员\n支付前请确认加油站是否正确"
+                    android:textColor="@color/public_color_666666"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/public_color_666666"
+            tools:alpha="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/fl_back"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_seckill_back" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</FrameLayout>
